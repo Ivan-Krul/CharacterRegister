@@ -1,0 +1,24 @@
+#sideMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #777;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Define styles for the content area */
+#content {
+    margin-left: 220px;
+    /* Adjust this to accommodate the width of the side menu */
+    padding: 20px;
+}
+
+#toggleButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+}
