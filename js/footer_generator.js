@@ -3,15 +3,13 @@
 function getCountToRoot() {
   let path = window.location.pathname;
 
-  const slashCount = (path.match(/\//g) || []).length;
-  const splitedStr = path.split("CharacterRegister")[0];
-  const slashCountDomain = (splitedStr.match(/\//g) || []).length;
-  const resCount = slashCount - slashCountDomain - 1;
+  let slashCount = (path.match(/\//g) || []).length;
+  let splitedStr = path.split("CharacterRegister")[0];
+  let slashCountDomain = (splitedStr.match(/\//g) || []).length;
+  let resCount = slashCount - slashCountDomain - 1;
 
   return resCount;
 }
-
-console.log(getCountToRoot());
 
 function fetchFooterTemplate() {
   return fetch(getCountToRoot() === 0? './pages/footer_template.html':'./footer_template.html') // Change 'footer_template.html' to the correct path of your external footer file

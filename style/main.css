@@ -22,3 +22,9 @@
     right: 20px;
     z-index: 1;
 }
+#toggleTheme {
+    position: fixed;
+    top: 20px;
+    right: 120px;
+    z-index: 1;
+}
