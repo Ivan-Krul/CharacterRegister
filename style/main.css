@@ -28,3 +28,8 @@
     right: 120px;
     z-index: 1;
 }
+img {
+    border: 5px solid black;
+    margin: 5px;
+    max-width:45%;
+}

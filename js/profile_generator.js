@@ -18,16 +18,18 @@ async function fetchFile(filePath) {
     });
 }
 
-function outputAge(initialAge, strDateCreation, strDateDisappearence){
+function outputAge(initialAge, strDateCreation, strDateDisappearence) {
   const today = new Date();
   if (strDateDisappearence !== "!!!\r") {
     console.log("disappeared at " + strDateDisappearence);
+    document.getElementById("header").innerText += " (Disappeared)";
+
     let diffd = today - new Date(strDateDisappearence);
     let diffc = today - new Date(strDateCreation);
 
     document.getElementById("age").innerText = initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24) - parseInt(diffd / 1000 / 60 / 60 / 24 / 365.24);
   }
-  else{
+  else {
     let diffc = today - new Date(strDateCreation);
 
     document.getElementById("age").innerText = initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24);
@@ -99,6 +101,48 @@ async function gatherOCData() {
 
   document.getElementById("work").innerText = formatedContent[readIndex++];
   document.getElementById("currency").innerText = "#" + parseInt(formatedContent[readIndex++]) + " (~" + parseInt(formatedContent[readIndex++]) + "S) from " + "#" + parseInt(formatedContent[readIndex++]) + " (~" + parseInt(formatedContent[readIndex++]) + "S)";
+
+  // Parse story
+  size = parseInt(formatedContent[readIndex++]);
+
+  for (let i = 0; i < size; i++) {
+    console.log(i);
+    let div = document.createElement("p");
+    let concatStr = "";
+    if (formatedContent[readIndex].lastIndexOf("\\") === -1) {
+      do {
+        let str = formatedContent[readIndex++];
+        str = str.replace("[", "<i>[");
+        str = str.replace("]", "]</i>");
+        concatStr += str;
+      } while (formatedContent[readIndex].lastIndexOf("\\") === -1);
+    }
+    let str = formatedContent[readIndex++];
+    str = str.replace("[", "<i>[");
+    str = str.replace("]", "]</i>");
+    str = str.replace("\\", " ");
+    concatStr += str;
+
+    div.innerHTML = concatStr;
+
+    document.getElementById("stories").appendChild(div);
+  }
+
+  size = parseInt(formatedContent[readIndex++]);
+  
+  for(let i = 0; i < size; i ++){
+    let img = document.createElement("img");
+    let path = formatedContent[readIndex++];
+    if(path === "%\r"){
+      img.src = formatedContent[readIndex++];
+      img.alt = "author " + formatedContent[readIndex++];
+    }
+    else
+      img.src = path
+
+      document.getElementById("gallery").appendChild(img);
+
+  }
 }
 
 
