@@ -111,6 +111,7 @@ async function gatherOCData() {
     let concatStr = "";
     if (formatedContent[readIndex].lastIndexOf("\\") === -1) {
       do {
+        console.log(readIndex);
         let str = formatedContent[readIndex++];
         str = str.replace("[", "<i>[");
         str = str.replace("]", "]</i>");

@@ -47,7 +47,7 @@ Hairdresser
 4
 1260
 # Then
-51
+5
 420
 # Stories
 10
