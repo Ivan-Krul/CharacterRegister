@@ -10,18 +10,24 @@ function getCountToRoot() {
 }
 
 async function fetchFile(filePath) {
-  return fetch(getCountToRoot() !== 0 ? "../" + filePath : filePath)
+  for (let index = 0; index < getCountToRoot(); index++) {
+    let toRoot = "../";
+    toRoot += filePath;
+    filePath = toRoot;
+  }
+
+  return fetch(filePath)
     .then(response => response.text())
     .catch(error => {
-      console.error('Error fetching "+filePath+":', error);
+      console.error('Error fetching '+filePath+':', error);
       return '';
     });
 }
 
-function outputAge(initialAge, strDateCreation, strDateDisappearence) {
+function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
   const today = new Date();
-  if (strDateDisappearence !== "!!!\r") {
-    console.log("disappeared at " + strDateDisappearence);
+  if (disappeared) {
+    console.log("disappeared");
     document.getElementById("header").innerText += " (Disappeared)";
 
     let diffd = today - new Date(strDateDisappearence);
@@ -34,6 +40,111 @@ function outputAge(initialAge, strDateCreation, strDateDisappearence) {
 
     document.getElementById("age").innerText = initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24);
   }
+}
+
+async function outputOCData(){
+  const urlParams = new URLSearchParams(window.location.search);
+  const ocName = urlParams.get('oc');
+
+  let content = await fetchFile("list/" + ocName + ".json");
+  let json = JSON.parse(content);
+  
+  console.log(json);
+
+  document.title = ocName + " in Character Register";
+  document.getElementById("header").innerText = ocName;
+  document.getElementById("pfp").src = json["pfp_path"];
+  document.getElementById("bioClass").innerText = json["biological_class"];
+  outputAge(json["initial_age"], json["date_creation"], json["disappeared"], json["date_disappearence"]);
+  document.getElementById("sex").innerText = json["sex"];
+
+  for(let index = 0; index < json["intedefication_in_comunity"].length; index++){
+    let b = document.createElement("b");
+    b.innerText = '_';
+    b.style.backgroundColor = json["intedefication_in_comunity"][index];
+    document.getElementById("idInCom").appendChild(b);
+  }
+
+  for (let index = 0; index < json["traits"].length; index++) {
+    let b = document.createElement("div");
+    b.innerText = json["traits"][index];
+    document.getElementById("traits").appendChild(b);
+  }
+
+  document.getElementById("dateCreation").innerText = json["date_creation"];
+  document.getElementById("dateCreationInMind").innerText = json["date_creation_in_mind"];
+
+  if(json["disappeared"]) {
+    document.getElementById("dateDisappearence").innerText = json["date_disappearence"];
+    document.getElementById("dateDisappearenceInMind").innerText = json["date_disappearence_in_mind"];
+  }
+
+  document.getElementById("country").innerText = json["country"];
+
+  document.getElementById("parents").innerText = json["parents"]["mother"] + '\n';
+  document.getElementById("parents").innerText += json["parents"]["father"];
+
+  for (let index = 0; index < json["interests"].length; index++) {
+    let b = document.createElement("div");
+    b.innerText = json["interests"][index];
+    document.getElementById("intrestings").appendChild(b);
+  }
+
+  document.getElementById("work").innerText = json["work"];
+  document.getElementById("currency").innerText = "#" + json["currency"]["now_place"]
+    + " (~" + json["currency"]["now_value"]
+    + "S) from " + "#" + json["currency"]["then_place"]
+    + " (~" + json["currency"]["then_value"] + "S)";
+
+  for (let i = 0; i < json["stories"].length; i++) {
+    let div = document.createElement("p");
+    let concatStr = "";
+    
+    for(let index = 0; index < json["stories"][i].length; index++){
+      let str = json["stories"][i][index];
+
+      str = str.replace("[", "<i>[");
+      str = str.replace("]", "]</i>");
+
+      concatStr += str;
+    }
+    div.innerHTML = concatStr;
+
+    document.getElementById("stories").appendChild(div);
+  }
+
+  for (let i = 0; i < json["gallery"].length; i++) {
+    let img = document.createElement("img");
+    img.src = json["gallery"][i]["path"];
+    
+    if (json["gallery"][i]["mine"] === false)
+    {
+      let tagA = document.createElement("a");
+      tagA.href = json["gallery"][i]["link"];
+      tagA.target = "_blank";
+      tagA.appendChild(img)
+      document.getElementById("gallery").appendChild(tagA);
+    }
+    else
+      document.getElementById("gallery").appendChild(img);
+  }
+}
+
+var readIndex = 0;
+
+function getTextSection(formatedContent) {
+  let str = formatedContent[readIndex];
+  if (str.lastIndexOf("\r") !== -1)
+    str = str.split('\r')[0];
+
+  console.log(readIndex + ": " + str);
+  return str;
+}
+
+function getNextTextSection(formatedContent) {
+  let str = getTextSection(formatedContent);
+  readIndex++;
+  return str;
 }
 
 async function gatherOCData() {
@@ -52,73 +163,77 @@ async function gatherOCData() {
 
   console.log(formatedContent);
 
-  let readIndex = 0;
+  readIndex = 0;
+
   document.title = ocName + " in Character Register";
   document.getElementById("header").innerText = ocName;
-  document.getElementById("pfp").src = formatedContent[readIndex++];
-  document.getElementById("bioClass").innerText = formatedContent[readIndex++];
-  let initialAge = parseInt(formatedContent[readIndex++]);
-  document.getElementById("sex").innerText = formatedContent[readIndex++];
+  document.getElementById("pfp").src = getNextTextSection(formatedContent);
+  document.getElementById("bioClass").innerText = getNextTextSection(formatedContent);
+  let initialAge = parseInt(getNextTextSection(formatedContent));
+  document.getElementById("sex").innerText = getTextSection(formatedContent);
 
-  let size = parseInt(formatedContent[readIndex++]);
+  let size = parseInt(getNextTextSection(formatedContent));
 
   for (let index = 0; index < size; index++) {
     let b = document.createElement("b");
     b.innerText = '_';
-    b.style.backgroundColor = formatedContent[readIndex++];
+    b.style.backgroundColor = getNextTextSection(formatedContent);
     document.getElementById("idInCom").appendChild(b);
   }
 
-  size = parseInt(formatedContent[readIndex++]);
+  size = parseInt(getNextTextSection(formatedContent));
 
   for (let index = 0; index < size; index++) {
     let b = document.createElement("div");
-    b.innerText = (formatedContent[readIndex++]).split('\r')[0] + " (" + formatedContent[readIndex++].split('\r')[0] + ")";
+    b.innerText = (getNextTextSection(formatedContent)) + " (" + getNextTextSection(formatedContent) + ")";
     document.getElementById("traits").appendChild(b);
   }
 
-  let strDateCreation = formatedContent[readIndex++];
+  let strDateCreation = getNextTextSection(formatedContent);
   document.getElementById("dateCreation").innerText = strDateCreation;
-  document.getElementById("dateCreationInMind").innerText = formatedContent[readIndex++];
+  document.getElementById("dateCreationInMind").innerText = getNextTextSection(formatedContent);
 
-  let strDateDisappearence = formatedContent[readIndex++]
+  let strDateDisappearence = getNextTextSection(formatedContent);
   document.getElementById("dateDisappearence").innerText = strDateDisappearence;
-  document.getElementById("dateDisappearenceInMind").innerText = formatedContent[readIndex++];
-  outputAge(initialAge, strDateCreation, strDateDisappearence);
+  document.getElementById("dateDisappearenceInMind").innerText = getNextTextSection(formatedContent);
+  outputAge(initialAge, strDateCreation, strDateDisappearence !== "!!!", strDateDisappearence);
 
-  document.getElementById("country").innerText = formatedContent[readIndex++];
+  document.getElementById("country").innerText = getNextTextSection(formatedContent);
 
-  document.getElementById("parents").innerText = formatedContent[readIndex++];
-  document.getElementById("parents").innerText += formatedContent[readIndex++];
+  document.getElementById("parents").innerText = getNextTextSection(formatedContent);
+  document.getElementById("parents").innerText += getNextTextSection(formatedContent);
 
-  size = parseInt(formatedContent[readIndex++]);
+  size = parseInt(getNextTextSection(formatedContent));
 
   for (let index = 0; index < size; index++) {
     let b = document.createElement("div");
-    b.innerText = formatedContent[readIndex++].split('\r')[0];
+    b.innerText = getNextTextSection(formatedContent);
     document.getElementById("intrestings").appendChild(b);
   }
 
-  document.getElementById("work").innerText = formatedContent[readIndex++];
-  document.getElementById("currency").innerText = "#" + parseInt(formatedContent[readIndex++]) + " (~" + parseInt(formatedContent[readIndex++]) + "S) from " + "#" + parseInt(formatedContent[readIndex++]) + " (~" + parseInt(formatedContent[readIndex++]) + "S)";
+  document.getElementById("work").innerText = getNextTextSection(formatedContent);
+  document.getElementById("currency").innerText = "#" + parseInt(getNextTextSection(formatedContent))
+    + " (~" + parseInt(getNextTextSection(formatedContent))
+    + "S) from " + "#" + parseInt(getNextTextSection(formatedContent))
+    + " (~" + parseInt(getNextTextSection(formatedContent)) + "S)";
 
   // Parse story
-  size = parseInt(formatedContent[readIndex++]);
+  size = parseInt(getNextTextSection(formatedContent));
 
   for (let i = 0; i < size; i++) {
     console.log(i);
     let div = document.createElement("p");
     let concatStr = "";
-    if (formatedContent[readIndex].lastIndexOf("\\") === -1) {
+    if (getTextSection(formatedContent).lastIndexOf("\\") === -1) {
       do {
         console.log(readIndex);
-        let str = formatedContent[readIndex++];
+        let str = getNextTextSection(formatedContent);
         str = str.replace("[", "<i>[");
         str = str.replace("]", "]</i>");
         concatStr += str;
-      } while (formatedContent[readIndex].lastIndexOf("\\") === -1);
+      } while (getTextSection(formatedContent).lastIndexOf("\\") === -1);
     }
-    let str = formatedContent[readIndex++];
+    let str = getNextTextSection(formatedContent);
     str = str.replace("[", "<i>[");
     str = str.replace("]", "]</i>");
     str = str.replace("\\", " ");
@@ -129,23 +244,23 @@ async function gatherOCData() {
     document.getElementById("stories").appendChild(div);
   }
 
-  size = parseInt(formatedContent[readIndex++]);
-  
-  for(let i = 0; i < size; i ++){
+  size = parseInt(getNextTextSection(formatedContent));
+
+  for (let i = 0; i < size; i++) {
     let img = document.createElement("img");
-    let path = formatedContent[readIndex++];
-    if(path === "%\r"){
-      img.src = formatedContent[readIndex++];
-      img.alt = "author " + formatedContent[readIndex++];
+    let path = getNextTextSection(formatedContent);
+    if (path === "%") {
+      img.src = getNextTextSection(formatedContent);
+      img.alt = "author " + getNextTextSection(formatedContent);
     }
     else
       img.src = path
 
-      document.getElementById("gallery").appendChild(img);
+    document.getElementById("gallery").appendChild(img);
 
   }
 }
 
 
-gatherOCData();
+outputOCData();
 
