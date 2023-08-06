@@ -1,0 +1,84 @@
+{
+    "pfp_path": "../image/marathon/06_2023/Ukinas.png",
+    "biological_class": "Tiger Shark",
+    "initial_age": 21,
+    "sex": "Female",
+    "intedefication_in_comunity": [
+        "black",
+        "gray",
+        "white",
+        "purple"
+    ],
+    "traits": [
+        "Creative",
+        "Courageous",
+        "Eccentric"
+    ],
+    "date_creation": "12 Jun 2023",
+    "date_creation_in_mind": "07.04.17",
+    "disappeared": false,
+    "country": "W",
+    "parents": {
+        "mother": "Mary",
+        "father": "Isaac"
+    },
+    "interests": [
+        "LGBT",
+        "Social Network",
+        "Activism"
+    ],
+    "work": "Activist",
+    "currency": {
+        "now_place": 2,
+        "now_value": 13000,
+        "then_place": 4,
+        "then_value": 2100
+    },
+    "stories": [
+        [
+            "Ukinas was born in average family. Her mother, Mary, worked in SN. Her dad, Isaac, was with her. Ukinas was happy, all time, when her mom came.",
+            " She told her about tolerance to special group of people, but also told, what she is also special for them."
+        ],
+        [
+            "When Ukinas started go to school, she rised up questions like \"Why should we doing not same all time, like see a dilema and taking a weapon?\"",
+            " Ukinas got a friend called Mia, what was in LGBT group.",
+            " Ukinas got interested in the group, like",
+            " \"Do I want actually going to date with boys, what is so stereotyped?",
+            " Do I want to feel a threat from them when I'll brake up with them?",
+            " Do I want a stereotyped boyfriend what wanted just have sex with anyone?",
+            " No! I want to be a unique person and don't envy\"",
+            " Mia - \"She was so courageous, what decided to ask very sensitive questions. Ukinas also wanted to be with me in one group.",
+            " She decided to be asexual, but honestly, maybe I'm going to fall in love with her\""
+        ],
+        [
+            "One time, she saw a poster to hiring to W for influence the enviroument to the bright side.",
+            " Ukinas decided to get a job. When she arrived to the W, she saw a blue forest from bonzai.",
+            " When she arrived to the castle, Ukinas was recognised and they offered well payed work for activism.",
+            " She was agreed."
+        ],
+        [
+            "One time, Ukinas invited her friend, Mia to the W. She was waited for her almost 29 cycles. So, Mia is arrived to the W.",
+            " She was suprised with the enviroument. Mia - \"Did you do this?\". Ukinas - \"Of course, there is unique enviroument. Rather than living in Fur, I'm living here!\".",
+            " Later, Mia saw, what Ukinas is working in strange facility in the island. Mia - \"Ukinas, what you know about your work?\"",
+            " Ukinas - \"Well, I'm working in advertising company what mainly campaigning about savety of enviroument\"",
+            " Mia - \"What's a problem with it?\"",
+            " Ukinas - \"So, these trees looks like a bonzai, but they are blue and their leaves are shiny.",
+            " In past, bonzai's leaves was used as currency, because minting coins - expensive.",
+            " Even after implementing S currency, trees starting to exhausting,",
+            " because they was adaptated to bring a lot of leaves and got intensively treated by obvious reasons, but without it, leaves aren't need anymore\".",
+            " Mia - \"Ok, but nearby here there a mansion with guns, directed down to the island!\"",
+            " Ukinas - \"Well... It's a defense, u know\"",
+            " Mia seems what the W is looks suspicious. Anyway, they sent a good farewell between each other."
+        ]
+    ],
+    "gallery": [
+        {
+            "mine": true,
+            "path": "../image/Ukinas in the work.png"
+        },
+        {
+            "mine": true,
+            "path": "../image/Ukinas seeing a first technological revolution in W.png"
+        }
+    ]
+}
