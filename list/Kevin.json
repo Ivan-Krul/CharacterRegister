@@ -1,0 +1,57 @@
+{
+    "pfp_path": "../image/Kevin.png",
+    "biological_class": "Dragon",
+    "initial_age": 14,
+    "sex": "Male",
+    "intedefication_in_comunity": [
+        "blue",
+        "blue",
+        "purple",
+        "pink",
+        "pink"
+    ],
+    "traits": [
+        "Hyperactive",
+        "Naive",
+        "Creative"
+    ],
+    "date_creation": "10 Aug 2023",
+    "date_creation_in_mind": "06.06.17",
+    "disappeared": false,
+    "country": "Edu",
+    "parents": {
+        "mother": "Isabella",
+        "father": "Jameson"
+    },
+    "interests": [
+        "artist"
+    ],
+    "work": "Student of Artist School in country Edu",
+    "currency": {
+        "now_place": 2,
+        "now_value": 6700,
+        "then_place": 2,
+        "then_value": 6400
+    },
+    "stories": [
+        [
+            "Kevin was created in Fur. Father was an artist and Mother was",
+            " a cooker in a restaurant of local cuisine. His parents",
+            " take care with him so much, and later for 3 years he got a naivity."
+        ],
+        [
+            "Kevin was hyperactive child: he can't easily focus in only task,",
+            " he can listen crowd and understand what's happening here, he hardly complete logic tasks.",
+            " After a diagnose, his parents understand that, so, they decided to",
+            " bring for him a bright future of artist."
+        ],
+        [
+            "Kevin like artist way, so, he developed a skill of creativity.",
+            " Alongside with his creativity, he developed a friendship with Kiwuar.",
+            " Kevin - \"Kiwuar was cheerful and kinda friendly, and I liked that!\".",
+            " Kiwuar - \"Kevin was bit odd, he can't concentrate, but I approciate that. At least, I'm his only friend\""
+        ]
+    ],
+    "gallery" : [
+    ]
+}
