@@ -105,6 +105,8 @@ async function outputOCData(){
 
       str = str.replace("[", "<i>[");
       str = str.replace("]", "]</i>");
+      while(str.indexOf(";") !== -1)
+        str = str.replace(";", "<br>");
 
       concatStr += str;
     }
@@ -236,6 +238,8 @@ async function gatherOCData() {
     let str = getNextTextSection(formatedContent);
     str = str.replace("[", "<i>[");
     str = str.replace("]", "]</i>");
+    str = str.replace(";", "<br>");
+    
     str = str.replace("\\", " ");
     concatStr += str;
 
