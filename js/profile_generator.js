@@ -1,3 +1,5 @@
+import { fetchFile } from "file_fetcher";
+
 function getCountToRoot() {
   path = window.location.pathname;
 
@@ -7,21 +9,6 @@ function getCountToRoot() {
   resCount = slashCount - slashCountDomain - 1;
 
   return resCount;
-}
-
-async function fetchFile(filePath) {
-  for (let index = 0; index < getCountToRoot(); index++) {
-    let toRoot = "../";
-    toRoot += filePath;
-    filePath = toRoot;
-  }
-
-  return fetch(filePath)
-    .then(response => response.text())
-    .catch(error => {
-      console.error('Error fetching '+filePath+':', error);
-      return '';
-    });
 }
 
 function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
@@ -42,13 +29,13 @@ function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearenc
   }
 }
 
-async function outputOCData(){
+async function outputOCData() {
   const urlParams = new URLSearchParams(window.location.search);
   const ocName = urlParams.get('oc');
 
   let content = await fetchFile("list/" + ocName + ".json");
   let json = JSON.parse(content);
-  
+
   console.log(json);
 
   document.title = ocName + " in Character Register";
@@ -58,7 +45,7 @@ async function outputOCData(){
   outputAge(json["initial_age"], json["date_creation"], json["disappeared"], json["date_disappearence"]);
   document.getElementById("sex").innerText = json["sex"];
 
-  for(let index = 0; index < json["intedefication_in_comunity"].length; index++){
+  for (let index = 0; index < json["intedefication_in_comunity"].length; index++) {
     let b = document.createElement("b");
     b.innerText = '_';
     b.style.backgroundColor = json["intedefication_in_comunity"][index];
@@ -74,7 +61,7 @@ async function outputOCData(){
   document.getElementById("dateCreation").innerText = json["date_creation"];
   document.getElementById("dateCreationInMind").innerText = json["date_creation_in_mind"];
 
-  if(json["disappeared"]) {
+  if (json["disappeared"]) {
     document.getElementById("dateDisappearence").innerText = json["date_disappearence"];
     document.getElementById("dateDisappearenceInMind").innerText = json["date_disappearence_in_mind"];
   }
@@ -99,13 +86,13 @@ async function outputOCData(){
   for (let i = 0; i < json["stories"].length; i++) {
     let div = document.createElement("p");
     let concatStr = "";
-    
-    for(let index = 0; index < json["stories"][i].length; index++){
+
+    for (let index = 0; index < json["stories"][i].length; index++) {
       let str = json["stories"][i][index];
 
       str = str.replace("[", "<i>[");
       str = str.replace("]", "]</i>");
-      while(str.indexOf(";") !== -1)
+      while (str.indexOf(";") !== -1)
         str = str.replace(";", "<br>");
 
       concatStr += str;
@@ -118,9 +105,8 @@ async function outputOCData(){
   for (let i = 0; i < json["gallery"].length; i++) {
     let img = document.createElement("img");
     img.src = json["gallery"][i]["path"];
-    
-    if (json["gallery"][i]["mine"] === false)
-    {
+
+    if (json["gallery"][i]["mine"] === false) {
       let tagA = document.createElement("a");
       tagA.href = json["gallery"][i]["link"];
       tagA.target = "_blank";
@@ -239,7 +225,7 @@ async function gatherOCData() {
     str = str.replace("[", "<i>[");
     str = str.replace("]", "]</i>");
     str = str.replace(";", "<br>");
-    
+
     str = str.replace("\\", " ");
     concatStr += str;
 
