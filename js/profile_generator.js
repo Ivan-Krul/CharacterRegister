@@ -33,7 +33,7 @@ function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearenc
     let diffd = today - new Date(strDateDisappearence);
     let diffc = today - new Date(strDateCreation);
 
-    document.getElementById("age").innerText = initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24) - parseInt(diffd / 1000 / 60 / 60 / 24 / 365.24);
+    document.getElementById("age").innerText = initialAge + parseInt(Math.floor(diffc / 1000 / 60 / 60 / 24 / 365.24 - diffd / 1000 / 60 / 60 / 24 / 365.24));
   }
   else {
     let diffc = today - new Date(strDateCreation);
