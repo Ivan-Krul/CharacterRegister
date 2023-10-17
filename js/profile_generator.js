@@ -49,6 +49,9 @@ async function outputOCData() {
   let content = await fetchFile("list/" + ocName + ".json");
   let json = JSON.parse(content);
 
+  let image_lines = (await fetchFile("image/paths.txt")).split('\n');
+  let image_list = filterStringsByMatch(image_lines, ocName);
+
   console.log(json);
 
   document.title = ocName + " in Character Register";
@@ -115,19 +118,25 @@ async function outputOCData() {
     document.getElementById("stories").appendChild(div);
   }
 
-  for (let i = 0; i < json["gallery"].length; i++) {
-    let img = document.createElement("img");
-    img.src = json["gallery"][i]["path"];
+  console.log(image_list);
+// TODO: fix implementation
 
-    if (json["gallery"][i]["mine"] === false) {
+  for(let i = 0; i < image_list.length; i++) {
+    console.log(image_list[i]);
+    let img = document.createElement("img");
+    img.src = "../" + image_list[i];
+    document.getElementById("gallery").appendChild(img);
+  }
+
+  for (let i = 0; i < json["not_mine_gallery"].length; i++) {
+    let img = document.createElement("img");
+    img.src = "../" + json["not_mine_gallery"][i]["path"];
+
       let tagA = document.createElement("a");
-      tagA.href = json["gallery"][i]["link"];
+      tagA.href = json["not_mine_gallery"][i]["link"];
       tagA.target = "_blank";
       tagA.appendChild(img)
       document.getElementById("gallery").appendChild(tagA);
-    }
-    else
-      document.getElementById("gallery").appendChild(img);
   }
 }
 
@@ -148,6 +157,12 @@ function getNextTextSection(formatedContent) {
   return str;
 }
 
+function filterStringsByMatch(strings, match) {
+  const filteredStrings = strings.filter(str => str.includes(match));
+  return filteredStrings;
+}
+
+// deprecated
 async function gatherOCData() {
   const urlParams = new URLSearchParams(window.location.search);
   const ocName = urlParams.get('oc');

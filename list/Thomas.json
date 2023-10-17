@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/Thomas is depressed.png",
+    "pfp_path": "../image/Thomas/Thomas is depressed.png",
     "biological_class": "Tiger Shark",
     "initial_age": 20,
     "sex": "Male",
@@ -121,54 +121,6 @@
             " he felt tired. In next cycle Thomas asked for a rest. Later he was so exhausted, what he declined his mandate."
         ]
     ],
-    "gallery": [
-        {
-            "mine": true,
-            "path": "../image/Thomas.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/Thomas's head.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/Thomas watching anime.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/Thomas's wounds.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230430_215037.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230507_224642.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230510_212656.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230518_202725.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230519_225715.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230522_230112.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/06_2023/Thomas is waiting.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/06_2023/Thomas is angry.png"
-        }
+    "not_mine_gallery": [
     ]
 }

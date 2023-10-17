@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/marathon/06_2023/Ostafan.png",
+    "pfp_path": "../image/Ostafan/marathon/06_2023/Ostafan.png",
     "biological_class": "Sheep & Humanoid",
     "initial_age": 19,
     "sex": "Male",
@@ -84,22 +84,6 @@
             " Later he got out of debt and started to get positive profit."
         ]
     ],
-    "gallery": [
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230503_211847.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230504_220239.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230510_212656.jpg"
-        },
-        {
-            "mine": true,
-            "path": "../image/marathon/04_2023/IMG_20230522_230112.jpg"
-        }
+    "not_mine_gallery": [
     ]
 }

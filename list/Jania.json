@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/Jania pfp.png",
+    "pfp_path": "../image/Jania/Oct 07.png",
     "biological_class": "Cat",
     "initial_age": 17,
     "sex": "Female",
@@ -203,66 +203,9 @@
             " but my friend are more important, so... maybe I'll throw away the hobby\""
         ]
     ],
-    "gallery" : [
-        {
-            "mine" : true,
-            "path" : "../image/first Jania.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Jania is yawing.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Jania with gun.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Pumpkin field.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Pined your queen.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/IMG_20230420_222230.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/photo_2023-04-25_22-35-40.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230426_203722.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230508_225812.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230510_212656.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230515_231229.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230518_202725.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230522_230112.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Jania in Vienna.png"
-        },
+    "not_mine_gallery" : [
         {     
-            "mine" : false,
-            "path" : "../image/Not mine/Jania by @Thir.jpg",
+            "path" : "image/Not mine/Jania by @Thir.jpg",
             "link": "https://twitter.com/Uki7UqvfzqQJ36j"
         }
     ]

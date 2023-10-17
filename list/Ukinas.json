@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/Ukinas.png",
+    "pfp_path": "../image/Ukinas/Ukinas.png",
     "biological_class": "Tiger Shark",
     "initial_age": 21,
     "sex": "Female",
@@ -71,14 +71,6 @@
             " Mia seems what the W is looks suspicious. Anyway, they sent a good farewell between each other."
         ]
     ],
-    "gallery": [
-        {
-            "mine": true,
-            "path": "../image/Ukinas in the work.png"
-        },
-        {
-            "mine": true,
-            "path": "../image/Ukinas seeing a first technological revolution in W.png"
-        }
+    "not_mine_gallery": [
     ]
 }

@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/marathon/06_2023/Stefan is waiting.png",
+    "pfp_path": "../image/Stefan/marathon/06_2023/Stefan is waiting.png",
     "biological_class": "Tiger Shark",
     "initial_age": 17,
     "sex": "Male",
@@ -121,42 +121,9 @@
             " Anyway, Stefan voted \"against\"."
         ]
     ],
-    "gallery" : [
-        {
-            "mine" : true,
-            "path" : "../image/Stefan with different outfit.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Stefan writing function.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/Stefan pfp.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/jar of apricot jam.png"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230429_213830.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230510_212656.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230521_224410.jpg"
-        },
-        {
-            "mine" : true,
-            "path" : "../image/marathon/04_2023/IMG_20230522_230112.jpg"
-        },
+    "not_mine_gallery" : [
         {     
-            "mine" : false,
-            "path" : "../image/Not mine/Stefan by @Thir.png",
+            "path" : "../image/Stefan/Not mine/Stefan by @Thir.png",
             "link": "https://twitter.com/Uki7UqvfzqQJ36j"
         }
     ]
