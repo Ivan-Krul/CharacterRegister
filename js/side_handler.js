@@ -5,10 +5,10 @@ const toggleButton = document.getElementById('toggleButton');
 function toggleSideMenu() {
   if (sideMenu.style.display === 'none') {
     sideMenu.style.display = 'block';
-    content.style.marginLeft = '220px';
+    content.style.marginLeft = '1.5vw';
   } else {
     sideMenu.style.display = 'none';
-    content.style.marginLeft = '20px';
+    content.style.marginLeft = '1.5vw';
   }
 }
 

@@ -1,5 +1,5 @@
 {
-    "pfp_path": "../image/Stefan/marathon/06_2023/Stefan is waiting.png",
+    "pfp_path": "../image/Stefan/Stefan is waiting.png",
     "biological_class": "Tiger Shark",
     "initial_age": 17,
     "sex": "Male",
@@ -123,7 +123,7 @@
     ],
     "not_mine_gallery" : [
         {     
-            "path" : "../image/Stefan/Not mine/Stefan by @Thir.png",
+            "path" : "image/Not mine/Stefan by @Thir.png",
             "link": "https://twitter.com/Uki7UqvfzqQJ36j"
         }
     ]

@@ -2,18 +2,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 15vw;
     height: 100%;
     background-color: #777;
     color: #fff;
-    padding: 20px;
+    padding: 2vw;
 }
 
 /* Define styles for the content area */
 #content {
-    margin-left: 220px;
+    margin-left: 1.5vw;
     /* Adjust this to accommodate the width of the side menu */
-    padding: 20px;
+    padding: 1vw;
 }
 
 #toggleButton {
