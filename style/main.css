@@ -11,7 +11,7 @@
 
 /* Define styles for the content area */
 #content {
-    margin-left: 1.5vw;
+    margin-left: 1.5vh;
     /* Adjust this to accommodate the width of the side menu */
     padding: 1vw;
 }
