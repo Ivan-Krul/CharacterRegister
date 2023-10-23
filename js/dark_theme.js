@@ -29,27 +29,43 @@ function animateTransfering(tagBody, directionToDark = true) {
   }, 1)
 }
 
+function changeBorderColor(targetDark = true) {
+  let images = document.querySelectorAll("img");
+  images.forEach(element => {
+    if(targetDark)
+      element.style.border = "5px solid white";
+    else 
+      element.style.border = "5px solid black";
+  });
+}
+
 function setThemeStyle(first = false) {
   let isDarkTheme = true;
-  if (localStorage.length === 0) {
+  if (localStorage.getItem("isDarkTheme") === undefined) {
     localStorage.setItem("isDarkTheme", isDarkTheme);
   }
   else {
     let tagBody = document.body;
     if (localStorage.getItem("isDarkTheme") === "true") {
-      if (!first)
+      if (!first) {
         animateTransfering(tagBody, true);
+        changeBorderColor(isDarkTheme);
+      }
       else {
         tagBody.style.backgroundColor = "black";
         tagBody.style.color = "white";
+        changeBorderColor(true);
       }
     }
     else {
-      if (!first)
+      if (!first) {
         animateTransfering(tagBody, false);
+        changeBorderColor(!isDarkTheme);
+      }
       else {
         tagBody.style.backgroundColor = "white";
         tagBody.style.color = "black";
+        changeBorderColor(false);
       }
     }
   }
@@ -73,5 +89,4 @@ function generateButtonToSwitch() {
 
 setThemeStyle(true);
 generateButtonToSwitch();
-
 
