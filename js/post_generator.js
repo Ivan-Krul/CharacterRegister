@@ -43,9 +43,9 @@ function divideSingleStringIntoRows(single_string = "") {
 }
 
 function generatePost(content = "", filename = "") {
-  let dateArr = filename.split("%")[0].split("_");
+  let dateArr = filename.split("~")[0].split("_");
   let date = dateArr[0] + " " + dateArr[1] + " " + dateArr[2];
-  let nameOfPostArr = filename.split("%")[1].split("_");
+  let nameOfPostArr = filename.split("~")[1].split("_");
   let nameOfPost = "";
   nameOfPostArr.forEach(element => {
     nameOfPost += element+" ";
