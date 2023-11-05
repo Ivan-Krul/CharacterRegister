@@ -42,7 +42,7 @@ function divideSingleStringIntoRows(single_string = "") {
   return single_string.split("\n");
 }
 
-function generatePost(content = "", filename = "") {
+function printPostPage(content = "", filename = "") {
   let dateArr = filename.split("~")[0].split("_");
   let date = dateArr[0] + " " + dateArr[1] + " " + dateArr[2];
   let nameOfPostArr = filename.split("~")[1].split("_");
@@ -53,7 +53,11 @@ function generatePost(content = "", filename = "") {
   let preFinalContent = "<h1>" + nameOfPost + "</h1>\n";
   preFinalContent += "<div>" + date + "</div>\n";
   preFinalContent += content;
-  generateHTMLPost(preFinalContent);
+  return preFinalContent;
+}
+
+function generatePost(content = "", filename = "") {
+  generateHTMLPost(printPostPage(content, filename));
 }
 
 async function generatePostPage(index_page = 0, index_page_size = 10) {
@@ -65,10 +69,6 @@ async function generatePostPage(index_page = 0, index_page_size = 10) {
     const link = linksArr[linksArr.length - i - index_page * index_page_size - 1];
     const content = await fetchFile("./posts/" + link);
     console.log(link);
-    console.log(content);
-
     generatePost(content,link);
   }
 }
-
-generatePostPage()
