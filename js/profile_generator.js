@@ -46,10 +46,24 @@ async function outputOCData() {
   const urlParams = new URLSearchParams(window.location.search);
   const ocName = urlParams.get('oc');
 
-  let content = await fetchFile("list/" + ocName + ".json");
-  let json = JSON.parse(content);
+  let content = "";
+  let json = {};
+  
+  let image_lines = [];
+  try {
+    content = await fetchFile("list/" + ocName + ".json");
+    json = JSON.parse(content);
 
-  let image_lines = (await fetchFile("image/paths.txt")).split('\n');
+    image_lines = (await fetchFile("image/paths.txt")).split('\n');
+  }
+  catch (error) {
+    if (Math.random() < 0.5)
+      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    else
+      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    return;
+  }
+
   let image_list = filterStringsByMatch(image_lines, ocName);
 
   console.log(json);
@@ -119,9 +133,9 @@ async function outputOCData() {
   }
 
   console.log(image_list);
-// TODO: fix implementation
+  // TODO: fix implementation
 
-  for(let i = 0; i < image_list.length; i++) {
+  for (let i = 0; i < image_list.length; i++) {
     console.log(image_list[i]);
     let img = document.createElement("img");
     img.src = "../" + image_list[i];
@@ -132,11 +146,11 @@ async function outputOCData() {
     let img = document.createElement("img");
     img.src = "../" + json["not_mine_gallery"][i]["path"];
 
-      let tagA = document.createElement("a");
-      tagA.href = json["not_mine_gallery"][i]["link"];
-      tagA.target = "_blank";
-      tagA.appendChild(img)
-      document.getElementById("gallery").appendChild(tagA);
+    let tagA = document.createElement("a");
+    tagA.href = json["not_mine_gallery"][i]["link"];
+    tagA.target = "_blank";
+    tagA.appendChild(img)
+    document.getElementById("gallery").appendChild(tagA);
   }
 }
 
