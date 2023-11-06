@@ -22,7 +22,7 @@
 
     <div id="content">
         <h2 id="header">Post Scrapper</h2>
-        <a href="post_scrapper.html">back</a><br/>
+        <a href="post_scrapper.html">back</a><br />
         <div id="post"></div>
         <img src="../resource/Circulator.gif">
     </div>
@@ -38,13 +38,30 @@
         (async () => {
             const urlParams = new URLSearchParams(window.location.search);
             const post = urlParams.get('post');
-            
-            if(post !== null) {
-                let page = printPostPage(await fetchFile("posts/" + post),post);
 
-                let resPage = page.replaceAll("image/", "../image/");
+            if (post !== null) {
+                if (post !== "") {
+                    let page = "";
+                    try {
+                        page = printPostPage(await fetchFile("posts/" + post), post);
+                        if (page.split("Eek").length === 1) {
+                            let resPage = page.replaceAll("image/", "../image/");
 
-                document.getElementById("post").innerHTML = resPage;
+                            document.getElementById("post").innerHTML = resPage;
+                        }
+                        else 
+                            throw "[Eek]";
+                    }
+                    catch (error) {
+                        if(Math.random() < 0.5)
+                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls></video>";
+                        else
+                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls></video>";
+                    }
+                }
+                else {
+                    document.getElementById("post").innerHTML = "[allocated]<br/><video src=\"../resource/Eek.mp4\" autoplay controls></video>";
+                }
             }
             else {
                 document.getElementById("header").innerText += " Browser";
@@ -53,8 +70,8 @@
 
                 partitionsArray.forEach(element => {
                     let el = document.createElement("a");
-                    el.href = "post_scrapper.html?post="+element;
-                    el.innerText = "post_scrapper.html?post="+element;
+                    el.href = "post_scrapper.html?post=" + element;
+                    el.innerText = "post_scrapper.html?post=" + element;
                     document.getElementById("post").appendChild(el).appendChild(document.createElement("br"));
                 });
             }
