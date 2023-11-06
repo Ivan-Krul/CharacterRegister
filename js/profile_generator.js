@@ -58,9 +58,9 @@ async function outputOCData() {
   }
   catch (error) {
     if (Math.random() < 0.5)
-      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls></video>";
+      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
     else
-      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls></video>";
+      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
     return;
   }
 
