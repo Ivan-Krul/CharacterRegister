@@ -24,7 +24,17 @@ function getCountToRoot() {
   return resCount;
 }
 
-function generateLinks(list) {
+function makeLinkIndependent(link) {
+  if(getCountToRoot() === 0)
+    return link;
+  for(let i = 0; i < getCountToRoot(); i++) {
+    let bufL = link;
+    link = "../" + bufL;
+  }
+  return link;
+}
+
+function generateLinks(list, httpArgument) {
   let tag = document.getElementById("linkList");
 
   for (let index = 0; index < list.length; index++) {
@@ -33,7 +43,7 @@ function generateLinks(list) {
       continue;
 
     let tagA = document.createElement("a");
-    tagA.href = getCountToRoot() !== 0 ? "../pages/oc.html?oc=" + element : "pages/oc.html?oc=" + element;
+    tagA.href = makeLinkIndependent("pages/" + httpArgument + ".html?" + httpArgument + "=" + element);
     tagA.innerText = "OC: " + element;
     let tagLi = document.createElement("li");
     tagLi.appendChild(tagA);
@@ -44,7 +54,13 @@ function generateLinks(list) {
 async function gatherOCs() {
   let content = await fetchFile("list/characters.txt");
   let formatedContent = content.split('\n');
-  generateLinks(formatedContent);
+  generateLinks(formatedContent, "oc");
+}
+
+async function gatherDefs()  {
+  let content = await fetchFile("list/definitions.txt");
+  let formatedContent = content.split('\n');
+
 }
 
 gatherOCs();

@@ -51,7 +51,7 @@ async function outputOCData() {
   
   let image_lines = [];
   try {
-    content = await fetchFile("list/" + ocName + ".json");
+    content = await fetchFile("list/characters/" + ocName + ".json");
     json = JSON.parse(content);
 
     image_lines = (await fetchFile("image/paths.txt")).split('\n');
@@ -131,9 +131,6 @@ async function outputOCData() {
 
     document.getElementById("stories").appendChild(div);
   }
-
-  console.log(image_list);
-  // TODO: fix implementation
 
   for (let i = 0; i < image_list.length; i++) {
     console.log(image_list[i]);
