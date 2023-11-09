@@ -2,16 +2,17 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 15vw;
+    width: 20vw;
     height: 100%;
     background-color: #777;
     color: #fff;
     padding: 2vw;
+    overflow-y: auto;
 }
 
 /* Define styles for the content area */
 #content {
-    margin-left: 1.5vh;
+    margin-left: 1vh;
     /* Adjust this to accommodate the width of the side menu */
     padding: 1vw;
 }
@@ -32,4 +33,8 @@ img {
     border: 5px solid white;
     margin: 5px;
     max-width:45%;
+}
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
