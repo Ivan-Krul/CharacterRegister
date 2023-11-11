@@ -44,7 +44,7 @@ function generateLinks(list, httpArgument) {
 
     let tagA = document.createElement("a");
     tagA.href = makeLinkIndependent("pages/" + httpArgument + ".html?" + httpArgument + "=" + element);
-    tagA.innerText = "OC: " + element;
+    tagA.innerText = httpArgument + ": " + element;
     let tagLi = document.createElement("li");
     tagLi.appendChild(tagA);
     tag.appendChild(tagLi);
@@ -60,9 +60,10 @@ async function gatherOCs() {
 async function gatherDefs()  {
   let content = await fetchFile("list/definitions.txt");
   let formatedContent = content.split('\n');
-
+  generateLinks(formatedContent, "def");
 }
 
 gatherOCs();
+gatherDefs();
 
 
