@@ -42,6 +42,16 @@ function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearenc
   }
 }
 
+function makeLinkIndependent(link) {
+  if(getCountToRoot() === 0)
+    return link;
+  for(let i = 0; i < getCountToRoot(); i++) {
+    let bufL = link;
+    link = "../" + bufL;
+  }
+  return link;
+}
+
 async function outputOCData() {
   const urlParams = new URLSearchParams(window.location.search);
   const ocName = urlParams.get('oc');
@@ -135,7 +145,7 @@ async function outputOCData() {
   for (let i = 0; i < image_list.length; i++) {
     console.log(image_list[i]);
     let img = document.createElement("img");
-    img.src = "../" + image_list[i];
+    img.src = makeLinkIndependent(image_list[i]);
     document.getElementById("gallery").appendChild(img);
   }
 
