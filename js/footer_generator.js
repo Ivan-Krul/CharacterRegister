@@ -11,18 +11,29 @@ function getCountToRoot() {
   return resCount;
 }
 
-function fetchFooterTemplate() {
-  return fetch(getCountToRoot() === 0? './pages/footer_template.html':'./footer_template.html') // Change 'footer_template.html' to the correct path of your external footer file
+function makeLinkIndependent(link) {
+  if(getCountToRoot() === 0)
+    return link;
+  for(let i = 0; i < getCountToRoot(); i++) {
+    let bufL = link;
+    link = "../" + bufL;
+  }
+  return link;
+}
+
+function fetchFile(filePath) {
+  filePath = makeLinkIndependent(filePath);
+  return fetch(filePath)
     .then(response => response.text())
     .catch(error => {
-      console.error('Error fetching footer template:', error);
+      console.error('Error fetching ' + filePath + ':', error);
       return '';
     });
 }
 
 // Function to assemble the external footer into the webpage
 function assembleFooter() {
-  fetchFooterTemplate()
+  fetchFile("pages/footer_template.html")
     .then(footerTemplate => {
       const footerElement = document.getElementById('externalFooter');
       footerElement.innerHTML = footerTemplate;
