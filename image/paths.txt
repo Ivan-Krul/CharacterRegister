@@ -1,7 +1,10 @@
 image\paths.txt
+image\DefinitionPool\sit.png
+image\DefinitionPool\symbol of currency S.png
 image\OCPool\Alexa\Aftermath.png
 image\OCPool\Alexa\Alexa in the beach.png
 image\OCPool\Alexa\Alexa pfp.png
+image\OCPool\Alexa\Alexa thought about that for a time.png
 image\OCPool\Alexa\Alexa's jealous.png
 image\OCPool\Alexa\Alexa's miss.png
 image\OCPool\Alexa\Alexa.png
@@ -69,6 +72,7 @@ image\OCPool\Thomas\IMG_20230519_225715.jpg
 image\OCPool\Thomas\IMG_20230522_230112.jpg
 image\OCPool\Thomas\Thomas is angry.png
 image\OCPool\Thomas\Thomas is depressed.png
+image\OCPool\Thomas\Thomas is in rehabilitation.png
 image\OCPool\Thomas\Thomas is programming.png
 image\OCPool\Thomas\Thomas is waiting.png
 image\OCPool\Thomas\Thomas watching anime.png
@@ -76,6 +80,7 @@ image\OCPool\Thomas\Thomas's head.png
 image\OCPool\Thomas\Thomas's wounds.png
 image\OCPool\Thomas\Thomas.png
 image\OCPool\Ukinas\Ukinas in the work.png
+image\OCPool\Ukinas\Ukinas is under cover in W.png
 image\OCPool\Ukinas\Ukinas seeing a first technological revolution in W.png
 image\OCPool\Ukinas\Ukinas.png
 image\PostPool\Annas celebrating.png
