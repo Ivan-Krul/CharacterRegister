@@ -1,0 +1,5 @@
+connections
+currency S
+list of country
+mind wars
+plan
