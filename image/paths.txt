@@ -1,6 +1,32 @@
 image\paths.txt
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
+image\Events\MindWarNum5\0.png
+image\Events\MindWarNum5\1.png
+image\Events\MindWarNum5\10.png
+image\Events\MindWarNum5\11.png
+image\Events\MindWarNum5\12.png
+image\Events\MindWarNum5\13.png
+image\Events\MindWarNum5\14.png
+image\Events\MindWarNum5\15.png
+image\Events\MindWarNum5\16.png
+image\Events\MindWarNum5\17.png
+image\Events\MindWarNum5\18.png
+image\Events\MindWarNum5\19.png
+image\Events\MindWarNum5\2.png
+image\Events\MindWarNum5\20.png
+image\Events\MindWarNum5\21.png
+image\Events\MindWarNum5\22.png
+image\Events\MindWarNum5\23.png
+image\Events\MindWarNum5\24.png
+image\Events\MindWarNum5\25.png
+image\Events\MindWarNum5\3.png
+image\Events\MindWarNum5\4.png
+image\Events\MindWarNum5\5.png
+image\Events\MindWarNum5\6.png
+image\Events\MindWarNum5\7.png
+image\Events\MindWarNum5\8.png
+image\Events\MindWarNum5\9.png
 image\OCPool\Alexa\Aftermath.png
 image\OCPool\Alexa\Alexa in the beach.png
 image\OCPool\Alexa\Alexa pfp.png
@@ -84,6 +110,7 @@ image\OCPool\Ukinas\Ukinas is under cover in W.png
 image\OCPool\Ukinas\Ukinas seeing a first technological revolution in W.png
 image\OCPool\Ukinas\Ukinas.png
 image\PostPool\Annas celebrating.png
+image\PostPool\CharacterRegister favicon high.png
 image\PostPool\I've ruined, cuz have paws.png
 image\PostPool\Kusya.jpg
 image\PostPool\Recreation of whoever was he.png
