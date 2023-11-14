@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/main.css">
+    <link rel="stylesheet" href="../../style/post.css">
+    <link rel="icon" type="image/png" href="../../favicon.ico">
+    <title>Event #1 in Character Register</title>
+</head>
+
+<body>
+    <div id="sideMenu">
+        <h2>Side Menu</h2>
+        <ul id="linkList">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./../../rpages/post_scrapper.html">Post Scrapper</a></li>
+            <li><a href="./../../rpages/about.html">About</a></li>
+        </ul>
+        <div id="externalFooter"></div>
+    </div>
+
+    <div id="content">
+        <h2 style="text-align: center;">Deep State Mind</h2>
+        <h2 style="text-align: center;">5th Mind War</h2>
+        
+        <div id="status" style="text-align: center;"></div>
+        <div id="remaining" style="text-align: center;"></div>
+        <img src="#" id="sit" style="text-align: center;">
+
+        <img src="./../../resource/Circulator.gif">
+    </div>
+
+    <button id="toggleButton">Toggle Menu</button>
+    <button id="toggleTheme">Toggle Theme</button>
+    <script src="../../js/side_handler.js"></script>
+    <script src="../../js/footer_generator.js"></script>
+    <script src="../../js/oc_linker.js"></script>
+    <script src="../../js/dark_theme.js"></script>
+    <script>
+        var today = new Date();
+        var beginDay = new Date("15 Nov 2023 7:00");
+        var slideDelay = 3*60*60*1000;
+        var slide = 0
+        var diff = today - beginDay;
+        var numSlide = Math.floor(diff/slideDelay);
+
+        function update() {
+            today = new Date();
+            diff = today - beginDay;
+            numSlide = Math.floor(diff/slideDelay);
+            document.getElementById("sit").src = "../../image/Events/MindWarNum5/"+numSlide+".png";
+            document.getElementById("status").innerText = "Current stage: " + numSlide;
+            document.getElementById("remaining").innerText = "Remaining to update: " + Math.floor(((slideDelay /1000) - (diff % slideDelay) / 1000) * 100)/100 + " sec";
+        }
+
+        update();
+
+        setInterval(() => {
+            update();
+        }, 1000);
+
+    </script>
+</body>
+
+</html>

@@ -63,7 +63,26 @@ async function gatherDefs()  {
   generateLinks(formatedContent, "def");
 }
 
+async function gatherEvents()  {
+  let content = await fetchFile("list/events.txt");
+  let formatedContent = content.split('\n');
+  let tag = document.getElementById("linkList");
+
+  for (let index = 0; index < formatedContent.length; index++) {
+    let element = formatedContent[index];
+    if (element === "")
+      continue;
+
+    let tagA = document.createElement("a");
+    tagA.href = makeLinkIndependent("list/events/" + element);
+    tagA.innerText ="event: " + element;
+    let tagLi = document.createElement("li");
+    tagLi.appendChild(tagA);
+    tag.appendChild(tagLi);
+}
+}
+
 gatherOCs();
 gatherDefs();
-
+gatherEvents();
 
