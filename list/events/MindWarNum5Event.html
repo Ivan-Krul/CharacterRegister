@@ -39,7 +39,7 @@
     <script src="../../js/dark_theme.js"></script>
     <script>
         var today = new Date();
-        var beginDay = new Date("13 Nov 2023 23:21");
+        var beginDay = new Date("15 Nov 2023 7:00");
         var slideDelay = 3*60*60*1000;
         var slide = 0
         var diff = today - beginDay;
@@ -51,15 +51,14 @@
             numSlide = Math.floor(diff/slideDelay);
             document.getElementById("sit").src = "../../image/Events/MindWarNum5/"+numSlide+".png";
             document.getElementById("status").innerText = "Current stage: " + numSlide;
-            document.getElementById("remaining").innerText = "Remaining to update: " + Math.floor((slideDelay - (diff % slideDelay))/1000);
-            console.log(numSlide);
+            document.getElementById("remaining").innerText = "Remaining to update: " + Math.floor(((slideDelay /1000) - (diff % slideDelay) / 1000) * 100)/100 + " sec";
         }
 
         update();
 
         setInterval(() => {
             update();
-        }, 60000);
+        }, 1000);
 
     </script>
 </body>
