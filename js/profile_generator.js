@@ -9,7 +9,7 @@ function fetchFile(filePath) {
     .then(response => response.text())
     .catch(error => {
       console.error('Error fetching ' + filePath + ':', error);
-      return '';
+      throw 'Error fetching ' + filePath + ': ' + error;
     });
 }
 
@@ -67,9 +67,13 @@ async function outputOCData() {
     image_lines = (await fetchFile("image/paths.txt")).split('\n');
   }
   catch (error) {
-    if (Math.random() < 0.5)
+    if (Math.random() < 0.25)
+    document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/Meet_the_Spy.mov\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    else if (Math.random() < 0.33)
       document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-    else
+    else if (Math.random() < 0.5)
+      document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/temple issue.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    else  
       document.getElementById("bioClass").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
     return;
   }
