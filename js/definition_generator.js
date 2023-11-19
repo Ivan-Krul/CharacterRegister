@@ -58,8 +58,12 @@ async function outputArticle() {
     document.getElementById("set").innerHTML = article;
   }
   catch (error) {
-    if (Math.random() < 0.5)
+    if (Math.random() < 0.25)
+    document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/Meet_the_Spy.mov\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    else if (Math.random() < 0.33)
       document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    else if (Math.random() < 0.5)
+      document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/temple issue.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
     else  
       document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
   }

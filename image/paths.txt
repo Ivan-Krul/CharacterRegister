@@ -59,6 +59,7 @@ image\OCPool\Jania\Oct 07.png
 image\OCPool\Jania\photo_2023-04-25_22-35-40.jpg
 image\OCPool\Jania\Pined your queen.png
 image\OCPool\Jania\Pumpkin field.png
+image\OCPool\Jania\Take my hand.png
 image\OCPool\Jania\Time to get away from that rn!.png
 image\OCPool\Jania\Unexpected meeting.png
 image\OCPool\Jania\What was that.png
@@ -77,6 +78,7 @@ image\OCPool\Ostafan\IMG_20230510_212656.jpg
 image\OCPool\Ostafan\IMG_20230522_230112.jpg
 image\OCPool\Ostafan\order to ADA.png
 image\OCPool\Ostafan\Ostafan.png
+image\OCPool\Stefan\Departure of Stefan.png
 image\OCPool\Stefan\IMG_20230429_213830.jpg
 image\OCPool\Stefan\IMG_20230510_212656.jpg
 image\OCPool\Stefan\IMG_20230521_224410.jpg
