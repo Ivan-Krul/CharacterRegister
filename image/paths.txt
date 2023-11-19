@@ -78,6 +78,7 @@ image\OCPool\Ostafan\IMG_20230510_212656.jpg
 image\OCPool\Ostafan\IMG_20230522_230112.jpg
 image\OCPool\Ostafan\order to ADA.png
 image\OCPool\Ostafan\Ostafan.png
+image\OCPool\Stefan\Departure of Stefan.png
 image\OCPool\Stefan\IMG_20230429_213830.jpg
 image\OCPool\Stefan\IMG_20230510_212656.jpg
 image\OCPool\Stefan\IMG_20230521_224410.jpg
