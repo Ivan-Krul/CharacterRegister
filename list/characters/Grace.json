@@ -1,0 +1,44 @@
+{
+    "pfp_path": "",
+    "biological_class": "Dog",
+    "initial_age": 19,
+    "sex": "Female",
+    "intedefication_in_comunity": [
+        "black",
+        "white",
+        "black",
+        "white",
+        "black",
+        "white"
+    ],
+    "traits": [
+        "Forthright",
+        "Creative",
+        "Coarse"
+    ],
+    "date_creation": "10 Aug 2023",
+    "date_creation_in_mind": "06.06.17",
+    "disappeared": false,
+    "country": "Edu",
+    "parents": {
+        "mother": "Isabella",
+        "father": "Jameson"
+    },
+    "interests": [
+        "artist"
+    ],
+    "work": "Student of Artist School in country Edu",
+    "currency": {
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
+    },
+    "stories": [
+        [
+            "[under construction]"
+        ]
+    ],
+    "not_mine_gallery" : [
+    ]
+}
