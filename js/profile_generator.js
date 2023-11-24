@@ -164,6 +164,7 @@ function fillProfile(object) {
   document.getElementById("parents").innerText =            object["parents"]["mother"] + '\n';
   document.getElementById("parents").innerText +=           object["parents"]["father"];
   document.getElementById("work").innerText =               object["work"];
+  document.getElementById("mbtiType").innerText =           object["mbti"];
 
   outputAge(
     object["initial_age"],

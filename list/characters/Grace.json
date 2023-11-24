@@ -1,5 +1,5 @@
 {
-    "pfp_path": "",
+    "pfp_path": null,
     "biological_class": "Dog",
     "initial_age": 19,
     "sex": "Female",
@@ -19,21 +19,24 @@
     "date_creation": null,
     "date_creation_in_mind": null,
     "disappeared": false,
-    "country": null,
+    "country": "Lang",
     "parents": {
-        "mother": null,
-        "father": null
+        "mother": "Sunrise",
+        "father": "Herbert"
     },
     "interests": [
-        null
+        "Polyglot",
+        "Books",
+        "Manga"
     ],
-    "work": null,
+    "work": "Library assistant",
     "currency": {
         "now_place": null,
         "now_value": null,
         "then_place": null,
         "then_value": null
     },
+    "mbti": null,
     "stories": [
     ],
     "not_mine_gallery" : [
