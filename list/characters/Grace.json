@@ -16,18 +16,18 @@
         "Creative",
         "Coarse"
     ],
-    "date_creation": "10 Aug 2023",
-    "date_creation_in_mind": "06.06.17",
+    "date_creation": null,
+    "date_creation_in_mind": null,
     "disappeared": false,
-    "country": "Edu",
+    "country": null,
     "parents": {
-        "mother": "Isabella",
-        "father": "Jameson"
+        "mother": null,
+        "father": null
     },
     "interests": [
-        "artist"
+        null
     ],
-    "work": "Student of Artist School in country Edu",
+    "work": null,
     "currency": {
         "now_place": null,
         "now_value": null,
@@ -35,9 +35,6 @@
         "then_value": null
     },
     "stories": [
-        [
-            "[under construction]"
-        ]
     ],
     "not_mine_gallery" : [
     ]
