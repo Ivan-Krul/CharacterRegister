@@ -1,5 +1,5 @@
 {
-    "pfp_path": null,
+    "pfp_path": "../image/OCPool/Grace/Grace.png",
     "biological_class": "Dog",
     "initial_age": 19,
     "sex": "Female",
@@ -13,7 +13,7 @@
     ],
     "traits": [
         "Forthright",
-        "Creative",
+        "Analytical",
         "Coarse"
     ],
     "date_creation": null,
