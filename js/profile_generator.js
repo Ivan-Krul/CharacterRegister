@@ -25,6 +25,10 @@ function getCountToRoot() {
 }
 
 function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
+  if(strDateCreation === null) {
+    document.getElementById("age").innerText = initialAge;
+    return;
+  }
   const today = new Date();
   if (disappeared) {
     console.log("disappeared");
@@ -50,6 +54,130 @@ function makeLinkIndependent(link) {
     link = "../" + bufL;
   }
   return link;
+}
+
+function fillIndeteficationInComunity(object) {
+  for (let index = 0; index < object["intedefication_in_comunity"].length; index++) {
+    let b = document.createElement("b");
+    b.innerText = '_';
+    b.style.backgroundColor = object["intedefication_in_comunity"][index];
+    document.getElementById("idInCom").appendChild(b);
+  }
+}
+
+function fillTraits(object) {
+  for (let index = 0; index < object["traits"].length; index++) {
+    let b = document.createElement("div");
+    b.innerText = object["traits"][index];
+    document.getElementById("traits").appendChild(b);
+  }
+}
+
+function fillDateDisappearence(object) {
+  if (object["disappeared"] || object["dateDisappearence"] !== undefined || object["dateDisappearenceInMind"] !== undefined) {
+    document.getElementById("dateDisappearence").innerText = object["date_disappearence"];
+    document.getElementById("dateDisappearenceInMind").innerText = object["date_disappearence_in_mind"];
+  }
+}
+
+function fillInterests(object) {
+  for (let index = 0; index < object["interests"].length; index++) {
+    let b = document.createElement("div");
+    b.innerText = object["interests"][index];
+    document.getElementById("intrestings").appendChild(b);
+  }
+}
+
+function fillCurrency(object) {
+  document.getElementById("currency").innerText = "#" + object["currency"]["now_place"]
+    + " (~" + object["currency"]["now_value"]
+    + "S) from " + "#" + object["currency"]["then_place"]
+    + " (~" + object["currency"]["then_value"] + "S)";
+}
+
+function replaceAllOccurrences(inputString, substringToReplace, replacementValue) {
+  // Escape special characters in the substring
+  var escapedSubstring = substringToReplace.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  // Use a regular expression with the global flag to replace all occurrences
+  var regex = new RegExp(escapedSubstring, 'g');
+  
+  // Replace all occurrences of the substring with the new value
+  var resultString = inputString.replace(regex, replacementValue);
+
+  return resultString;
+}
+
+function fillStories(object) {
+  for (let i = 0; i < object["stories"].length; i++) {
+    let div = document.createElement("p");
+    let concatStr = "";
+
+    for (let index = 0; index < object["stories"][i].length; index++) {
+      let str = object["stories"][i][index];
+
+      str = replaceAllOccurrences(str, "[q]", "<q>");
+      str = replaceAllOccurrences(str, "[/q]", "</q>");
+
+      str = replaceAllOccurrences(str, "[", "<i>[");
+      str = replaceAllOccurrences(str, "]", "]</i>");
+      str = replaceAllOccurrences(str, "\n", "<br>");
+
+      concatStr += str;
+    }
+    div.innerHTML = concatStr;
+
+    document.getElementById("stories").appendChild(div);
+  }
+}
+
+function fillMineGallery(image_lines, ocName) {
+  image_list = filterStringsByMatch(image_lines, ocName);
+
+  for (let i = 0; i < image_list.length; i++) {
+    let img = document.createElement("img");
+    img.src = makeLinkIndependent(image_list[i]);
+    document.getElementById("gallery").appendChild(img);
+  }
+}
+
+function fillNotMineGallery(object) {
+  for (let i = 0; i < object["not_mine_gallery"].length; i++) {
+    let img = document.createElement("img");
+    img.src = "../" + object["not_mine_gallery"][i]["path"];
+
+    let tagA = document.createElement("a");
+    tagA.href = object["not_mine_gallery"][i]["link"];
+    tagA.target = "_blank";
+    tagA.appendChild(img)
+    document.getElementById("gallery").appendChild(tagA);
+  }
+}
+
+function fillProfile(object) {
+  document.getElementById("pfp").src =                      object["pfp_path"];
+  document.getElementById("bioClass").innerText =           object["biological_class"];
+  document.getElementById("sex").innerText =                object["sex"];
+  document.getElementById("dateCreation").innerText =       object["date_creation"];
+  document.getElementById("dateCreationInMind").innerText = object["date_creation_in_mind"];
+  document.getElementById("country").innerText =            object["country"];
+  document.getElementById("parents").innerText =            object["parents"]["mother"] + '\n';
+  document.getElementById("parents").innerText +=           object["parents"]["father"];
+  document.getElementById("work").innerText =               object["work"];
+  document.getElementById("mbtiType").innerText =           object["mbti"];
+
+  outputAge(
+    object["initial_age"],
+    object["date_creation"],
+    object["disappeared"],
+    object["date_disappearence"]);
+  fillIndeteficationInComunity(object);
+  fillTraits(object);
+  fillDateDisappearence(object);
+  fillInterests(object);
+  fillCurrency(object);
+  fillStories(object);
+  fillNotMineGallery(object);
 }
 
 async function outputOCData() {
@@ -78,91 +206,11 @@ async function outputOCData() {
     return;
   }
 
-  let image_list = filterStringsByMatch(image_lines, ocName);
-
-  console.log(json);
-
-  document.title = ocName + " in Character Register";
   document.getElementById("header").innerText = ocName;
-  document.getElementById("pfp").src = json["pfp_path"];
-  document.getElementById("bioClass").innerText = json["biological_class"];
-  outputAge(json["initial_age"], json["date_creation"], json["disappeared"], json["date_disappearence"]);
-  document.getElementById("sex").innerText = json["sex"];
+  document.title = ocName + " in Character Register";
 
-  for (let index = 0; index < json["intedefication_in_comunity"].length; index++) {
-    let b = document.createElement("b");
-    b.innerText = '_';
-    b.style.backgroundColor = json["intedefication_in_comunity"][index];
-    document.getElementById("idInCom").appendChild(b);
-  }
-
-  for (let index = 0; index < json["traits"].length; index++) {
-    let b = document.createElement("div");
-    b.innerText = json["traits"][index];
-    document.getElementById("traits").appendChild(b);
-  }
-
-  document.getElementById("dateCreation").innerText = json["date_creation"];
-  document.getElementById("dateCreationInMind").innerText = json["date_creation_in_mind"];
-
-  if (json["disappeared"]) {
-    document.getElementById("dateDisappearence").innerText = json["date_disappearence"];
-    document.getElementById("dateDisappearenceInMind").innerText = json["date_disappearence_in_mind"];
-  }
-
-  document.getElementById("country").innerText = json["country"];
-
-  document.getElementById("parents").innerText = json["parents"]["mother"] + '\n';
-  document.getElementById("parents").innerText += json["parents"]["father"];
-
-  for (let index = 0; index < json["interests"].length; index++) {
-    let b = document.createElement("div");
-    b.innerText = json["interests"][index];
-    document.getElementById("intrestings").appendChild(b);
-  }
-
-  document.getElementById("work").innerText = json["work"];
-  document.getElementById("currency").innerText = "#" + json["currency"]["now_place"]
-    + " (~" + json["currency"]["now_value"]
-    + "S) from " + "#" + json["currency"]["then_place"]
-    + " (~" + json["currency"]["then_value"] + "S)";
-
-  for (let i = 0; i < json["stories"].length; i++) {
-    let div = document.createElement("p");
-    let concatStr = "";
-
-    for (let index = 0; index < json["stories"][i].length; index++) {
-      let str = json["stories"][i][index];
-
-      str = str.replace("[", "<i>[");
-      str = str.replace("]", "]</i>");
-      while (str.indexOf(";") !== -1)
-        str = str.replace(";", "<br>");
-
-      concatStr += str;
-    }
-    div.innerHTML = concatStr;
-
-    document.getElementById("stories").appendChild(div);
-  }
-
-  for (let i = 0; i < image_list.length; i++) {
-    console.log(image_list[i]);
-    let img = document.createElement("img");
-    img.src = makeLinkIndependent(image_list[i]);
-    document.getElementById("gallery").appendChild(img);
-  }
-
-  for (let i = 0; i < json["not_mine_gallery"].length; i++) {
-    let img = document.createElement("img");
-    img.src = "../" + json["not_mine_gallery"][i]["path"];
-
-    let tagA = document.createElement("a");
-    tagA.href = json["not_mine_gallery"][i]["link"];
-    tagA.target = "_blank";
-    tagA.appendChild(img)
-    document.getElementById("gallery").appendChild(tagA);
-  }
+  fillProfile(json);
+  fillMineGallery(image_lines, ocName);
 }
 
 var readIndex = 0;

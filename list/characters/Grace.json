@@ -1,0 +1,44 @@
+{
+    "pfp_path": "../image/OCPool/Grace/Grace.png",
+    "biological_class": "Dog",
+    "initial_age": 19,
+    "sex": "Female",
+    "intedefication_in_comunity": [
+        "black",
+        "white",
+        "black",
+        "white",
+        "black",
+        "white"
+    ],
+    "traits": [
+        "Forthright",
+        "Analytical",
+        "Coarse"
+    ],
+    "date_creation": null,
+    "date_creation_in_mind": null,
+    "disappeared": false,
+    "country": "Lang",
+    "parents": {
+        "mother": "Sunrise",
+        "father": "Herbert"
+    },
+    "interests": [
+        "Polyglot",
+        "Books",
+        "Manga"
+    ],
+    "work": "Library assistant",
+    "currency": {
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
+    },
+    "mbti": null,
+    "stories": [
+    ],
+    "not_mine_gallery" : [
+    ]
+}
