@@ -125,7 +125,7 @@ function fillStories(object) {
 
       concatStr += str;
     }
-    div.innerHTML = concatStr;
+    div.innerHTML = concatStr + "<hr>";
 
     document.getElementById("stories").appendChild(div);
   }
