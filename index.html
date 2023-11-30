@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
@@ -35,12 +36,13 @@
     <button id="toggleButton">Toggle Menu</button>
     <button id="toggleTheme">Toggle Theme</button>
     <script src="./js/side_handler.js"></script>
-    <script src="./js/footer_generator.js"></script>
-    <script src="./js/oc_linker.js"></script>
-    <script src="./js/dark_theme.js"></script>
-    <script src="./js/post_generator.js"></script>
-    <script>
-        generatePostPage(0,10);
+    <script type="module" src="./js/footer_generator.js"></script>
+    <script type="module" src="./js/oc_linker.js"></script>
+    <script type="module" src="./js/dark_theme.js"></script>
+    <script type="module" src="./js/post_generator.js"></script>
+    <script type="module">
+        import * as postg from "./js/post_generator.js";
+        postg.generatePostPage(0,10);
     </script>
 </body>
 

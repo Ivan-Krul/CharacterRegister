@@ -1,28 +1,4 @@
-function fetchFile(filePath) {
-  for (let index = 0; index < getCountToRoot(); index++) {
-    let toRoot = "../";
-    toRoot += filePath;
-    filePath = toRoot;
-  }
-
-  return fetch(filePath)
-    .then(response => response.text())
-    .catch(error => {
-      console.error('Error fetching ' + filePath + ':', error);
-      throw 'Error fetching ' + filePath + ': ' + error;
-    });
-}
-
-function getCountToRoot() {
-  path = window.location.pathname;
-
-  slashCount = (path.match(/\//g) || []).length;
-  splitedStr = path.split("CharacterRegister")[0];
-  slashCountDomain = (splitedStr.match(/\//g) || []).length;
-  resCount = slashCount - slashCountDomain - 1;
-
-  return resCount;
-}
+import * as fileFetcher from "./file_fetcher.js";
 
 function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
   if(strDateCreation === null) {
@@ -132,7 +108,7 @@ function fillStories(object) {
 }
 
 function fillMineGallery(image_lines, ocName) {
-  image_list = filterStringsByMatch(image_lines, ocName);
+  let image_list = filterStringsByMatch(image_lines, ocName);
 
   for (let i = 0; i < image_list.length; i++) {
     let img = document.createElement("img");
@@ -189,10 +165,10 @@ async function outputOCData() {
   
   let image_lines = [];
   try {
-    content = await fetchFile("list/characters/" + ocName + ".json");
+    content = await fileFetcher.fetchFile("list/characters/" + ocName + ".json");
     json = JSON.parse(content);
 
-    image_lines = (await fetchFile("image/paths.txt")).split('\n');
+    image_lines = (await fileFetcher.fetchFile("image/paths.txt")).split('\n');
   }
   catch (error) {
     if (Math.random() < 0.25)
