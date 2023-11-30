@@ -30,12 +30,15 @@
 
     <button id="toggleButton">Toggle Menu</button>
     <button id="toggleTheme">Toggle Theme</button>
-    <script src="./../js/side_handler.js"></script>
-    <script src="./../js/footer_generator.js"></script>
-    <script src="./../js/dark_theme.js"></script>
-    <script src="./../js/oc_linker.js"></script>
-    <script src="./../js/post_generator.js"></script>
-    <script>
+    <script type="module" src="./../js/side_handler.js"></script>
+    <script type="module" src="./../js/footer_generator.js"></script>
+    <script type="module" src="./../js/dark_theme.js"></script>
+    <script type="module" src="./../js/oc_linker.js"></script>
+    <script type="module">
+        import * as fileFetcher from "../js/file_fetcher.js";
+        import * as postGenerator from "./../js/post_generator.js";
+        import * as videoException from "./../js/video_exception.js";
+
         (async () => {
             const urlParams = new URLSearchParams(window.location.search);
             const post = urlParams.get('post');
@@ -44,8 +47,8 @@
                 if (post !== "") {
                     let page = "";
                     try {
-                        let file = await fetchFile("posts/" + post);
-                        page = printPostPage(file, post);
+                        let file = await fileFetcher.fetchFile("posts/" + post);
+                        page = postGenerator.printPostPage(file, post);
                         if (page.split("Eek").length === 1) {
                             let resPage = page.replaceAll("image/", "../image/");
 
@@ -55,14 +58,7 @@
                             throw "[Eek]";
                     }
                     catch (error) {
-                        if (Math.random() < 0.25)
-                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/Meet_the_Spy.mov\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-                        else if (Math.random() < 0.33)
-                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-                        else if (Math.random() < 0.5)
-                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/temple issue.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-                        else
-                            document.getElementById("post").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+                        document.getElementById("post").appendChild(await videoException.getExceptionNode(error));
                     }
                 }
                 else {
@@ -71,8 +67,8 @@
             }
             else {
                 document.getElementById("header").innerText += " Browser";
-                let partitions = await fetchFile("posts/partitions.txt");
-                partitionsArray = partitions.split("\n");
+                let partitions = await fileFetcher.fetchFile("posts/partitions.txt");
+                let partitionsArray = partitions.split("\n");
 
                 partitionsArray.forEach(element => {
                     let el = document.createElement("a");
