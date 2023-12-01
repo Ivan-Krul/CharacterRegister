@@ -1,8 +1,8 @@
 {
     "pfp_path": "../image/OCPool/Grace/Grace.png",
-    "biological_class": "Dog",
+    "biological_class": "Dog/Hund",
     "initial_age": 19,
-    "sex": "Female",
+    "sex": "Female/Weiblich",
     "intedefication_in_comunity": [
         "black",
         "white",
@@ -16,8 +16,8 @@
         "Analytical",
         "Coarse"
     ],
-    "date_creation": null,
-    "date_creation_in_mind": null,
+    "date_creation": "27 Nov 2023",
+    "date_creation_in_mind": "23.11.17",
     "disappeared": false,
     "country": "Lang",
     "parents": {
@@ -26,10 +26,10 @@
     },
     "interests": [
         "Polyglot",
-        "Books",
+        "Books/Bucher",
         "Manga"
     ],
-    "work": "Library assistant",
+    "work": "Library assistant/Bibliotheksassistent",
     "currency": {
         "now_place": null,
         "now_value": null,
@@ -38,6 +38,53 @@
     },
     "mbti": null,
     "stories": [
+        [
+            "Grace was born in intellectual family, where all in her family was writers and readers. Sunrise decided to take her to writing school when she had 4 years old.",
+            " Grace started to be interested in books, and she started to reading them alot. They - \"She deserved that! She can grow by herself, and grow even faster, that",
+            " her vessel\""
+        ],
+        [
+            "In school, Grace was famous by her forthrightness. She can tell about others honestly and understandable, and so, some students are asking for",
+            " honest description of the each other. Almost all hates her because she tells truth about them and then started to think, what she spies on them.",
+            " Some of them are gladly to understand their mistakes. Grace's friend, River - \"I was kinda jerk. I provoked Theo, what he have defensed me, because I",
+            " had a bag of sweets. Grace's honest speech was rude, but I like discovering a solution's deep caves.\".\n Grace - \"Why are still coming to me, and asking",
+            " for a roast????\""
+        ],
+        [
+            "After gradulation, Grace decided to go to more philological direction by starting learn German. While she's stydied, she discovered what there's a whole book",
+            " group, what are mainly interested in, well books. Also she discovered a job as library assistance. At least, she was satisfied about her work..."
+        ],
+        [
+            "In the group, Grace met with all members of the group, including [N:Stefan,V:Stefan.]. Grace - \"I thought, what he is she, but after a first word, he seems to me",
+            " weirdo\". After for a week she got adapted and she can show herself in bright side. She started to get in manga world, and she likes it.",
+            " Her parents ofter visited Grace in the group, and discuss with other readers. Grace - \"They often tell about their work and their impressions about what they",
+            " read. I'm gladly, what they are our family\""
+        ],
+        [
+            "When Grace was took to Anime by [N:Stefan,V:Stefan.] before 4th Mind war:",
+            "\n[q]\n",
+            " All his[[N:Stefan,V:Stefan's.]] friends accepted, except Grace. She wanted to go with [N:Stefan,V:Stefan.], but her parents didn't wanted.\n",
+            " [N:Stefan,V:Stefan.] - \"Hey Grace! I heard your argued, but I was disagree with your parents. So, I decided to take you\"\n",
+            " Grace - \"Really? Of course I will be with you!\".\n [N:Stefan,V:Stefan.] - \"Are you have love attration?\"\n",
+            " Grace(embarassing) - \"No...\".\n [N:Stefan,V:Stefan.] - \"So, are we going?\"\n",
+            " They sneakly left Grace's home and [N:Stefan,V:Stefan.] told his parents, time to begin.",
+            "\n[/q]\n",
+            " She realised, what mistake she made...",
+            "\n*While they're in floating vehicle*\n",
+            "Grace - \"Know you what, [N:Stefan,V:Stefan.], but I'm feeling weirdly\"\n",
+            "[N:Stefan,V:Stefan.] - \"What's wrong?\"\n",
+            "Grace - \"Well, my parents still disagree with me. I think, what it's for a best...\"\n",
+            "[N:Stefan,V:Stefan.] - \"Don't worry, they will be ok!\"\n",
+            "After coming back to the Fur, she check it out, and goes to her parents with a huge hug.",
+            " Grace told about her decisions and her experience. They forgive her for the behaviour."
+        ],
+        [
+            "When 5th Mind war was occured, she tried to lead the group, and they decided to hide in Land's bunker for refugees. They took place and started to discuss political",
+            " themes like: Why Fur is joining to Tol block?, Is Lang got paid by F❤️ to take over the region with the bunker, etc. Some of the refugees are came here to discuss",
+            " their political problems.",
+            " After 5th Mind war, Grace and group realised, what the territory, where suppost to be Fur now is Lang, and Grace decided to still stay in place, where they",
+            " found the group. Only was one question, where is Stefan right now?"
+        ]        
     ],
     "not_mine_gallery" : [
     ]

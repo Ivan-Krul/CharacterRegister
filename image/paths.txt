@@ -38,6 +38,7 @@ image\OCPool\Alexa\IMG_20230501_220440.jpg
 image\OCPool\Alexa\IMG_20230510_212656.jpg
 image\OCPool\Alexa\IMG_20230521_224410.jpg
 image\OCPool\Alexa\IMG_20230522_230112.jpg
+image\OCPool\Grace\Grace.png
 image\OCPool\Jania\-rw9530.jpg
 image\OCPool\Jania\Anniversary.png
 image\OCPool\Jania\Dream.png

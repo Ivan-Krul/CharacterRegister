@@ -1,71 +1,20 @@
-function fetchFile(filePath) {
-  for (let index = 0; index < getCountToRoot(); index++) {
-    let toRoot = "../";
-    toRoot += filePath;
-    filePath = toRoot;
-  }
-
-  return fetch(filePath)
-    .then(response => response.text())
-    .catch(error => {
-      console.error('Error fetching ' + filePath + ':', error);
-      throw 'Error fetching ' + filePath + ': ' + error;
-    });
-}
-
-function getCountToRoot() {
-  path = window.location.pathname;
-
-  slashCount = (path.match(/\//g) || []).length;
-  splitedStr = path.split("CharacterRegister")[0];
-  slashCountDomain = (splitedStr.match(/\//g) || []).length;
-  resCount = slashCount - slashCountDomain - 1;
-
-  return resCount;
-}
-
-function makeLinkIndependent(link) {
-  if(getCountToRoot() === 0)
-    return link;
-  for(let i = 0; i < getCountToRoot(); i++) {
-    let bufL = link;
-    link = "../" + bufL;
-  }
-  return link;
-}
-
-function makeLinkIndependent(link) {
-  if(getCountToRoot() === 0)
-    return link;
-  for(let i = 0; i < getCountToRoot(); i++) {
-    let bufL = link;
-    link = "../" + bufL;
-  }
-  return link;
-}
-
+import * as fileFetcher from "./file_fetcher.js";
+import * as videoException from "./video_exception.js";
 
 async function outputArticle() {
   const urlParams = new URLSearchParams(window.location.search);
   const definition = urlParams.get('def');
 
   try {
-    let article = await fetchFile("list/definitions/" + definition + ".html");
+    let article = await fileFetcher.fetchFile("list/definitions/" + definition + ".html");
 
-    article = article.replaceAll("%(imgdir)%", makeLinkIndependent("image/DefinitionPool/"));
+    article = article.replaceAll("%(imgdir)%", fileFetcher.makeLinkIndependent("image/DefinitionPool/"));
 
     document.getElementById("header").innerText = "Definition of: " + definition;
     document.getElementById("set").innerHTML = article;
   }
   catch (error) {
-    if (Math.random() < 0.25)
-    document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/Meet_the_Spy.mov\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-    else if (Math.random() < 0.33)
-      document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/knife style.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-    else if (Math.random() < 0.5)
-      document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/temple issue.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
-    else  
-      document.getElementById("set").innerHTML = error + "<br/><video src=\"../resource/wrecked.mp4\" autoplay controls style=\"max-width: 50vw; max-height: 50vh\"></video>";
+    document.getElementById("set").appendChild(await videoException.getExceptionNode(error));
   }
 }
 

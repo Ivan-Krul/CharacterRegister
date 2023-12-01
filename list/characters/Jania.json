@@ -77,11 +77,11 @@
             " world and cheer me to make my first investiment\"."
         ],
         [
-            "One time, Jania decided to visit Kiwuar,",
+            "One time, Jania decided to visit [N:Kiwuar,V:Kiwuar.],",
             " with her friends, but, unfortunatly, nobody didn't",
             " accept to visit him. Jania started to argue with her",
-            " friends. It's because nobody wanted to visit Kiwuar",
-            " \"Why we should go to the Kiwuar? He's soo boring.",
+            " friends. It's because nobody wanted to visit [N:Kiwuar,V:Kiwuar.]",
+            " \"Why we should go to the [N:Kiwuar,V:Kiwuar.]? He's soo boring.",
             " Moreover, he suggest us to go to a plain, and that's",
             " disgusting...\" but she didn't listened them\n Jania",
             " - \"Are you going to regect him, as my friend, I think no\"."
@@ -103,7 +103,7 @@
             "One time, Jania heard something very far. She decided,",
             " what need to get out of there, and go to the furthest place,",
             " as possible. When she with her parents still preparerad,",
-            " Jania saw Kiwuar, what looks scared. After preperation,",
+            " Jania saw [N:Kiwuar,V:Kiwuar.], what looks scared. After preperation,",
             " they started to get out of there. After long time of",
             " forced travelling, they came to Art."
         ],
@@ -166,18 +166,18 @@
             " gang to tell, what she cares about."
         ],
         [
-            "One time, Jania decided to go to the Kiwuar and discover,",
-            " is he there. Jania walked to the Kiwuar's town and",
+            "One time, Jania decided to go to the [N:Kiwuar,V:Kiwuar.] and discover,",
+            " is he there. Jania walked to the [N:Kiwuar,V:Kiwuar's.] town and",
             " saw some buildings are still broken. When she came to the",
-            " Kiwuar's house, she saw repairing house, what it",
-            " wasn't Kiwuar's house. She knocked a door and waited",
+            " [N:Kiwuar,V:Kiwuar's.] house, she saw repairing house, what it",
+            " wasn't [N:Kiwuar,V:Kiwuar's.] house. She knocked a door and waited",
             " for a while. Later, the door was opened and it was a",
-            " Kiwuar's mother, Julia. Jania asked about him, but",
+            " [N:Kiwuar,V:Kiwuar's.] mother, Julia. Jania asked about him, but",
             " Julia answered, what he was disappeared\n",
             "Jania(shocked) - \"Really? Do you know when?\"\n",
             "Julia - \"5 cycles after declearing the 4th Mind war.\"\n\n",
 
-            "[q]Kiwuar was exhausted, with no energy to create",
+            "[q][N:Kiwuar,V:Kiwuar.] was exhausted, with no energy to create",
             " anything and he was silent. Sometimes he even cried.",
             " One time, after 4 cycles, he was so tired, what he asked",
             " his mom, Julia, to go outside. He later disappeared from",
@@ -186,7 +186,7 @@
             "Jania(sadly) - \"Oh...\"\n Jania felt the same pain as in Julia, as thought.",
             " She started crying and hugged Julia. Julia also cried\n",
             " Jania - \"I'm feeling the same pain as you\"\n Julia - \"I know\"\n",
-            " Jania said goodbye and got, what Kiwuar was disappeared",
+            " Jania said goodbye and got, what [N:Kiwuar,V:Kiwuar.] was disappeared",
             " forever."
         ],
         [
@@ -201,15 +201,15 @@
             " Driven by an unknown compulsion, she decided to leave this country to more peaceful place.",
             " With determination, she got in Life(country).",
 
-            " While she was staying in Life, she crossed paths with Stefan.",
+            " While she was staying in Life, she crossed paths with [N:Stefan,V:Stefan.].",
             " Initially, he recognised Jania's figure as \"Money demander\" from his memory.",
             " He shared what he felt embarassed and became more melanholic because of Jania.",
             " She couldn't recall the events, but she apologized for her previous behaviour.",
-            " Stefan forgave her and, feeling bored, he started sharing his reasons to come here.",
+            " [N:Stefan,V:Stefan.] forgave her and, feeling bored, he started sharing his reasons to come here.",
 
-            " Stefan said that he had fled from Fur due to his fear of Thomas and his purposes.",
+            " [N:Stefan,V:Stefan.] said that he had fled from Fur due to his fear of [N:Thomas,V:Thomas.] and his purposes.",
             " He believes, what it's his fault, and as a result, the 5th Mind War was decleared.",
-            " Stefan also tells about himself.\n",
+            " [N:Stefan,V:Stefan.] also tells about himself.\n",
             " Jania - \"He tells for me about himself. I didn't use to believe, what he was came from rich parents. He's like me - have friends,",
             " memories about his trips, and even have unusual interestings! I wasn't sure, is he a boy, or a girl, until I heard his name\"\n",
             " In this moment, Jania had remembered what she forgot.",
@@ -217,10 +217,10 @@
             " Jania - \"I used to be with friends and hang out with them, and for attention and money I did a lot...",
 			" When you was, I thought about making money from you, but the at least, I thought about your authority.",
 			" as a newcommer in our group. I didn't know why are you ran away to be honest.\"\n",
-			" Stefan - \"Yeah? And what happened with your group?\"\n",
+			" [N:Stefan,V:Stefan.] - \"Yeah? And what happened with your group?\"\n",
 			" Jania - \"Well, started 4th Mind war, and then adaptation, then experiments on me, then education, then another 5th Mind war...\"\n",
 			" She was reminded, what Jania doesn't speak with her friends anymore.\n",
-            " Stefan - \"And, what? You've lost them!\"\n",
+            " [N:Stefan,V:Stefan.] - \"And, what? You've lost them!\"\n",
             " After that was an awkward silence, so they left and then spotted in different places."
         ]
     ],
