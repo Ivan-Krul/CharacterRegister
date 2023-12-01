@@ -93,6 +93,10 @@ function fillStories(object) {
     for (let index = 0; index < object["stories"][i].length; index++) {
       let str = object["stories"][i][index];
 
+      str = replaceAllOccurrences(str, "[N:", "<a href=\"oc.html?oc=");
+      str = replaceAllOccurrences(str, ",V:", "\">");
+      str = replaceAllOccurrences(str, ".]", "</a>");
+
       str = replaceAllOccurrences(str, "[q]", "<q>");
       str = replaceAllOccurrences(str, "[/q]", "</q>");
 
@@ -185,143 +189,10 @@ async function outputOCData() {
 
 var readIndex = 0;
 
-function getTextSection(formatedContent) {
-  let str = formatedContent[readIndex];
-  if (str.lastIndexOf("\r") !== -1)
-    str = str.split('\r')[0];
-
-  console.log(readIndex + ": " + str);
-  return str;
-}
-
-function getNextTextSection(formatedContent) {
-  let str = getTextSection(formatedContent);
-  readIndex++;
-  return str;
-}
-
 function filterStringsByMatch(strings, match) {
   const filteredStrings = strings.filter(str => str.includes(match));
   return filteredStrings;
 }
-
-// deprecated
-async function gatherOCData() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const ocName = urlParams.get('oc');
-
-  let content = await fetchFile("list/" + ocName + ".txt");
-  let formatedContent = content.split('\n');
-  formatedContent = formatedContent.filter((str) => {
-    return ((str.length > 1)
-      ? ((str[0] !== '#')
-        ? true
-        : false)
-      : false);
-  });
-
-  console.log(formatedContent);
-
-  readIndex = 0;
-
-  document.title = ocName + " in Character Register";
-  document.getElementById("header").innerText = ocName;
-  document.getElementById("pfp").src = getNextTextSection(formatedContent);
-  document.getElementById("bioClass").innerText = getNextTextSection(formatedContent);
-  let initialAge = parseInt(getNextTextSection(formatedContent));
-  document.getElementById("sex").innerText = getTextSection(formatedContent);
-
-  let size = parseInt(getNextTextSection(formatedContent));
-
-  for (let index = 0; index < size; index++) {
-    let b = document.createElement("b");
-    b.innerText = '_';
-    b.style.backgroundColor = getNextTextSection(formatedContent);
-    document.getElementById("idInCom").appendChild(b);
-  }
-
-  size = parseInt(getNextTextSection(formatedContent));
-
-  for (let index = 0; index < size; index++) {
-    let b = document.createElement("div");
-    b.innerText = (getNextTextSection(formatedContent)) + " (" + getNextTextSection(formatedContent) + ")";
-    document.getElementById("traits").appendChild(b);
-  }
-
-  let strDateCreation = getNextTextSection(formatedContent);
-  document.getElementById("dateCreation").innerText = strDateCreation;
-  document.getElementById("dateCreationInMind").innerText = getNextTextSection(formatedContent);
-
-  let strDateDisappearence = getNextTextSection(formatedContent);
-  document.getElementById("dateDisappearence").innerText = strDateDisappearence;
-  document.getElementById("dateDisappearenceInMind").innerText = getNextTextSection(formatedContent);
-  outputAge(initialAge, strDateCreation, strDateDisappearence !== "!!!", strDateDisappearence);
-
-  document.getElementById("country").innerText = getNextTextSection(formatedContent);
-
-  document.getElementById("parents").innerText = getNextTextSection(formatedContent);
-  document.getElementById("parents").innerText += getNextTextSection(formatedContent);
-
-  size = parseInt(getNextTextSection(formatedContent));
-
-  for (let index = 0; index < size; index++) {
-    let b = document.createElement("div");
-    b.innerText = getNextTextSection(formatedContent);
-    document.getElementById("intrestings").appendChild(b);
-  }
-
-  document.getElementById("work").innerText = getNextTextSection(formatedContent);
-  document.getElementById("currency").innerText = "#" + parseInt(getNextTextSection(formatedContent))
-    + " (~" + parseInt(getNextTextSection(formatedContent))
-    + "S) from " + "#" + parseInt(getNextTextSection(formatedContent))
-    + " (~" + parseInt(getNextTextSection(formatedContent)) + "S)";
-
-  // Parse story
-  size = parseInt(getNextTextSection(formatedContent));
-
-  for (let i = 0; i < size; i++) {
-    console.log(i);
-    let div = document.createElement("p");
-    let concatStr = "";
-    if (getTextSection(formatedContent).lastIndexOf("\\") === -1) {
-      do {
-        console.log(readIndex);
-        let str = getNextTextSection(formatedContent);
-        str = str.replace("[", "<i>[");
-        str = str.replace("]", "]</i>");
-        concatStr += str;
-      } while (getTextSection(formatedContent).lastIndexOf("\\") === -1);
-    }
-    let str = getNextTextSection(formatedContent);
-    str = str.replace("[", "<i>[");
-    str = str.replace("]", "]</i>");
-    str = str.replace(";", "<br>");
-
-    str = str.replace("\\", " ");
-    concatStr += str;
-
-    div.innerHTML = concatStr;
-
-    document.getElementById("stories").appendChild(div);
-  }
-
-  size = parseInt(getNextTextSection(formatedContent));
-
-  for (let i = 0; i < size; i++) {
-    let img = document.createElement("img");
-    let path = getNextTextSection(formatedContent);
-    if (path === "%") {
-      img.src = getNextTextSection(formatedContent);
-      img.alt = "author " + getNextTextSection(formatedContent);
-    }
-    else
-      img.src = path
-
-    document.getElementById("gallery").appendChild(img);
-
-  }
-}
-
 
 outputOCData();
 
