@@ -23,16 +23,6 @@ function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearenc
   }
 }
 
-function makeLinkIndependent(link) {
-  if(getCountToRoot() === 0)
-    return link;
-  for(let i = 0; i < getCountToRoot(); i++) {
-    let bufL = link;
-    link = "../" + bufL;
-  }
-  return link;
-}
-
 function fillIndeteficationInComunity(object) {
   for (let index = 0; index < object["intedefication_in_comunity"].length; index++) {
     let b = document.createElement("b");
@@ -112,12 +102,15 @@ function fillStories(object) {
   }
 }
 
-function fillMineGallery(image_lines, ocName) {
+async function fillMineGallery() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const ocName = urlParams.get('oc');
+  let image_lines = (await fileFetcher.fetchFile("image/paths.txt")).split('\n');
   let image_list = filterStringsByMatch(image_lines, ocName);
 
   for (let i = 0; i < image_list.length; i++) {
     let img = document.createElement("img");
-    img.src = makeLinkIndependent(image_list[i]);
+    img.src = fileFetcher.makeLinkIndependent(image_list[i]);
     document.getElementById("gallery").appendChild(img);
   }
 }
@@ -158,6 +151,7 @@ function fillProfile(object) {
   fillInterests(object);
   fillCurrency(object);
   fillStories(object);
+  fillMineGallery();
   fillNotMineGallery(object);
 }
 
