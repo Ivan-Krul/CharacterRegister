@@ -178,7 +178,6 @@ async function outputOCData() {
   document.title = ocName + " in Character Register";
 
   fillProfile(json);
-  fillMineGallery(image_lines, ocName);
 }
 
 var readIndex = 0;
