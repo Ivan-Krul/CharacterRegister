@@ -27,7 +27,7 @@
     position: fixed;
     top: 20px;
     right: 120px;
-    z-index: 1;
+    z-index: 8;
 }
 img {
     border: 5px solid white;

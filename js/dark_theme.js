@@ -71,7 +71,7 @@ function setThemeStyle(first = false) {
   }
 }
 
-function handleClick() {
+export function handleClick() {
   if(index)
     return;
 
@@ -84,6 +84,8 @@ function handleClick() {
 
 function generateButtonToSwitch() {
   let tagButton = document.getElementById("toggleTheme");
+  if(tagButton === null)
+   tagButton = document.getElementById("button_toggleTheme");
   tagButton.onclick = handleClick;
 }
 
