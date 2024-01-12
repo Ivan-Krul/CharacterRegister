@@ -27,3 +27,7 @@ export function makeLinkIndependent(link) {
   }
   return link;
 }
+
+export function getURLParams() {
+  return urlParams = new URLSearchParams(window.location.search);
+}
