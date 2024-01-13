@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Harlow Solid Italic'; /*a name to be used later*/
+    src: url('./../HARLOWSI.TTF'); /*URL to font*/
+}
+
 .text {
     font-family: "Harlow Solid Italic";
     font-size: 125%;
