@@ -31,10 +31,10 @@
     ],
     "work": "Student of Trade School in country Art",
     "currency": {
-        "now_place": 2,
-        "now_value": 7200,
-        "then_place": 2,
-        "then_value": 7500
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": "ESTP",
     "stories": [

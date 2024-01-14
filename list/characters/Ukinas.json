@@ -29,10 +29,10 @@
     ],
     "work": "Activist",
     "currency": {
-        "now_place": 2,
-        "now_value": 13000,
-        "then_place": 4,
-        "then_value": 2100
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": null,
     "stories": [
