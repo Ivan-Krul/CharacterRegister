@@ -75,6 +75,11 @@ function replaceAllOccurrences(inputString, substringToReplace, replacementValue
   return resultString;
 }
 
+function removeComments(input) {
+  const regex = /\/\*[\s\S]*?\*\//g;
+  return input.replace(regex, '');
+}
+
 function fillStories(object) {
   for (let i = 0; i < object["stories"].length; i++) {
     let div = document.createElement("p");
@@ -96,6 +101,9 @@ function fillStories(object) {
 
       concatStr += str;
     }
+
+    concatStr = removeComments(concatStr);
+
     div.innerHTML = concatStr + "<hr>";
 
     document.getElementById("stories").appendChild(div);
@@ -149,7 +157,7 @@ function fillProfile(object) {
   fillTraits(object);
   fillDateDisappearence(object);
   fillInterests(object);
-  fillCurrency(object);
+  //document.getElementById("currency").innerText = undefined;//fillCurrency(object);
   fillStories(object);
   fillMineGallery();
   fillNotMineGallery(object);
