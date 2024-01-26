@@ -97,6 +97,12 @@ function fillStories(object) {
 
       str = replaceAllOccurrences(str, "[", "<i>[");
       str = replaceAllOccurrences(str, "]", "]</i>");
+      
+      str = replaceAllOccurrences(str, "[LR:", "<a href=\"../resource/");
+      str = replaceAllOccurrences(str, "[LP:", "<a href=\"post_scrapper.html?post=");
+      str = replaceAllOccurrences(str, "[LD:", "<a href=\"def.html?def=");
+      str = replaceAllOccurrences(str, "[L:", "<a href=\"");
+
       str = replaceAllOccurrences(str, "\n", "<br>");
 
       concatStr += str;
