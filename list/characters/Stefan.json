@@ -30,10 +30,10 @@
     ],
     "work": "Student of Trade School in country Edu",
     "currency": {
-        "now_place": 2,
-        "now_value": 7000,
-        "then_place": 1,
-        "then_value": 16000
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": "INFP",
     "stories": [

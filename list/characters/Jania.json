@@ -14,7 +14,9 @@
     "traits": [
         "Brave (mainly near friends)",
         "Patient (in tricky situations)",
-        "Manipulative (mainly for rich persons)"
+        "Manipulative (mainly for rich persons)?",
+        "Communicable!",
+        "Insane!"
     ],
     "date_creation": "7 Oct 2022",
     "date_creation_in_mind": "21.08.16",
@@ -26,15 +28,16 @@
     },
     "interests": [
         "trade",
-        "bureaucracy",
-        "topograph"
+        "bureaucracy?",
+        "topograph?",
+        "communication!"
     ],
-    "work": "Student of Trade School in country Art",
+    "work": "Not employed",
     "currency": {
-        "now_place": 2,
-        "now_value": 7200,
-        "then_place": 2,
-        "then_value": 7500
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": "ESTP",
     "stories": [
@@ -222,6 +225,30 @@
 			" She was reminded, what Jania doesn't speak with her friends anymore.\n",
             " [N:Stefan,V:Stefan.] - \"And, what? You've lost them!\"\n",
             " After that was an awkward silence, so they left and then spotted in different places."
+        ],
+        [
+            "In the end of the 5th Mind war, Jania decided to take a spot in Life for a longer time. She decided to make a new life but instead of small town",
+            " like Kiwlley, Jania will be in Grephanie. She lost a care. Is she losing hope?\n",
+            "Jania tried so hard, and got so far, but in the end it doesn't even matter.\n",
+            "She went too far, to lost them all, but in the end, it doesn't even matter.\n",
+            "She saw radiance under her. She knows what will happen with her. Capsule was formed and she was sent to ESC,",
+            " as she heard from this old robotic syntecized voice in cabin.",
+            " Due to huge aceleration and so, high G, she lost concious.\n\n...\n\n",
+            "Welcome back to laboratoric enviroument, what she was well known. In this time, she saw a cabin with a place for her.",
+            " Manipulators are tried to pick her, but they got stuck in Jania's hair, or she resisted, because she was grabbed in specific places.",
+            " Later, manipulators are kept away, but it was for a beam, what holding her in static pose. The beam dragged her to the cabin.",
+            " When it happened, the cabin was closed, and so, Jania was released from beam. She was trapped in the cabin. Her thoughts were anxious.",
+            " \"What will they do in this time? Kill me!?\".",
+            " The process was started and Jania felt injection into her body, later she fell in concious.\n",
+            "\n...\n",
+            "[LR:REQ_REF_OBJ_CAC1CEC9C100_SHOT_DR_171215_20240125_CONV_MOVM_INSR_RES.png,V:REQ_REF_OBJ_CAC1CEC9C100_SHOT_DR_171215_20240125_CONV_MOVM_INSR_RES.png.]\n...\n",
+            "\n[LR:Linkin Park - In the End.mp3,V:In the End.]\n[LR:Sabrepulse - Close To Me.mp3,V:Close to me.]\n[LR:King Gnu - SPECIALZ.mp3,V:Specially.]\n...\n",
+            "[LR:CheesyHFJ - Againagon.mp3,V:Againagon.]\n[LR:HL2 - Probably Not A Problem.mp3,V:Probably Not A Problem.]\n[LR:tone 1000Hz.mp3,V:DONE.]\n",
+            "...\n",
+            "[Jania's body was injected again and was carried to launcher and was launched to (106,442)]\n",
+            "When Jania woke up, she felt headache. Why she is in Furherzland? Jania wanted to stay in Grephanie, but why?",
+            "Jania after a walking around for a while, she wanted some friends, but where are they? She decided to move again to Grephanie, because why not.",
+            "After settle down in the city, she decided to visit some integration into trading. Also she joined to the club for refugees from existed Fur."
         ]
     ],
     "not_mine_gallery" : [

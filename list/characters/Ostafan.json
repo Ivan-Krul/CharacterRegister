@@ -29,12 +29,12 @@
         "team up leader",
         "conducting business"
     ],
-    "work": "Businessman",
+    "work": "CEO of \"TetraBank\"",
     "currency": {
-        "now_place": 3,
-        "now_value": 6400,
-        "then_place": 3,
-        "then_value": 5900
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": "ENFJ",
     "stories": [

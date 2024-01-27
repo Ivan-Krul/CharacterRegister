@@ -75,6 +75,11 @@ function replaceAllOccurrences(inputString, substringToReplace, replacementValue
   return resultString;
 }
 
+function removeComments(input) {
+  const regex = /\/\*[\s\S]*?\*\//g;
+  return input.replace(regex, '');
+}
+
 function fillStories(object) {
   for (let i = 0; i < object["stories"].length; i++) {
     let div = document.createElement("p");
@@ -87,15 +92,24 @@ function fillStories(object) {
       str = replaceAllOccurrences(str, ",V:", "\">");
       str = replaceAllOccurrences(str, ".]", "</a>");
 
+      str = replaceAllOccurrences(str, "[LR:", "<a href=\"../resource/");
+      str = replaceAllOccurrences(str, "[LP:", "<a href=\"post_scrapper.html?post=");
+      str = replaceAllOccurrences(str, "[LD:", "<a href=\"def.html?def=");
+      str = replaceAllOccurrences(str, "[L:", "<a href=\"");
+
       str = replaceAllOccurrences(str, "[q]", "<q>");
       str = replaceAllOccurrences(str, "[/q]", "</q>");
 
       str = replaceAllOccurrences(str, "[", "<i>[");
       str = replaceAllOccurrences(str, "]", "]</i>");
+
       str = replaceAllOccurrences(str, "\n", "<br>");
 
       concatStr += str;
     }
+
+    concatStr = removeComments(concatStr);
+
     div.innerHTML = concatStr + "<hr>";
 
     document.getElementById("stories").appendChild(div);
@@ -149,7 +163,7 @@ function fillProfile(object) {
   fillTraits(object);
   fillDateDisappearence(object);
   fillInterests(object);
-  fillCurrency(object);
+  //document.getElementById("currency").innerText = undefined;//fillCurrency(object);
   fillStories(object);
   fillMineGallery();
   fillNotMineGallery(object);

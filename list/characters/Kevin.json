@@ -28,10 +28,10 @@
     ],
     "work": "Student of Artist School in country Edu",
     "currency": {
-        "now_place": 2,
-        "now_value": 6700,
-        "then_place": 2,
-        "then_value": 6400
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": null,
     "stories": [

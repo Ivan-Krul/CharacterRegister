@@ -30,12 +30,12 @@
         "circuit engineer",
         "viewer of anime"
     ],
-    "work": "Not working",
+    "work": "Not employed",
     "currency": {
-        "now_place": 1,
-        "now_value": 11000,
-        "then_place": 3,
-        "then_value": 4400
+        "now_place": null,
+        "now_value": null,
+        "then_place": null,
+        "then_value": null
     },
     "mbti": "ISFJ",
     "stories": [
