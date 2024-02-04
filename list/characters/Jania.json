@@ -252,13 +252,18 @@
         ]
     ],
     "not_mine_gallery" : [
+		{     
+            "path" : "image/Not mine/Jania on Bday by @RaiDev_.png",
+            "link": "https://twitter.com/RaiDev_"
+        },
+		{	
+            "path" : "image/Not mine/Jania Chirstmas by @UnGato377.png",
+            "link": "https://twitter.com/UnGato377"
+        },
         {     
             "path" : "image/Not mine/Jania by @Thir.jpg",
             "link": "https://twitter.com/Uki7UqvfzqQJ36j"
-        },
-        {     
-            "path" : "image/Not mine/Jania Chirstmas by @UnGato377.png",
-            "link": "https://twitter.com/UnGato377"
         }
+        
     ]
 }
