@@ -30,11 +30,10 @@
     <div id="content">
         <h2>Character Register</h2>
 
-        <div>What's new?</div>
+        <div>What's new? Idk</div>
         <div id="posts">
             <hr/>
         </div>
-        <img src="./resource/Circulator.gif">
     </div>
 
     <button id="toggleButton">Toggle Menu</button>
@@ -47,6 +46,18 @@
     <script type="module">
         import * as postg from "./js/post_generator.js";
         postg.generatePostPage(0,10);
+    </script>
+    <script>
+        let div = document.createElement("div");
+        document.getElementById("sideMenu").appendChild(div);
+
+setInterval(()=>{
+        let curDate = new Date();
+        let nYDate = new Date(`${curDate.getFullYear()} Jan 1`);
+
+        div.innerText=`Loading to ${curDate.getFullYear()+1}: ${((curDate - nYDate) / 10 / 60 / 60 / 24 / 365.24)}%`
+}, 100);
+        
     </script>
 </body>
 
