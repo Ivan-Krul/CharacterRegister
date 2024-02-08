@@ -51,7 +51,7 @@
                         let file = await fileFetcher.fetchFile("posts/" + post);
                         page = postGenerator.printPostPage(file, post);
                         if (page.split("Eek").length === 1) {
-                            let resPage = page.replaceAll("image/", "../image/");
+                            let resPage = page.replaceAll("./", "./../");
 
                             document.getElementById("post").innerHTML = resPage;
                         }
@@ -63,7 +63,7 @@
                     }
                 }
                 else {
-                    document.getElementById("post").innerHTML = "[allocated]<br/><video src=\"../resource/Eek.mp4\" autoplay controls></video>";
+                    document.getElementById("post").innerHTML = "[allocated]<br/><video src=\"../resource/waw.mov\" autoplay controls></video>";
                 }
             }
             else {
