@@ -57,7 +57,12 @@ setInterval(()=>{
 
         div.innerText=`Loading to ${curDate.getFullYear()+1}: ${((curDate - nYDate) / 10 / 60 / 60 / 24 / 365.24)}%`
 }, 100);
-        
+    </script>
+    <script>
+        let curDate = new Date();
+        if(curDate.getDate() === 4 && curDate.getMonth() === 1) {
+            alert("YAY, AUTHOR OF THE PAGE HAS A BIRTHDAY!! HAPPY BIRTHDAY TO ME!!");
+        }
     </script>
 </body>
 
