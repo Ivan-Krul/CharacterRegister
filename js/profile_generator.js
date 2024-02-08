@@ -90,7 +90,14 @@ function fillStories(object) {
 
       str = replaceAllOccurrences(str, "[N:", "<a href=\"oc.html?oc=");
       str = replaceAllOccurrences(str, ",V:", "\">");
+
+      str = replaceAllOccurrences(str, "{ER: A:", "<audio src=\"../resource/");
+      str = replaceAllOccurrences(str, "|A ER}", "\" controls></audio>");
+
       str = replaceAllOccurrences(str, ".]", "</a>");
+
+      str = replaceAllOccurrences(str, "{SP>", "<span style=\"background-color: black; color:black\">");
+      str = replaceAllOccurrences(str, "<SP}", "</span>");
 
       str = replaceAllOccurrences(str, "[LR:", "<a href=\"../resource/");
       str = replaceAllOccurrences(str, "[LP:", "<a href=\"post_scrapper.html?post=");
@@ -184,7 +191,8 @@ async function outputOCData() {
     image_lines = (await fileFetcher.fetchFile("image/paths.txt")).split('\n');
   }
   catch (error) {
-    document.getElementById("bioClass").appendChild(videoException.getExceptionNode(error));
+    let div_section = document.getElementById("content");
+    div_section.appendChild(await videoException.getExceptionNode(error));
     return;
   }
 

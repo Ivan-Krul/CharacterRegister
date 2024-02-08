@@ -5,12 +5,14 @@ async function outputArticle() {
   const urlParams = new URLSearchParams(window.location.search);
   const definition = urlParams.get('def');
 
+  document.getElementById("header").innerText = "Definition of: " + definition;
+
   try {
     let article = await fileFetcher.fetchFile("list/definitions/" + definition + ".html");
 
     article = article.replaceAll("%(imgdir)%", fileFetcher.makeLinkIndependent("image/DefinitionPool/"));
 
-    document.getElementById("header").innerText = "Definition of: " + definition;
+    
     document.getElementById("set").innerHTML = article;
   }
   catch (error) {

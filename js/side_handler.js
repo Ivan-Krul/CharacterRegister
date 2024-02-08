@@ -1,3 +1,5 @@
+
+
 const sideMenu = document.getElementById('sideMenu');
 var content = document.getElementById('content');
 const toggleButton = document.getElementById('toggleButton');
@@ -5,8 +7,8 @@ const toggleButton = document.getElementById('toggleButton');
 function toggleSideMenu() {
   const windowRatio = window.innerWidth / window.innerHeight;
 
-  if(windowRatio > 1.0){
-    sideMenu.style.width = "30vw";
+  if(windowRatio > 1.1){
+    sideMenu.style.width = "25vw";
     sideMenu.style.height = "100%";
   if (sideMenu.style.display === 'none') {
     sideMenu.style.display = 'block';
