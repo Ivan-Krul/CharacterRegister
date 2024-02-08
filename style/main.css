@@ -1,3 +1,11 @@
+
+
+
+@font-face {
+    font-family: 'Fot'; /*a name to be used later*/
+    src: url('Burbank Big Condensed Black.otf'); /*URL to font*/
+}
+
 #sideMenu {
     position: fixed;
     top: 0;
@@ -36,5 +44,5 @@ img {
 }
 
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
