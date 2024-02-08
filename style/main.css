@@ -12,10 +12,19 @@
     left: 0;
     width: 20vw;
     height: 100%;
-    background-color: #777;
+    background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
     color: #fff;
+    border: 5px solid black;
     padding: 2vw;
     overflow-y: auto;
+}
+
+#sideMenu a{
+    color:#fff;
+}
+
+#sideMenu a:visited{
+    color:#fff;
 }
 
 /* Define styles for the content area */
