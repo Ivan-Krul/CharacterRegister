@@ -1,4 +1,5 @@
 image\paths.txt
+image\DefinitionPool\cit.png
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
 image\Events\MindWarNum5\0.png
@@ -71,10 +72,12 @@ image\OCPool\Jania\Take my hand.png
 image\OCPool\Jania\Time to get away from that rn!.png
 image\OCPool\Jania\Unexpected meeting.png
 image\OCPool\Jania\What was that.png
+image\OCPool\Kevin\K is standing for Know.png
 image\OCPool\Kevin\Kevin.png
 image\OCPool\Kevin\order to ADA.png
 image\OCPool\Kiwuar\first Kiwuar.png
 image\OCPool\Kiwuar\getting started.png
+image\OCPool\Kiwuar\K is standing for Know.png
 image\OCPool\Kiwuar\Kiwuar pfp.png
 image\OCPool\Kiwuar\Kiwuar with cover.png
 image\OCPool\Kiwuar\Kiwuar's researches.png
