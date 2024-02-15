@@ -104,8 +104,8 @@ function fillStories(object) {
       str = replaceAllOccurrences(str, "[LD:", "<a href=\"def.html?def=");
       str = replaceAllOccurrences(str, "[L:", "<a href=\"");
 
-      str = replaceAllOccurrences(str, "[q]", "<q>");
-      str = replaceAllOccurrences(str, "[/q]", "</q>");
+      str = replaceAllOccurrences(str, "[q]", "<blockquote style=\"color: gray;\">");
+      str = replaceAllOccurrences(str, "[/q]", "</blockquote>");
 
       str = replaceAllOccurrences(str, "[", "<i>[");
       str = replaceAllOccurrences(str, "]", "]</i>");
