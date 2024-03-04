@@ -91,10 +91,10 @@ function fillStories(object) {
       str = replaceAllOccurrences(str, "[N:", "<a href=\"oc.html?oc=");
       str = replaceAllOccurrences(str, ",V:", "\">");
 
-      str = replaceAllOccurrences(str, "{ER: A:", "<audio src=\"../resource/");
-      str = replaceAllOccurrences(str, "|A ER}", "\" controls></audio>");
-
       str = replaceAllOccurrences(str, ".]", "</a>");
+
+      str = replaceAllOccurrences(str, "{IR>", "<img src=\"");
+      str = replaceAllOccurrences(str, "<IR}", "\"/>");
 
       str = replaceAllOccurrences(str, "{SP>", "<span style=\"background-color: black; color:black\">");
       str = replaceAllOccurrences(str, "<SP}", "</span>");
