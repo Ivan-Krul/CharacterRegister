@@ -25,7 +25,7 @@
         "father": "Filip"
     },
     "interests": [
-        "politician",
+        "politician?",
         "programmer",
         "circuit engineer",
         "viewer of anime"
@@ -118,8 +118,15 @@
             "In backward of the map saw a note - \"Division by regions was erased because DB was broked down by Life\"\n"
         ],
         [
-            " Later, he heard what his plan was cracked by creating an Outer Border. He was so angry, as he could. After that,",
+            "Later, he heard what his plan was cracked by creating an Outer Border. He was so angry, as he could. After that,",
             " he felt tired. In next cycle Thomas asked for a rest. Later he was so exhausted, what he declined his mandate."
+        ],
+        [
+            "One time, Thomas was recovered. He saw so much changed, what were done. After his discharge from hospital, he first hasn't used to new enviroument.",
+            " He was so confused, because in hospital, he was in his own bubble of information: he's getting disks of anime, but he didn't know existance of",
+            " intercontinental services, asks for Zeitung(Newspaper), etc...\n",
+            "He decided to go to Bordeffto, because he's more preferable to live in F.K, than in F.D.",
+            " "
         ]
     ],
     "not_mine_gallery": [

@@ -33,6 +33,7 @@ image\Favicons\Favicon 32x32.png
 image\Favicons\Favicon 64x64.png
 image\OCPool\Alexa\Aftermath.png
 image\OCPool\Alexa\Alexa in the beach.png
+image\OCPool\Alexa\Alexa is meeting Yogan.png
 image\OCPool\Alexa\Alexa pfp.png
 image\OCPool\Alexa\Alexa thought about that for a time.png
 image\OCPool\Alexa\Alexa's jealous.png
