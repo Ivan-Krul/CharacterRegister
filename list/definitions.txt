@@ -1,6 +1,7 @@
 connections
 currency S
 list of country
+ESC
 mind wars
 plan
 cities
