@@ -68,3 +68,13 @@ a {
 * {
     font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.unpreferable {
+    text-decoration:none ;
+    background-color: black; 
+    color:black;
+}
+
+.unpreferable:hover {
+    color: white;
+}

@@ -1,5 +1,6 @@
 image\paths.txt
 image\DefinitionPool\cit.png
+image\DefinitionPool\ESC secret shot.png
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
 image\Events\MindWarNum5\0.png
@@ -97,6 +98,7 @@ image\OCPool\Stefan\IMG_20230510_212656.jpg
 image\OCPool\Stefan\IMG_20230521_224410.jpg
 image\OCPool\Stefan\IMG_20230522_230112.jpg
 image\OCPool\Stefan\jar of apricot jam.png
+image\OCPool\Stefan\Stefan in library.png
 image\OCPool\Stefan\Stefan is waiting.png
 image\OCPool\Stefan\Stefan pfp.png
 image\OCPool\Stefan\Stefan with different outfit.png
