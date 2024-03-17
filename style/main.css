@@ -14,7 +14,7 @@
     height: 100%;
     background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
     color: #fff;
-    border: 5px solid black;
+    border-right: 5px solid black;
     padding: 2vw;
     overflow-y: auto;
 }
@@ -34,17 +34,14 @@
     padding: 1vw;
 }
 
-#toggleButton {
+.overlayed {
+    z-index: 1;
+}
+
+#control-buttons-container {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1;
-}
-#toggleTheme {
-    position: fixed;
-    top: 20px;
-    right: 120px;
-    z-index: 8;
 }
 img {
     border: 5px solid white;
@@ -52,6 +49,31 @@ img {
     max-width:45%;
 }
 
+a {
+    /* to unwrap */
+    white-space: pre-wrap; /* CSS3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
 * {
     font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.undesirable {
+    font-size: 5%;
+    text-decoration:none;
+    background-color: red; 
+    color:red;
 }

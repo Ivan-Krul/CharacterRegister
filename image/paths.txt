@@ -1,5 +1,6 @@
 image\paths.txt
 image\DefinitionPool\cit.png
+image\DefinitionPool\ESC secret shot.png
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
 image\Events\MindWarNum5\0.png
@@ -33,6 +34,7 @@ image\Favicons\Favicon 32x32.png
 image\Favicons\Favicon 64x64.png
 image\OCPool\Alexa\Aftermath.png
 image\OCPool\Alexa\Alexa in the beach.png
+image\OCPool\Alexa\Alexa is meeting Yogan.png
 image\OCPool\Alexa\Alexa pfp.png
 image\OCPool\Alexa\Alexa thought about that for a time.png
 image\OCPool\Alexa\Alexa's jealous.png
@@ -61,6 +63,7 @@ image\OCPool\Jania\Jania Christmas.png
 image\OCPool\Jania\Jania had sad vibes.png
 image\OCPool\Jania\Jania in Vienna.png
 image\OCPool\Jania\Jania is yawing.png
+image\OCPool\Jania\Jania pfp speedrun.png
 image\OCPool\Jania\Jania pfp.png
 image\OCPool\Jania\Jania with gun.png
 image\OCPool\Jania\Jania with strawberry.png
@@ -96,6 +99,7 @@ image\OCPool\Stefan\IMG_20230510_212656.jpg
 image\OCPool\Stefan\IMG_20230521_224410.jpg
 image\OCPool\Stefan\IMG_20230522_230112.jpg
 image\OCPool\Stefan\jar of apricot jam.png
+image\OCPool\Stefan\Stefan in library.png
 image\OCPool\Stefan\Stefan is waiting.png
 image\OCPool\Stefan\Stefan pfp.png
 image\OCPool\Stefan\Stefan with different outfit.png
@@ -129,6 +133,7 @@ image\PostPool\Annas celebrating.png
 image\PostPool\Annas Christmas.png
 image\PostPool\CharacterRegister favicon high.png
 image\PostPool\First Art Raffle.png
+image\PostPool\Gang in Altes Landgut.png
 image\PostPool\I've ruined, cuz have paws.png
 image\PostPool\Kusya.jpg
 image\PostPool\Mira discovered a forest.png
