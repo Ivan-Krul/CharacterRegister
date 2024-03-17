@@ -14,7 +14,7 @@
     height: 100%;
     background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
     color: #fff;
-    border: 5px solid black;
+    border-right: 5px solid black;
     padding: 2vw;
     overflow-y: auto;
 }
@@ -34,26 +34,19 @@
     padding: 1vw;
 }
 
-#toggleButton {
+.overlayed {
+    z-index: 1;
+}
+
+#control-buttons-container {
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1;
-}
-#toggleTheme {
-    position: fixed;
-    top: 20px;
-    right: 120px;
-    z-index: 8;
 }
 img {
     border: 5px solid white;
     margin: 5px;
     max-width:45%;
-}
-button {
-    margin-left: 4vh;
-    margin-right: 4vh;
 }
 
 a {
@@ -69,12 +62,9 @@ a {
     font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.unpreferable {
-    text-decoration:none ;
-    background-color: black; 
-    color:black;
-}
-
-.unpreferable:hover {
-    color: white;
+.undesirable {
+    font-size: 5%;
+    text-decoration:none;
+    background-color: red; 
+    color:red;
 }

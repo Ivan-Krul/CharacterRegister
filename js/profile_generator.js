@@ -99,7 +99,7 @@ function fillStories(object) {
       str = replaceAllOccurrences(str, "{SP>", "<span style=\"background-color: black; color:black\">");
       str = replaceAllOccurrences(str, "<SP}", "</span>");
 
-      str = replaceAllOccurrences(str, "{?>", "<a href=\"#\" class=\"unpreferable\">");
+      str = replaceAllOccurrences(str, "{?>", "<a href=\"#\" class=\"undesirable\">");
       str = replaceAllOccurrences(str, "<?}", "</a>");
 
       str = replaceAllOccurrences(str, "[LR:", "<a href=\"../resource/");
