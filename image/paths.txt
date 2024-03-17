@@ -63,6 +63,7 @@ image\OCPool\Jania\Jania Christmas.png
 image\OCPool\Jania\Jania had sad vibes.png
 image\OCPool\Jania\Jania in Vienna.png
 image\OCPool\Jania\Jania is yawing.png
+image\OCPool\Jania\Jania pfp speedrun.png
 image\OCPool\Jania\Jania pfp.png
 image\OCPool\Jania\Jania with gun.png
 image\OCPool\Jania\Jania with strawberry.png
@@ -132,6 +133,7 @@ image\PostPool\Annas celebrating.png
 image\PostPool\Annas Christmas.png
 image\PostPool\CharacterRegister favicon high.png
 image\PostPool\First Art Raffle.png
+image\PostPool\Gang in Altes Landgut.png
 image\PostPool\I've ruined, cuz have paws.png
 image\PostPool\Kusya.jpg
 image\PostPool\Mira discovered a forest.png
