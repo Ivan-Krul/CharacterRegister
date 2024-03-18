@@ -72,7 +72,7 @@ a {
 }
 
 .undesirable {
-    font-size: 5%;
+    font-size: 0.05ch;
     text-decoration:none;
     background-color: red; 
     color:red;
