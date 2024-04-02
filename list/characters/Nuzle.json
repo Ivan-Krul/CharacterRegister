@@ -1,0 +1,36 @@
+{
+  "pfp_path": "../image/OCPool/Nuzle/Nuzle.png",
+  "biological_class": "Bunny",
+  "initial_age": 17,
+  "sex": "Female",
+  "intedefication_in_comunity": [
+    "#D52800",
+    "#FF8800",
+    "#FFFFFF",
+    "#D261A3",
+    "#A30061"
+  ],
+  "traits": [
+    "Silly"
+  ],
+  "date_creation": "25 Mar 2024",
+  "disappeared": false,
+  "date_disappearence": null,
+  "date_disappearence_in_mind": null,
+  "country": "F.D",
+  "parents": {
+    "mother": null,
+    "father": null
+  },
+  "interests": [],
+  "work": null,
+  "currency": {
+    "now_place": null,
+    "now_value": null,
+    "then_place": null,
+    "then_value": null
+  },
+  "mbti": null,
+  "stories": [],
+  "not_mine_gallery": []
+}
