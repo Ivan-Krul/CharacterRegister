@@ -1,6 +1,7 @@
 image\paths.txt
 image\DefinitionPool\cit.png
 image\DefinitionPool\ESC secret shot.png
+image\DefinitionPool\git.png
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
 image\Events\MindWarNum5\0.png
