@@ -65,13 +65,8 @@ function fillCurrency(object) {
 }
 
 function replaceAllOccurrences(inputString, substringToReplace, replacementValue) {
-  // Escape special characters in the substring
   var escapedSubstring = substringToReplace.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-  // Use a regular expression with the global flag to replace all occurrences
   var regex = new RegExp(escapedSubstring, 'g');
-  
-  // Replace all occurrences of the substring with the new value
   var resultString = inputString.replace(regex, replacementValue);
 
   return resultString;

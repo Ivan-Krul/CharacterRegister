@@ -19,14 +19,13 @@ function Write-ImagePaths
 
 function Write-PostPaths
 {
-	$partitionsPaths = Get-ChildItem -Path ".\posts" -Filter "*.html" -Name
+	$partitionsPaths = Get-ChildItem -Path ".\posts" -Name
 
 	$content = ""
 	
-	foreach($partitionsPath in $partitionsPaths)
-	{
-		$content += "$($partitionsPath)`n"
-		Write-Host $partitionsPath
+	for($i = 0; $i -lt $partitionsPaths.Count - 1; $i += 1) {
+		$content += "$($partitionsPaths[$i])`n"
+		Write-Host $partitionsPaths[$i]
 	}
 	
 	New-Item -Path "./posts" -Name "partitions.txt" -Value $content -Force
