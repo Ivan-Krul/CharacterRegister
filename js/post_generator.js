@@ -1,4 +1,5 @@
 import * as fileFetcher from "./file_fetcher.js";
+import * as postParser from "./post_parser.js";
 
 export function generateHTMLPost(content = "") {
   const posts = document.getElementById("posts");
@@ -28,7 +29,7 @@ export function printPostPage(content = "", filename = "") {
   });
   let preFinalContent = "<h1>" + nameOfPost + "</h1>\n";
   preFinalContent += "<div>" + date + "</div>\n";
-  preFinalContent += content;
+  preFinalContent += postParser.parseRawPost(content);
   return preFinalContent;
 }
 

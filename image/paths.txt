@@ -1,6 +1,10 @@
 image\paths.txt
 image\DefinitionPool\cit.png
 image\DefinitionPool\ESC secret shot.png
+image\DefinitionPool\Form of Mem UN (after).png
+image\DefinitionPool\Form of Mem UN (before).png
+image\DefinitionPool\git.png
+image\DefinitionPool\MW7.gif
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
 image\Events\MindWarNum5\0.png
@@ -86,6 +90,7 @@ image\OCPool\Kiwuar\Kiwuar pfp.png
 image\OCPool\Kiwuar\Kiwuar with cover.png
 image\OCPool\Kiwuar\Kiwuar's researches.png
 image\OCPool\Kiwuar\Pumpkin field.png
+image\OCPool\Nuzle\Nuzle.png
 image\OCPool\Ostafan\Chess is fun.png
 image\OCPool\Ostafan\IMG_20230503_211847.jpg
 image\OCPool\Ostafan\IMG_20230504_220239.jpg

@@ -1,5 +1,6 @@
 import * as fileFetcher from "./file_fetcher.js";
 import * as videoException from "./video_exception.js"
+import * as mind from "./mind.js";
 
 function outputAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
   if(strDateCreation === null) {
@@ -42,8 +43,9 @@ function fillTraits(object) {
 
 function fillDateDisappearence(object) {
   if (object["disappeared"] || object["dateDisappearence"] !== undefined || object["dateDisappearenceInMind"] !== undefined) {
-    document.getElementById("dateDisappearence").innerText = object["date_disappearence"];
-    document.getElementById("dateDisappearenceInMind").innerText = object["date_disappearence_in_mind"];
+    let date = new Date(object["date_disappearence"]);
+    document.getElementById("dateDisappearence").innerText = outputDate(date,false);
+    document.getElementById("dateDisappearenceInMind").innerText = outputDate(mind.getMindDate(date), true);
   }
 }
 
@@ -63,13 +65,8 @@ function fillCurrency(object) {
 }
 
 function replaceAllOccurrences(inputString, substringToReplace, replacementValue) {
-  // Escape special characters in the substring
   var escapedSubstring = substringToReplace.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-  // Use a regular expression with the global flag to replace all occurrences
   var regex = new RegExp(escapedSubstring, 'g');
-  
-  // Replace all occurrences of the substring with the new value
   var resultString = inputString.replace(regex, replacementValue);
 
   return resultString;
@@ -152,12 +149,18 @@ function fillNotMineGallery(object) {
   }
 }
 
+function outputDate(date = new Date(), isMind = false) {
+  return `${date.getDate()}.${date.getMonth()+1}.${isMind ? date.getFullYear() - 2000 :date.getFullYear()}${isMind?"M":""}`;
+}
+
 function fillProfile(object) {
+  let timeCre = new Date(object["date_creation"]);
+
   document.getElementById("pfp").src =                      object["pfp_path"];
   document.getElementById("bioClass").innerText =           object["biological_class"];
   document.getElementById("sex").innerText =                object["sex"];
-  document.getElementById("dateCreation").innerText =       object["date_creation"];
-  document.getElementById("dateCreationInMind").innerText = object["date_creation_in_mind"];
+  document.getElementById("dateCreation").innerText =       outputDate(timeCre, false);
+  document.getElementById("dateCreationInMind").innerText = outputDate(mind.getMindDate(timeCre), true);
   document.getElementById("country").innerText =            object["country"];
   document.getElementById("parents").innerText =            object["parents"]["mother"] + '\n';
   document.getElementById("parents").innerText +=           object["parents"]["father"];
@@ -213,4 +216,3 @@ function filterStringsByMatch(strings, match) {
 }
 
 outputOCData();
-
