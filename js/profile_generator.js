@@ -127,7 +127,7 @@ async function fillMineGallery() {
   const urlParams = new URLSearchParams(window.location.search);
   const ocName = urlParams.get('oc');
   let image_lines = (await fileFetcher.fetchFile("image/paths.txt")).split('\n');
-  let image_list = filterStringsByMatch(image_lines, ocName);
+  let image_list = filterStringsByMatch(image_lines, `${ocName}\\`);
 
   for (let i = 0; i < image_list.length; i++) {
     let img = document.createElement("img");
@@ -207,8 +207,6 @@ async function outputOCData() {
 
   fillProfile(json);
 }
-
-var readIndex = 0;
 
 function filterStringsByMatch(strings, match) {
   const filteredStrings = strings.filter(str => str.includes(match));
