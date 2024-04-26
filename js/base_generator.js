@@ -1,0 +1,25 @@
+import * as fileFetcher from "./file_fetcher.js";
+import * as sideLinker from "./side_linker.js";
+import "./side_handler.js";
+import "./dark_theme.js";
+
+async function assemble() {
+  let side = await fileFetcher.fetchFile("pages/side_template.html");
+
+  if(fileFetcher.getCountToRoot() !== 0) {
+    side = side.replace("/pages/","/");
+    side = side.replace("./i","../i");
+  }
+
+  let doc = await fileFetcher.fetchFile("pages/footer_template.html");
+  document.getElementById('sideMenu').innerHTML = `${side}
+  <div id="externalFooter">${doc}</div>`;
+
+  await sideLinker.gatherOCs();
+  await sideLinker.gatherDefs();
+  await sideLinker.gatherEvents();
+  await sideLinker.gatherMarathons();
+}
+
+assemble();
+
