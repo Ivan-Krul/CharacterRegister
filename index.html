@@ -13,16 +13,7 @@
 </head>
 
 <body>
-    <div id="sideMenu">
-        <h2>Side Menu</h2>
-        <ul id="linkList">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="./pages/post_scrapper.html">Post Scrapper</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-        </ul>
-        
-        <div id="externalFooter"></div>
-    </div>
+    <div id="sideMenu"></div>
 
     <div id="content">
         <h2>Character Register</h2>
@@ -33,32 +24,7 @@
         </div>
     </div>
     
-    <script src="./js/side_handler.js"></script>
-    <script type="module" src="./js/footer_generator.js"></script>
-    <script type="module" src="./js/oc_linker.js"></script>
-    <script type="module" src="./js/dark_theme.js"></script>
-    <script type="module" src="./js/post_generator.js"></script>
-    <script type="module">
-        import * as postg from "./js/post_generator.js";
-        postg.generatePostPage(0,10);
-    </script>
-    <script>
-        let div = document.createElement("div");
-        document.getElementById("sideMenu").appendChild(div);
-
-setInterval(()=>{
-        let curDate = new Date();
-        let nYDate = new Date(`${curDate.getFullYear()} Jan 1`);
-
-        div.innerText=`Loading to ${curDate.getFullYear()+1}: ${((curDate - nYDate) / 10 / 60 / 60 / 24 / 365.24)}%`
-}, 100);
-    </script>
-    <script>
-        let curDate = new Date();
-        if(curDate.getDate() === 4 && curDate.getMonth() === 1) {
-            alert("YAY, AUTHOR OF THE PAGE HAS A BIRTHDAY!! HAPPY BIRTHDAY TO ME!!");
-        }
-    </script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>
