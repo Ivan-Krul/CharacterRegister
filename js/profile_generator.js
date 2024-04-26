@@ -1,3 +1,4 @@
+import "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 import * as videoException from "./video_exception.js"
 import * as mind from "./mind.js";
