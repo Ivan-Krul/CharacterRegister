@@ -12,8 +12,8 @@ export function parseRawPost(str = "") {
     let strCom = str.replace("\r", "");
     let res = "";
 
-    res = replaceAllOccurrences(strCom,"!! ", "<h1>");
-    res = replaceAllOccurrences(res," !!", "</h1>");
+    res = replaceAllOccurrences(strCom,"!!!! ", "<h1>");
+    res = replaceAllOccurrences(res," !!!!", "</h1>");
 
     res = replaceAllOccurrences(res,"i- ", "<img src=\"./image/");
     res = replaceAllOccurrences(res," -i", "\">");

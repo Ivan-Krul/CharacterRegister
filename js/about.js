@@ -3,7 +3,7 @@ import "./base_generator.js";
 var JSON = {};
 
 function pushZeros(number, threshold = 2) {
-    let log = Math.ceil(Math.log10(number));
+    let log = number.toString().length;
 
     let str = "";
 
@@ -15,23 +15,16 @@ function pushZeros(number, threshold = 2) {
     return str;
 }
 
-function generateTags() {
-    
-    
-    document.getElementById("sideMenu").appendChild(`
-    <div>Repository updated: <span id="updateDate"></span></div>
-    <div>Repository open issues: <span id="repoIssues"></span></div>
-    <div>Repository forks: <span id="repoForks"></span></div>
-    `);
-}
-
 function output() {
     let date = new Date(JSON.updated_at);
 
-    document.getElementById("repoIssues").innerText = JSON.open_issues_count;
-    document.getElementById("repoForks").innerText = JSON.forks_count;
-    document.getElementById("updateDate").innerText = 
-        `${pushZeros(date.getHours())}:${pushZeros(date.getMinutes())} | ${pushZeros(date.getDate())}.${pushZeros(date.getMonth() + 1)}.${date.getFullYear()}`;
+    document.getElementById("sideMenu").innerHTML += `
+    <div>Repository updated: <span id="updateDate">${JSON.open_issues_count}</span></div>
+    <div>Repository open issues: <span id="repoIssues">${JSON.forks_count}</span></div>
+    <div>Repository forks: <span id="repoForks">
+    ${date.getHours()}:${pushZeros(date.getMinutes())} | ${pushZeros(date.getDate())}.${pushZeros(date.getMonth() + 1)}.${date.getFullYear()}
+    </span></div>
+    `;
 };
 
 async function outputGithubDetails() {
