@@ -1,7 +1,6 @@
 connections
 currency S
-list of country
+countries
+cities
 ESC
 mind wars
-plan
-cities
