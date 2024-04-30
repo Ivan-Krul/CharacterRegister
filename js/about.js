@@ -19,11 +19,11 @@ function output() {
     let date = new Date(JSON.updated_at);
 
     document.getElementById("sideMenu").innerHTML += `
-    <div>Repository updated: <span id="updateDate">${JSON.open_issues_count}</span></div>
-    <div>Repository open issues: <span id="repoIssues">${JSON.forks_count}</span></div>
-    <div>Repository forks: <span id="repoForks">
+    <div>Repository updated: <span id="updateDate">
     ${date.getHours()}:${pushZeros(date.getMinutes())} | ${pushZeros(date.getDate())}.${pushZeros(date.getMonth() + 1)}.${date.getFullYear()}
     </span></div>
+    <div>Repository open issues: <span id="repoIssues">${JSON.open_issues_count}</span></div>
+    <div>Repository forks: <span id="repoForks">${JSON.forks_count}</span></div>
     `;
 };
 
