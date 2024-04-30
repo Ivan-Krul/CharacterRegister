@@ -6,10 +6,11 @@ import "./dark_theme.js";
 async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
 
-  if(fileFetcher.getCountToRoot() !== 0) {
-    side = side.replace("/pages/","/");
-    side = side.replace("./i","../i");
-  }
+  console.log(fileFetcher.getCountToRoot());
+
+    side = side.replace("./pages/post_scrapper.html",fileFetcher.makeLinkIndependent("./pages/post_scrapper.html"));
+    side = side.replace("./pages/about.html",fileFetcher.makeLinkIndependent("./pages/about.html"));
+    side = side.replace("./index.html",fileFetcher.makeLinkIndependent("./index.html"));
 
   let doc = await fileFetcher.fetchFile("pages/footer_template.html");
   document.getElementById('sideMenu').innerHTML = `${side}
