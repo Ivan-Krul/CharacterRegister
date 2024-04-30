@@ -74,6 +74,7 @@ image\OCPool\Jania\Jania with gun.png
 image\OCPool\Jania\Jania with strawberry.png
 image\OCPool\Jania\Jania's style clones.png
 image\OCPool\Jania\Oct 07.png
+image\OCPool\Jania\On way to Fronstan.png
 image\OCPool\Jania\photo_2023-04-25_22-35-40.jpg
 image\OCPool\Jania\Pined your queen.png
 image\OCPool\Jania\Pumpkin field.png
@@ -97,6 +98,7 @@ image\OCPool\Ostafan\IMG_20230503_211847.jpg
 image\OCPool\Ostafan\IMG_20230504_220239.jpg
 image\OCPool\Ostafan\IMG_20230510_212656.jpg
 image\OCPool\Ostafan\IMG_20230522_230112.jpg
+image\OCPool\Ostafan\On way to Fronstan.png
 image\OCPool\Ostafan\order to ADA.png
 image\OCPool\Ostafan\Ostafan.png
 image\OCPool\Stefan\Departure of Stefan.png
@@ -141,6 +143,11 @@ image\PostPool\CharacterRegister favicon high.png
 image\PostPool\First Art Raffle.png
 image\PostPool\Gang in Altes Landgut.png
 image\PostPool\I've ruined, cuz have paws.png
+image\PostPool\IMG_20240428_191610.jpg
+image\PostPool\IMG_20240428_191632.jpg
+image\PostPool\IMG_20240428_192546.jpg
+image\PostPool\IMG_20240428_201611984.jpg
+image\PostPool\IMG_20240428_203810.jpg
 image\PostPool\Kusya.jpg
 image\PostPool\Mira discovered a forest.png
 image\PostPool\NoxeyTheKit Silvester.png

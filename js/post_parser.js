@@ -16,7 +16,7 @@ export function parseRawPost(str = "") {
   res = replaceAllOccurrences(strCom, "!!!! ", "<h1>");
   res = replaceAllOccurrences(res, " !!!!", "</h1>");
 
-  res = replaceAllOccurrences(res, "i- ", `<img src=\"${fileFetcher.makeLinkIndependent("./image/")}`);
+  res = replaceAllOccurrences(res, "i- ", `<img src=\"${fileFetcher.makeLinkIndependent("image/")}`);
   res = replaceAllOccurrences(res, " -i", "\">");
 
   res = replaceAllOccurrences(res, "\" ", "<div>");

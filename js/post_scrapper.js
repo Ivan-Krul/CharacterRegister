@@ -13,13 +13,8 @@ import * as videoException from "./../js/video_exception.js";
             try {
                 let file = await fileFetcher.fetchFile("posts/" + post);
                 page = postGenerator.printPostPage(file, post);
-                if (page.split("Eek").length === 1) {
-                    let resPage = page.replaceAll("./", "./../");
-
-                    document.getElementById("post").innerHTML = resPage;
-                }
-                else
-                    throw "[Eek]";
+                let resPage = page;//.replaceAll("./", "./../");
+                document.getElementById("post").innerHTML = resPage;
             }
             catch (error) {
                 document.getElementById("post").appendChild(await videoException.getExceptionNode(error));
