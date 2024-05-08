@@ -8,9 +8,33 @@ function replaceAllOccurrences(inputString, substringToReplace, replacementValue
   return resultString;
 }
 
+function getLangTag(str = "") {
+  let lang = fileFetcher.getURLParams().get("lang");
+
+  if(lang === null) {
+    lang = "en";
+    console.warn("parameter for lang in URI wasn't defined, and so lang='en'");
+  }
+
+  const begStr = `#->${lang}#`;
+  const endStr = `#<-${lang}#`;
+
+  let indxBeg = str.indexOf(begStr);
+  let indxEnd = str.indexOf(endStr);
+
+  if(indxBeg === -1) {
+    console.warn("It's unsupported for translated text, assumption it's deprecated post");
+    return str;
+  }
+  if(indxEnd === -1) throw `Bracket for language ${lang} wasn't closed`;
+  
+  return str.substring(indxBeg + begStr.length, indxEnd);
+}
 
 export function parseRawPost(str = "") {
-  let strCom = str.replace("\r", "");
+  let strCom = str.replaceAll("\r", "");
+  strCom = getLangTag(strCom);
+
   let res = "";
 
   res = replaceAllOccurrences(strCom, "!!!! ", "<h1>");
@@ -21,6 +45,9 @@ export function parseRawPost(str = "") {
 
   res = replaceAllOccurrences(res, "\" ", "<div>");
   res = replaceAllOccurrences(res, " \"", "</div>");
+
+  res = replaceAllOccurrences(res, "\"*", "\"");
+  res = replaceAllOccurrences(res, "*\"", "\"");
 
   res = replaceAllOccurrences(res, "<< ", "<a target=\"_blank\" href=\"");
   res = replaceAllOccurrences(res, ">|<", "\">");
@@ -35,7 +62,7 @@ export function parseRawPost(str = "") {
   res = replaceAllOccurrences(res, "|$ ", "<script type=\"module\">");
   res = replaceAllOccurrences(res, " $|", "</script>");
 
-  res = replaceAllOccurrences(res, "|$- ", `<script type=\"module\" src=\"${fileFetcher.makeLinkIndependent("./js/")}`);
+  res = replaceAllOccurrences(res, "|$- ", `<script type=\"module\" src=\"${fileFetcher.makeLinkIndependent("js/")}`);
   res = replaceAllOccurrences(res, " -$|", `\"></script>`);
 
   res = replaceAllOccurrences(res, "!|", "<br/>");
