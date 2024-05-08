@@ -6,8 +6,6 @@ import "./dark_theme.js";
 async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
 
-  console.log(fileFetcher.getCountToRoot());
-
     side = side.replace("./pages/post_scrapper.html",fileFetcher.makeLinkIndependent("./pages/post_scrapper.html"));
     side = side.replace("./pages/about.html",fileFetcher.makeLinkIndependent("./pages/about.html"));
     side = side.replace("./index.html",fileFetcher.makeLinkIndependent("./index.html"));
