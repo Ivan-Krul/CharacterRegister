@@ -46,12 +46,18 @@ export function parseRawPost(str = "") {
   res = replaceAllOccurrences(res, "\" ", "<div>");
   res = replaceAllOccurrences(res, " \"", "</div>");
 
+  res = replaceAllOccurrences(res, "[ ", "<i>[");
+  res = replaceAllOccurrences(res, "]", "]</i>");
+
   res = replaceAllOccurrences(res, "\"*", "\"");
   res = replaceAllOccurrences(res, "*\"", "\"");
 
   res = replaceAllOccurrences(res, "<< ", "<a target=\"_blank\" href=\"");
   res = replaceAllOccurrences(res, ">|<", "\">");
   res = replaceAllOccurrences(res, " >>", "</a>");
+
+  res = replaceAllOccurrences(res, " ##| ", "<span style=\"background-color: black; color:black\">");
+  res = replaceAllOccurrences(res, " <| ", "</span>");
 
   res = replaceAllOccurrences(res, " -- ", "<li>");
   res = replaceAllOccurrences(res, " |--", "</li>");
