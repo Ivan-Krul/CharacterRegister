@@ -8,70 +8,77 @@ function replaceAllOccurrences(inputString, substringToReplace, replacementValue
   return resultString;
 }
 
+export const begLangTag = `#->[]#`;
+export const endLangTag = `#<-[]#`;
+
 function getLangTag(str = "") {
   let lang = fileFetcher.getURLParams().get("lang");
 
-  if(lang === null) {
+  if (lang === null) {
     lang = "en";
     console.warn("parameter for lang in URI wasn't defined, and so lang='en'");
   }
 
-  const begStr = `#->${lang}#`;
-  const endStr = `#<-${lang}#`;
+  let indxBeg = str.indexOf(begLangTag.replace("[]", lang));
+  let indxEnd = str.indexOf(endLangTag.replace("[]", lang));
 
-  let indxBeg = str.indexOf(begStr);
-  let indxEnd = str.indexOf(endStr);
-
-  if(indxBeg === -1) {
+  if (indxBeg === -1) {
     console.warn("It's unsupported for translated text, assumption it's deprecated post");
     return str;
   }
-  if(indxEnd === -1) throw `Bracket for language ${lang} wasn't closed`;
-  
-  return str.substring(indxBeg + begStr.length, indxEnd);
+  if (indxEnd === -1) throw `Bracket for language ${lang} wasn't closed`;
+
+  return str.substring(indxBeg + begLangTag.length, indxEnd);
 }
+
+export const dictionary =
+  [
+    ["!!!! ", "<h1>"],
+    [" !!!!", "</h1>"],
+
+    ["il- ", `<img src="${fileFetcher.makeLinkIndependent("image/")}`],
+    [" -il", "\">"],
+
+    ["i- ", "<img src=\""],
+    [" -i", "\">"],
+
+    ["\" ", "<div>"],
+    [" \"", "</div>"],
+
+    ["[ ", "<i>["],
+    [" ]", "]</i>"],
+
+    ["\"*", "\""],
+    ["*\"", "\""],
+
+    ["<< ", "<a target=\"_blank\" href=\""],
+    [">|<", "\">"],
+    [" >>", "</a>"],
+
+    [" ##| ", "<span style=\"background-color: black; color:black\">"],
+    [" <| ", "</span>"],
+
+    [" -- ", "<li>"],
+    [" |-- ", "</li>"],
+
+    [">-> ", "<dir>"],
+    [" >->", "</dir>"],
+
+    ["|$ ", "<script type=\"module\">"],
+    [" $|", "</script>"],
+
+    ["|$- ", `<script type=\"module\" src=\"${fileFetcher.makeLinkIndependent("js/")}`],
+    [" -$|", "\"></script>"],
+
+    ["!|", "<br/>"]
+  ];
 
 export function parseRawPost(str = "") {
   let strCom = str.replaceAll("\r", "");
-  strCom = getLangTag(strCom);
+  let res = getLangTag(strCom);
 
-  let res = "";
-
-  res = replaceAllOccurrences(strCom, "!!!! ", "<h1>");
-  res = replaceAllOccurrences(res, " !!!!", "</h1>");
-
-  res = replaceAllOccurrences(res, "i- ", `<img src=\"${fileFetcher.makeLinkIndependent("image/")}`);
-  res = replaceAllOccurrences(res, " -i", "\">");
-
-  res = replaceAllOccurrences(res, "\" ", "<div>");
-  res = replaceAllOccurrences(res, " \"", "</div>");
-
-  res = replaceAllOccurrences(res, "[ ", "<i>[");
-  res = replaceAllOccurrences(res, "]", "]</i>");
-
-  res = replaceAllOccurrences(res, "\"*", "\"");
-  res = replaceAllOccurrences(res, "*\"", "\"");
-
-  res = replaceAllOccurrences(res, "<< ", "<a target=\"_blank\" href=\"");
-  res = replaceAllOccurrences(res, ">|<", "\">");
-  res = replaceAllOccurrences(res, " >>", "</a>");
-
-  res = replaceAllOccurrences(res, " ##| ", "<span style=\"background-color: black; color:black\">");
-  res = replaceAllOccurrences(res, " <| ", "</span>");
-
-  res = replaceAllOccurrences(res, " -- ", "<li>");
-  res = replaceAllOccurrences(res, " |--", "</li>");
-
-  res = replaceAllOccurrences(res, ">-> ", "<dir>");
-  res = replaceAllOccurrences(res, " >->", "</dir>");
-
-  res = replaceAllOccurrences(res, "|$ ", "<script type=\"module\">");
-  res = replaceAllOccurrences(res, " $|", "</script>");
-
-  res = replaceAllOccurrences(res, "|$- ", `<script type=\"module\" src=\"${fileFetcher.makeLinkIndependent("js/")}`);
-  res = replaceAllOccurrences(res, " -$|", `\"></script>`);
-
-  res = replaceAllOccurrences(res, "!|", "<br/>");
-
+  dictionary.forEach((regex_value) => {
+    res = replaceAllOccurrences(res, regex_value[0], regex_value[1]);
+  });
   return res;
 }
