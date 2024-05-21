@@ -16,7 +16,7 @@ function getLangTag(str = "") {
 
   if (lang === null) {
     lang = "en";
-    console.warn("parameter for lang in URI wasn't defined, and so lang='en'");
+    //console.warn("parameter for lang in URI wasn't defined, and so lang='en'");
   }
 
   let indxBeg = str.indexOf(begLangTag.replace("[]", lang));
@@ -31,8 +31,14 @@ function getLangTag(str = "") {
   return str.substring(indxBeg + begLangTag.length, indxEnd);
 }
 
+export const titleOpen = "T=>";
+export const titleClose = "<=T";
+
 export const dictionary =
   [
+    [titleOpen, "<!--"],
+    [titleClose, "-->"],
+
     ["!!!! ", "<h1>"],
     [" !!!!", "</h1>"],
 
@@ -73,12 +79,27 @@ export const dictionary =
     ["!|", "<br/>"]
   ];
 
-export function parseRawPost(str = "") {
+function adaptRawString(str = "") {
   let strCom = str.replaceAll("\r", "");
-  let res = getLangTag(strCom);
+  return getLangTag(strCom);
+}
+
+export function parseRawTitle(str = "") {
+  let res = adaptRawString(str);
+
+  if(res.indexOf(titleOpen) !== -1 && res.indexOf(titleClose) !== -1) {
+    return res.substring(res.indexOf(titleOpen) + titleOpen.length, res.indexOf(titleClose));
+  }
+
+  return "undefined";
+}
+
+export function parseRawPost(str = "") {
+  let res = adaptRawString(str);
 
   dictionary.forEach((regex_value) => {
     res = replaceAllOccurrences(res, regex_value[0], regex_value[1]);
   });
   return res;
 }
+

@@ -20,17 +20,12 @@ function divideSingleStringIntoRows(single_string = "") {
 }
 
 export function printPostPage(content = "", filename = "") {
-  let dateArr = filename.split("~")[0].split("_");
+  let dateArr = filename.split("_");
   let date = dateArr[0] + " " + dateArr[1] + " " + dateArr[2];
-  let nameOfPostArr = filename.split("~")[1].split("_");
-  let nameOfPost = "";
-  nameOfPostArr.forEach(element => {
-    nameOfPost += element+" ";
-  });
-  let preFinalContent = "<h1>" + nameOfPost + "</h1>\n";
-  preFinalContent += "<div>" + date + "</div>\n";
-  preFinalContent += postParser.parseRawPost(content);
-  return preFinalContent;
+  
+  let parsedText = postParser.parseRawPost(content);
+  let parsedTitle = postParser.parseRawTitle(content);
+  return `<h1>${parsedTitle}</h1><div>${date}</div>${parsedText}`;
 }
 
 export function generatePost(content = "", filename = "") {

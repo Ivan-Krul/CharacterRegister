@@ -2,80 +2,85 @@
 <html>
 
 <head>
-    <title>Character Register: Post Constructor</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Character Register: Post Constructor</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 
 <style>
-    td {
-        border: 2px solid black;
-    }
+  td {
+    border: 2px solid black;
+  }
 
-    img {
-        max-width: 75%;
-    }
+  img {
+    max-width: 75%;
+  }
 </style>
 
 <body>
-    <textarea id="input" cols="50" rows="50" style="width: 100ch; height: 10ch;"></textarea>
+  <textarea id="input" cols="50" rows="50" style="width: 100ch; height: 10ch;"></textarea>
 
-    <hr>
+  <hr>
+  <h1 id="title"></h1>
+  <div id="output"></div>
 
-    <div id="output"></div>
+  <hr>
 
-    <hr>
+  <div style="font-family: consolas;">
+    <div style="font-size: 32px;">Atlas</div>
+    <table id="atlasList">
+    </table>
+  </div>
 
-    <div style="font-family: consolas;">
-        <div style="font-size: 32px;">Atlas</div>
-        <table id="atlasList">
-        </table>
-    </div>
+  <script type="module">
+    import * as PostParser from "../js/post_parser.js";
 
-    <script type="module">
-        import * as PostParser from "../js/post_parser.js";
+    const localstorageDir = "saved_post_parser_text";
 
-        const localstorageDir = "saved_post_parser_text";
+    function updateRaw(text) {
+      document.getElementById("output").innerHTML = PostParser.parseRawPost(text);
+      document.getElementById("title").innerText = PostParser.parseRawTitle(text);
+    }
+    function update(event) {
+      updateRaw(event.target.value);
+    }
 
-        function updateRaw(text) {
-            document.getElementById("output").innerHTML = PostParser.parseRawPost(text);
+    function generateAtlas() {
+      const generateRow = (a, b) => `<tr><td><span style="font-size: 10px; color: gray;">"</span>${a.replaceAll("<", "&lt;").replaceAll(">", "&gt;")}<span style="font-size: 10px; color: gray;">"</span></td><td><span style="font-size: 10px; color: gray;">"</span>${b.replaceAll("<", "&lt;").replaceAll(">", "&gt;")}<span style="font-size: 10px; color: gray;">"</span></td></tr>\n`;
+
+      document.getElementById("atlasList").innerHTML += generateRow(PostParser.titleOpen, "(opening scope for any title)");
+      document.getElementById("atlasList").innerHTML += generateRow(PostParser.titleClose, "(closing scope for any title)");
+      PostParser.dictionary.forEach(regex_value => {
+        if (regex_value[1] !== "<!--" && regex_value[1] !== "-->") {
+          document.getElementById("atlasList").innerHTML += generateRow(regex_value[0], regex_value[1])
         }
-        function update(event) {
-            updateRaw(event.target.value);
-        }
+      });
+      document.getElementById("atlasList").innerHTML += generateRow(PostParser.begLangTag, "(in URL -> ?lang=[2 ch] -> switch language (open))");
+      document.getElementById("atlasList").innerHTML += generateRow(PostParser.endLangTag, "(in URL -> ?lang=[2 ch] -> switch language (close))");
+    }
 
-        function generateAtlas() {
-            const generateRow = (a,b) => `<tr><td><span style="font-size: 10px; color: gray;">"</span>${a}<span style="font-size: 10px; color: gray;">"</span></td><td><span style="font-size: 10px; color: gray;">"</span>${b.replaceAll("<", "&lt;").replaceAll(">", "&gt;")}<span style="font-size: 10px; color: gray;">"</span></td></tr>\n`; 
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey && e.key === 's') {
 
-            PostParser.dictionary.forEach(regex_value => {
-                document.getElementById("atlasList").innerHTML += generateRow(regex_value[0], regex_value[1])
-            })
-            document.getElementById("atlasList").innerHTML += generateRow(PostParser.begLangTag, "(in URL -> ?lang=[2 ch] -> switch language (open))")
-            document.getElementById("atlasList").innerHTML += generateRow(PostParser.endLangTag, "(in URL -> ?lang=[2 ch] -> switch language (close))")
-        }
+        e.preventDefault();
 
-        document.addEventListener('keydown', e => {
-            if (e.ctrlKey && e.key === 's') {
-                
-                e.preventDefault();
-                
-                localStorage.setItem(localstorageDir, document.getElementById("input").value);
+        localStorage.setItem(localstorageDir, document.getElementById("input").value);
 
-                alert("text was saved!");
-            }
-        });
+        alert("text was saved!");
+      }
+    });
 
-        generateAtlas();
-        document.getElementById("input").onkeyup = update;
+    generateAtlas();
+    document.getElementById("input").onkeyup = update;
 
-        if(localStorage.getItem(localstorageDir) === undefined) {
-            localStorage.setItem(localstorageDir, document.getElementById("input").value);
-        }
-        else {
-            document.getElementById("input").value = localStorage.getItem(localstorageDir);
-        }
+    if (localStorage.getItem(localstorageDir) === undefined) {
+      localStorage.setItem(localstorageDir, document.getElementById("input").value);
+    }
+    else {
+      document.getElementById("input").value = localStorage.getItem(localstorageDir);
+    }
 
-        updateRaw(localStorage.getItem(localstorageDir));
-    </script>
+    updateRaw(localStorage.getItem(localstorageDir));
+  </script>
 
 </body>
 

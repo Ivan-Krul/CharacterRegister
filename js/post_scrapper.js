@@ -32,7 +32,7 @@ import * as videoException from "./../js/video_exception.js";
         partitionsArray.forEach(element => {
             let el = document.createElement("a");
             el.href = "post_scrapper.html?post=" + element;
-            el.innerText = "post_scrapper.html?post=" + element;
+            el.innerText = element;
             document.getElementById("post").appendChild(el).appendChild(document.createElement("br"));
         });
     }
