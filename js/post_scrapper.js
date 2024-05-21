@@ -33,7 +33,10 @@ import * as videoException from "./../js/video_exception.js";
             let el = document.createElement("a");
             el.href = "post_scrapper.html?post=" + element;
             el.innerText = element;
-            document.getElementById("post").appendChild(el).appendChild(document.createElement("br"));
+            let span = document.createElement("div");
+            span.appendChild(el);
+            //span.style.margin = "20px";
+            document.getElementById("post").appendChild(span);
         });
     }
 })();
