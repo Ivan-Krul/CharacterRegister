@@ -42,16 +42,15 @@
 }
 
 button {
-    background-color: #7b48ac;
+    background-color: #6b389c;
     color: #fff;
-    border: 5px solid black;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
     margin: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-left: 6px;
     padding-right: 6px;
-    font-weight: bold;
 }
 
 #sideMenu a{
