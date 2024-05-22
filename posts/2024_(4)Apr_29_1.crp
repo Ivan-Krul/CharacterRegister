@@ -1,17 +1,20 @@
 Standart
 #->en#
+T=>I had prüfung<=T
 " So, I had an Integration Prüfung A2, and I would go to Uni. Hope I would pass "
 " Anyway, I'm back in ONLINE! "
 #<-en#
 
 Native
 #->uk#
+T=>I had prüfung<=T
 " Отже, Я писав Інтеграційний Prüfung A2, та піду до уні. Надіюсь пройду "
 " В будь-якому випадку, Я повернувся в Онлайн! "
 #<-uk#
 
 Know
 #->de#
+T=>I had prüfung<=T
 " So, hatte ich Integration Prüfung A2, und werde ich zu Uni gehen. Ich hoffe, dass werde ich pass da "
 " Sowieso, Ich bin wieder ONLINE! "
 #<-de#
@@ -19,11 +22,13 @@ Know
 
 Google translator [don't]
 #->id#
+T=>I had prüfung<=T
 " Jadi, saya memiliki Integrasi Prüfung A2, dan saya akan melanjutkan ke universitas. Saya harap saya akan lulus "
 " Pokoknya aku ONLINE lagi! "
 #<-id#
 
 #->gr#
+T=>I had prüfung<=T
 " Έτσι, έγραψα ένα Integration Prüfung A2, και θα πάω στο πανεπιστήμιο. Ελπίζω να περάσω "
 " Τέλος πάντων, είμαι ξανά στο διαδίκτυο! "
 #<-gr#
