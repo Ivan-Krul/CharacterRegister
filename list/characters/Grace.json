@@ -96,6 +96,10 @@
             " Grace said, what "
         ]
     ],
-    "not_mine_gallery" : [
+    "not_mine_gallery": [
+        {
+            "path": "image/Not mine/Grace by @Kitarango.png",
+            "link": "https://twitter.com/K1tarango"
+        }
     ]
 }
