@@ -15,21 +15,17 @@
 @media screen and (min-aspect-ratio: 1/1) {
     #sideMenu {
         width: 25vw;
-    }
+    }    
 }
 
-@media screen and (max-aspect-ratio: 1/1) {
+@media screen and ((max-aspect-ratio: 1/1) or (max-width: 600px)){
     #sideMenu {
         width: 100%;
     }
-}
+    td {
 
-@media screen and (max-width: 600px) {
-    #sideMenu {
-        width: 100%;
     }
 }
-
 
 @media screen and (min-width: 1920px) {
     * {
@@ -78,7 +74,11 @@ button {
 img {
     border: 5px solid white;
     margin: 5px;
-    max-width:40%;
+    max-width:75%;
+}
+
+video {
+    max-width:75%;
 }
 
 a {

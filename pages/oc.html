@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/main.css">
     <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
-	<link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
+    <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
     <title>Original Character in Register</title>
 </head>
 
@@ -15,27 +15,36 @@
 
     <div id="content">
         <h2 id="header">Character</h2>
-        <img id="pfp">
-        <div>Species: <span id="bioClass"></span></div>
-        <div>Age: <span id="age"></span></div>
-        <div>Sex: <span id="sex"></span></div>
-        <div>Orientation: <span id="idInCom"></span></div>
-        <div>Traits: (<div id="traits"></div>)<div>
-        <div>MBTI: <span id="mbtiType"></span></div>
-        <div>Date creation: <span id="dateCreation"></span></div>
-        <div>Date creation(Mind):<span id="dateCreationInMind"></span></div>
-        <div>Date disappearence: <span id="dateDisappearence"></span></div>
-        <div>Date disappearence(Mind): <span id="dateDisappearenceInMind"></span></div>
-        <div>Country of registration: <span id="country"></span></div>
-        <div>Parents: (<div id="parents"></div>)</div>
-        <div>Interests: (<div id="intrestings"></div>)</div>
-        <div>Work: <span id="work"></span></div>
+        <table>
+            <tr>
+                <td style="max-width: 50vw;">
+                    <img id="pfp">
+                </td>
+                <td>
+
+                    <div>Species: <span id="bioClass"></span></div>
+                    <div>Age: <span id="age"></span></div>
+                    <div>Sex: <span id="sex"></span></div>
+                    <div>Orientation: <span id="orient"></span></div>
+                    <div>Traits: (<div id="traits"></div>)</div>
+                    <div>MBTI: <span id="mbtiType"></span></div>
+                    <div>Date creation: <span id="dateCreation"></span></div>
+                    <div>Date disappearence: <span id="dateDisappearence"></span></div>
+                    <div>Country of registration: <span id="country"></span></div>
+                    <div>Parents: (<div id="parentMom"></div>
+                        <div id="parentDad"></div>)
+                    </div>
+                    <div>Interests: (<div id="intrestings"></div>)</div>
+                    <div>Work: <span id="work"></span></div>
+                </td>
+            </tr>
+        </table>
         <hr>
         <div id="stories"></div>
         <div id="gallery"></div>
     </div>
 
-    <script type="module" src="./../js/profile_generator.js"></script>
+    <script type="module" src="./../js/oc_render.js"></script>
 </body>
 
 </html>
