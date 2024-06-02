@@ -1,6 +1,8 @@
 import * as fileFetcher from "./file_fetcher.js";
 
 export async function getExceptionNode(errorMessage) {
+  console.error(errorMessage);
+
   let node = document.createElement("div");
 
   let list = (await fileFetcher.fetchFile("resource/rand_handler.txt")).split("\n");

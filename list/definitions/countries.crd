@@ -3,55 +3,55 @@ il- DefinitionPool/sit.png -il
 " 
 	" Island countries (1st and 2nd generation of continent): "
 	>-> 
-		 -- Corrupt |--
-		 -- Culture |--
-         -- Continent #3 |--
-		 -- Def |--
-		 -- ESC |--
-		 -- Erraser |--
-		 -- Games |--
-		 -- History |--
-		 -- Lp |--
-		 -- Lang g |--
-		 -- Vec |--
-		 -- W |--
+		 -- Corrupt |-- 
+		 -- Culture |-- 
+         -- Continent #3 |-- 
+		 -- Def |-- 
+		 -- ESC |-- 
+		 -- Erraser |-- 
+		 -- Games |-- 
+		 -- History |-- 
+		 -- Lp |-- 
+		 -- Lang g |-- 
+		 -- Vec |-- 
+		 -- W |-- 
 		 >->
 	" Countries in 3rd generation continent: "
 	>-> 
-		 -- Continent #3 |--
+		 -- Continent #3 |-- 
 		 >->
 	" Countries in 4th generation continent: "
 	>-> 
-		 -- Serials |--
-		 -- Nat |--
-		 -- Agrar |--
-		 -- Proc |--
-		 -- YT |--
-		 -- T |--
-		 -- Mot |--
-		 -- Locat |--
-         -- Life |--
+		 -- Serials |-- 
+		 -- Nat |-- 
+		 -- Agrar |-- 
+		 -- Proc |-- 
+		 -- YT |-- 
+		 -- T |-- 
+		 -- Mot |-- 
+		 -- Locat |-- 
+         -- Life |-- 
 		 >->
 	" Countries in force islands: "
 	>-> 
-		 -- Marathon |--
-		 -- Sp. gm |--
-		 -- Strength |--
-		 -- Phy |--
+		 -- Marathon |-- 
+		 -- Sp. gm |-- 
+		 -- Strength |-- 
+		 -- Phy |-- 
 		 >->
 	" Countries in 5th generation continent: "
 	>-> 
-		 -- Outer border |--
-         -- YT |--
-         -- Edu |--
-         -- YT |--
-		 -- Skill |--
-         -- Proph |--
-         -- Life |--
+		 -- Outer border |-- 
+         -- YT |-- 
+         -- Edu |-- 
+         -- YT |-- 
+		 -- Skill |-- 
+         -- Proph |-- 
+         -- Life |-- 
 		 >->
 	" Countries in central islands: "
 	>-> 
-		 -- Border |--
-		 -- P.L |--
+		 -- Border |-- 
+		 -- P.L |-- 
 		 >->
  "

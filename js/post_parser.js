@@ -39,6 +39,9 @@ export const dictionary =
     [titleOpen, "<!--"],
     [titleClose, "-->"],
 
+    ["/*", "<!--"],
+    ["*/", "-->"],
+
     ["!!!! ", "<h1>"],
     [" !!!!", "</h1>"],
 
@@ -57,6 +60,9 @@ export const dictionary =
     ["\"*", "\""],
     ["*\"", "\""],
 
+    ["<<l ", `<a target=\"_blank\" href=\""${fileFetcher.makeLinkIndependent("/")}`],
+    [" l>>", "</a>"],
+
     ["<< ", "<a target=\"_blank\" href=\""],
     [">|<", "\">"],
     [" >>", "</a>"],
@@ -69,6 +75,9 @@ export const dictionary =
 
     [">-> ", "<dir>"],
     [" >->", "</dir>"],
+
+    [">q> ", "<blockquote style=\"color: gray;\">"],
+    [" >q>", "</blockquote>"],
 
     ["|$ ", "<script type=\"module\">"],
     [" $|", "</script>"],

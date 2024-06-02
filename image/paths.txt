@@ -145,6 +145,7 @@ image\PostPool\Annas Christmas.png
 image\PostPool\CharacterRegister favicon high.png
 image\PostPool\First Art Raffle.png
 image\PostPool\Gang in Altes Landgut.png
+image\PostPool\Gumball school edited.png
 image\PostPool\I've ruined, cuz have paws.png
 image\PostPool\IMG_20230708_205834.jpg
 image\PostPool\IMG_20240428_191610.jpg
