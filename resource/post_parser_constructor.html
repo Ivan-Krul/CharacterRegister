@@ -49,6 +49,8 @@
 
       document.getElementById("atlasList").innerHTML += generateRow(PostParser.titleOpen, "(opening scope for any title)");
       document.getElementById("atlasList").innerHTML += generateRow(PostParser.titleClose, "(closing scope for any title)");
+      document.getElementById("atlasList").innerHTML += generateRow("/*", "(opening scope for comments)");
+      document.getElementById("atlasList").innerHTML += generateRow("*/", "(closing scope for comments)");
       PostParser.dictionary.forEach(regex_value => {
         if (regex_value[1] !== "<!--" && regex_value[1] !== "-->") {
           document.getElementById("atlasList").innerHTML += generateRow(regex_value[0], regex_value[1])

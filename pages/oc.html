@@ -17,30 +17,34 @@
         <h2 id="header">Character</h2>
         <table>
             <tr>
-                <td style="max-width: 50vw;">
+                <td style="max-width: 50vw; display: block; float:left;">
                     <img id="pfp">
                 </td>
-                <td>
-
+                <td style="display: block; float:left;">
                     <div>Species: <span id="bioClass"></span></div>
                     <div>Age: <span id="age"></span></div>
                     <div>Sex: <span id="sex"></span></div>
                     <div>Orientation: <span id="orient"></span></div>
-                    <div>Traits: (<div id="traits"></div>)</div>
+                    <div>Traits:<dir id="traits"></dir></div>
                     <div>MBTI: <span id="mbtiType"></span></div>
                     <div>Date creation: <span id="dateCreation"></span></div>
                     <div>Date disappearence: <span id="dateDisappearence"></span></div>
                     <div>Country of registration: <span id="country"></span></div>
-                    <div>Parents: (<div id="parentMom"></div>
-                        <div id="parentDad"></div>)
+                    <div>Parents:
+                    <dir>
+                        <div>♀️:<span id="parentMom"></span></div>
+                        <div>♂️:<span id="parentDad"></span></div>
+                    </dir>
                     </div>
-                    <div>Interests: (<div id="intrestings"></div>)</div>
+                    <div>Interests: <dir id="interests"></dir></div>
                     <div>Work: <span id="work"></span></div>
                 </td>
             </tr>
         </table>
         <hr>
+        <button id="button_showStories">Show Stories</button>
         <div id="stories"></div>
+        <button id="button_showGallery">Show Gallery</button>
         <div id="gallery"></div>
     </div>
 

@@ -39,6 +39,9 @@ export const dictionary =
     [titleOpen, "<!--"],
     [titleClose, "-->"],
 
+    ["/*", "<!--"],
+    ["*/", "-->"],
+
     ["!!!! ", "<h1>"],
     [" !!!!", "</h1>"],
 

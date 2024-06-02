@@ -1,6 +1,6 @@
 import "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
-import * as videoException from "./video_exception.js"
+import * as postParser from "./post_parser.js"
 import * as mind from "./mind.js";
 
 export function extractAge(initialAge, strDateCreation, disappeared, strDateDisappearence) {
@@ -22,7 +22,7 @@ export function extractAge(initialAge, strDateCreation, disappeared, strDateDisa
 
 export async function getGalleryLinks(filter = "") {
   let image_lines = (await fileFetcher.fetchFile("image/paths.txt")).split('\n');
-  let image_list = filterStringsByMatch(image_lines, `${filter}\\`);
+  let image_list = image_lines.filter(str => str.includes(`${filter}\\`));
 
   return image_list;
 }
@@ -35,6 +35,6 @@ export function convertDateToStringFull(date = new Date()) {
   return `${convertDateToString(date,false)}(${convertDateToString(mind.getMindDate(date),true)})`;
 }
 
-export function extractRawStory(story_lines = []) {
-  return story_lines.join("");
+export function prepareStory(story_lines = []) {
+  return postParser.parseRawPost(story_lines.join(""));
 }
