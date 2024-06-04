@@ -26,6 +26,9 @@ import * as videoException from "./../js/video_exception.js";
     }
     else {
         document.getElementById("header").innerText += " Browser";
+
+        document.getElementById("post").innerHTML = `<dir><a href="${fileFetcher.makeLinkIndependent("resource/post_parser_constructor.html")}">Post Parser constructor</a></dir>`;
+
         let partitions = await fileFetcher.fetchFile("posts/partitions.txt");
         let partitionsArray = partitions.split("\n");
 
