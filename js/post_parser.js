@@ -1,4 +1,5 @@
 import * as fileFetcher from "./file_fetcher.js";
+import * as mind from "./mind.js";
 
 function replaceAllOccurrences(inputString, substringToReplace, replacementValue) {
   var escapedSubstring = substringToReplace.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -11,12 +12,16 @@ function replaceAllOccurrences(inputString, substringToReplace, replacementValue
 export const begLangTag = `#->[]#`;
 export const endLangTag = `#<-[]#`;
 
-function getLangTag(str = "") {
-  let lang = fileFetcher.getURLParams().get("lang");
+function getLangTag(str = "", forcedLang = undefined) {
+  var lang = undefined;
+
+  if(forcedLang)
+    lang = forcedLang;
+  else
+    lang = fileFetcher.getURLParams().get("lang");
 
   if (lang === null) {
     lang = "en";
-    //console.warn("parameter for lang in URI wasn't defined, and so lang='en'");
   }
 
   let indxBeg = str.indexOf(begLangTag.replace("[]", lang));
@@ -60,6 +65,10 @@ export const dictionary =
     ["\"*", "\""],
     ["*\"", "\""],
 
+    ["<!twitter ", "<a target=\"_blank\" href=\"https://twitter.com/"],
+    ["<!youtube ", "<a target=\"_blank\" href=\"https://www.youtube.com/"],
+    [" !>", "</a>"],
+
     ["<<l ", `<a target=\"_blank\" href=\""${fileFetcher.makeLinkIndependent("/")}`],
     [" l>>", "</a>"],
 
@@ -88,13 +97,13 @@ export const dictionary =
     ["!|", "<br/>"]
   ];
 
-function adaptRawString(str = "") {
+function adaptRawString(str = "", forcedLang = undefined) {
   let strCom = str.replaceAll("\r", "");
-  return getLangTag(strCom);
+  return getLangTag(strCom, forcedLang);
 }
 
-export function parseRawTitle(str = "") {
-  let res = adaptRawString(str);
+export function parseRawTitle(str = "", forcedLang = undefined) {
+  let res = adaptRawString(str,forcedLang);
 
   if(res.indexOf(titleOpen) !== -1 && res.indexOf(titleClose) !== -1) {
     return res.substring(res.indexOf(titleOpen) + titleOpen.length, res.indexOf(titleClose));
@@ -103,8 +112,8 @@ export function parseRawTitle(str = "") {
   return "undefined";
 }
 
-export function parseRawPost(str = "") {
-  let res = adaptRawString(str);
+export function parseRawPost(str = "", forcedLang = undefined) {
+  let res = adaptRawString(str, forcedLang);
 
   dictionary.forEach((regex_value) => {
     res = replaceAllOccurrences(res, regex_value[0], regex_value[1]);

@@ -18,7 +18,8 @@
 
 <body>
   <textarea id="input" cols="50" rows="50" style="width: 100ch; height: 10ch;"></textarea>
-
+  <div><span>Language argument (2 symbols to mark): </span><input type="text" minlength="2" maxlength="2"
+      placeholder="en" id="langArg"></div>
   <hr>
   <h1 id="title"></h1>
   <div id="output"></div>
@@ -37,8 +38,10 @@
     const localstorageDir = "saved_post_parser_text";
 
     function updateRaw(text) {
-      document.getElementById("output").innerHTML = PostParser.parseRawPost(text);
-      document.getElementById("title").innerText = PostParser.parseRawTitle(text);
+      let forced = document.getElementById("langArg").value.length ? document.getElementById("langArg").value : undefined;
+
+      document.getElementById("output").innerHTML = PostParser.parseRawPost(text, forced);
+      document.getElementById("title").innerText = PostParser.parseRawTitle(text, forced);
     }
     function update(event) {
       updateRaw(event.target.value);
@@ -79,6 +82,10 @@
     }
     else {
       document.getElementById("input").value = localStorage.getItem(localstorageDir);
+    }
+
+    document.getElementById("langArg").onchange = () => {
+      updateRaw(document.getElementById("input").value);
     }
 
     updateRaw(localStorage.getItem(localstorageDir));
