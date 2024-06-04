@@ -1,11 +1,10 @@
-" In current stage(02.03.17M(24 Dec 2023)) we have a list of countries: "
+" In current stage(03.03.18M(24 Dec 2023)) we have a list of countries: "
 il- DefinitionPool/sit.png -il
 " 
 	" Island countries (1st and 2nd generation of continent): "
 	>-> 
 		 -- Corrupt |-- 
 		 -- Culture |-- 
-         -- Continent #3 |-- 
 		 -- Def |-- 
 		 -- ESC |-- 
 		 -- Erraser |-- 
@@ -26,7 +25,6 @@ il- DefinitionPool/sit.png -il
 		 -- Nat |-- 
 		 -- Agrar |-- 
 		 -- Proc |-- 
-		 -- YT |-- 
 		 -- T |-- 
 		 -- Mot |-- 
 		 -- Locat |-- 
@@ -34,6 +32,7 @@ il- DefinitionPool/sit.png -il
 		 >->
 	" Countries in force islands: "
 	>-> 
+		 -- YT |-- 
 		 -- Marathon |-- 
 		 -- Sp. gm |-- 
 		 -- Strength |-- 
