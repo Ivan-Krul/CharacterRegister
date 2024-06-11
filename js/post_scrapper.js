@@ -17,7 +17,7 @@ import * as videoException from "./../js/video_exception.js";
     }
     let page = "";
     try {
-      if (post.indexOf(".html") !== -1) {
+      if (post.indexOf(".") !== -1) {
         let file = await fileFetcher.fetchFile("posts/" + post);
         page = postGenerator.printPostPage(file, post);
         let resPage = page;//.replaceAll("./", "./../");
