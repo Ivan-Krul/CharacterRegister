@@ -29,7 +29,7 @@
         font-size: large;
     }
 
-    h1, h2 {
+    h1, h2, #header{
         font-size: xx-large;
     }
 }

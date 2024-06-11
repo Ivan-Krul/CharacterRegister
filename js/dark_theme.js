@@ -1,3 +1,5 @@
+import * as fileFetcher from "./file_fetcher.js";
+
 const step = 3;
 
 function convertToHex(c) {
@@ -90,5 +92,7 @@ function generateButtonToSwitch() {
 }
 
 setThemeStyle(true);
-generateButtonToSwitch();
+if (fileFetcher.getURLParams().get("windowed") === null) {
+  generateButtonToSwitch();
+}
 
