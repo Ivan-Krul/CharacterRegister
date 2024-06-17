@@ -31,6 +31,7 @@ function renderDetails() {
   document.getElementById("pfp").src =                       json.pfp_path;
 
   document.getElementById("bioClass").innerText =            json.biological_class;
+  document.getElementById("age").innerText =                 oc.extractAge(json.initial_age, json.date_creation,json.disappeared,json.date_disappearence);
   document.getElementById("sex").innerText =                 json.sex;
   document.getElementById("mbtiType").innerText =            json.mbti;
 
