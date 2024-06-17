@@ -20,6 +20,7 @@
   <textarea id="input" cols="50" rows="50" style="width: 100ch; height: 10ch;"></textarea>
   <div><span>Language argument (2 symbols to mark): </span><input type="text" minlength="2" maxlength="2"
       placeholder="en" id="langArg"></div>
+  <button id="buttonSave">Save</button>
   <hr>
   <h1 id="title"></h1>
   <div id="output"></div>
@@ -27,6 +28,8 @@
   <hr>
 
   <div style="font-family: consolas;">
+    <div>You can save your work in local storage like a cookie using CTRL + S or clicking that button "Save"</div>
+    <div>It loads your progress refreshing the page</div>
     <div style="font-size: 32px;">Atlas</div>
     <table id="atlasList">
     </table>
@@ -63,14 +66,17 @@
       document.getElementById("atlasList").innerHTML += generateRow(PostParser.endLangTag, "(in URL -> ?lang=[2 ch] -> switch language (close))");
     }
 
+    function save() {
+      localStorage.setItem(localstorageDir, document.getElementById("input").value);
+      alert("text was saved!");
+    }
+
+    document.getElementById("buttonSave").onclick = save;
+
     document.addEventListener('keydown', e => {
-      if (e.ctrlKey && e.key === 's') {
-
+      if (e.ctrlKey && e.which === 83) {
         e.preventDefault();
-
-        localStorage.setItem(localstorageDir, document.getElementById("input").value);
-
-        alert("text was saved!");
+        save();
       }
     });
 
