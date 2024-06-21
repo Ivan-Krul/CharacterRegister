@@ -23,8 +23,9 @@ import * as videoException from "./../js/video_exception.js";
         let resPage = page;//.replaceAll("./", "./../");
         document.getElementById("post").innerHTML = resPage;
       }
-      else if (post.match(/[0-9]*/))
+      else if (post.match(/\d+/g) !== null) {
         document.getElementById("post").innerHTML = await postGenerator.generatePostPage(0, parseInt(post));
+      }
       else throw "undefined url \"post\" argument";
     }
     catch (error) {

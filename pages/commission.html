@@ -45,7 +45,7 @@
         <div>
             <div>Conditions to call out me:</div>
             <ul>
-                <li>Using direct messages to my discord account</li>
+                <li>Using direct messages to my <button style="background-color: blue; color:white;" onclick="copyToClipboardDiscordNick()">discord account (click)</button></li>
                 <li>Using google forms for shy people(soon)</li>
             </ul>
         </div>
@@ -173,6 +173,12 @@
         <div>After that, for a day, or for a week(more than a week after payment you can ask about another drawing as free), you're getting a drawing from me. Lastly, don't forget to mention me in case of publishing my work.</div>
     </div>
 
+    <script>
+        function copyToClipboardDiscordNick() {
+            navigator.clipboard.writeText(`@kiwiidevulopir`);
+            alert("copied to clipboard");
+        }
+    </script>
     <script type="module" src="../js/commission.js"></script>
 </body>
 

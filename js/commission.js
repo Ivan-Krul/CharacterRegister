@@ -6,29 +6,33 @@ var json = JSON.parse(await fileFetcher.fetchFile("resource/commission_params.js
 function calcPrice() {
   let res = 1;
 
-  if(document.getElementById("head").checked) res *= json.crop.head;
-else if(document.getElementById("half").checked) res *= json.crop.half;
-else                                             res *= json.crop.full;
+  if(document.getElementById("count").value !== "0") {
+         if(document.getElementById("head").checked) res *= json.crop.head;
+    else if(document.getElementById("half").checked) res *= json.crop.half;
+    else                                             res *= json.crop.full;
+  }
 
-  if(document.getElementById("line").checked)                  res *= json.detail["line"];
-else if(document.getElementById("paint_line").checked)            res *= json.detail["line+color"];
-else if(document.getElementById("shadow_paint_line").checked)     res *= json.detail["line+color+effect"];
-else if(document.getElementById("shadow_line").checked)           res *= json.detail["line+effect"];
-else if(document.getElementById("lineless_paint").checked)        res *= json.detail["lineless-color"];
-else if(document.getElementById("shadow_lineless_paint").checked) res *= json.detail["lineless-color+effect"];
+       if(document.getElementById("line").checked)                  res *= json.detail["line"];
+  else if(document.getElementById("paint_line").checked)            res *= json.detail["line+color"];
+  else if(document.getElementById("shadow_paint_line").checked)     res *= json.detail["line+color+effect"];
+  if(document.getElementById("pixel-art").checked === false) {
+         if(document.getElementById("shadow_line").checked)           res *= json.detail["line+effect"];
+    else if(document.getElementById("lineless_paint").checked)        res *= json.detail["lineless-color"];
+    else if(document.getElementById("shadow_lineless_paint").checked) res *= json.detail["lineless-color+effect"];
+  }
 
-  if(document.getElementById("count").value === 0) res *= json.count["0"];
-else if(document.getElementById("count").value === 1) res *= json.count["1"];
-else                                                  res *= json.count["2+"] * document.getElementById("count").value +json.count["1"];
+       if(document.getElementById("count").value === "0") res *= json.count["0"];
+  else if(document.getElementById("count").value === "1") res *= json.count["1"];
+  else                                                  res *= json.count["2+"] * document.getElementById("count").value +json.count["1"];
 
-  if(document.getElementById("blank").checked)    res *= json.background.blank;
-else if(document.getElementById("abstract").checked) res *= json.background.abstract;
-else if(document.getElementById("actual").checked)   res *= json.background.actual;
-else if(document.getElementById("detailed").checked) res *= json.background.detailed;
+       if(document.getElementById("blank").checked)    res *= json.background.blank;
+  else if(document.getElementById("abstract").checked) res *= json.background.abstract;
+  else if(document.getElementById("actual").checked)   res *= json.background.actual;
+  else if(document.getElementById("detailed").checked) res *= json.background.detailed;
 
-  if(document.getElementById("original").checked)  res *= json.style["original"];
-else if(document.getElementById("pixel-art").checked) res *= json.style["pixel-art"];
-else                                                  res *= json.style["others"];
+       if(document.getElementById("original").checked)  res *= json.style["original"];
+  else if(document.getElementById("pixel-art").checked) res *= json.style["pixel-art"];
+  else                                                  res *= json.style["others"];
 
 if(document.getElementById("ref").checked) res -= json.base;
 
@@ -41,33 +45,59 @@ function outputPrice() {
 
 
 function assembleToDetail() {
+  if(document.getElementById("count").value === "0") return "";
+
   if(document.getElementById("line").checked) return "line";
   else if(document.getElementById("paint_line").checked) return "line + paint";
   else if(document.getElementById("shadow_paint_line").checked) return "line + paint + shadow";
   else if(document.getElementById("shadow_line").checked) return "line + shadow";
   else if(document.getElementById("lineless_paint").checked) return "lineless-paint";
   else if(document.getElementById("shadow_lineless_paint").checked) return "lineless-paint + shadow";
-  else "";
+  else return "";
 }
 
 function assembleBracket() {
   let detail = assembleToDetail();
 
        if(document.getElementById("blank").checked)    return `${detail}`;
-  else if(document.getElementById("abstract").checked) return `${detail} + abst`;
-  else if(document.getElementById("actual").checked)   return `${detail} + actual`;
-  else if(document.getElementById("detailed").checked) return `${detail} + detailed`;
+  else if(document.getElementById("abstract").checked) return `${detail}${detail.length !== 0 ? " + " : ""}abst`;
+  else if(document.getElementById("actual").checked)   return `${detail}${detail.length !== 0 ? " + " : ""}actual`;
+  else if(document.getElementById("detailed").checked) return `${detail}${detail.length !== 0 ? " + " : ""}detailed`;
 }
 
 function assemblePath() {
   let brackets = assembleBracket();
-  if(document.getElementById("pixel-art").checked) return ` pixel-art (${brackets})`;
-  else return `(${brackets})`;
+  let str = (document.getElementById("pixel-art").checked)
+    ? `pixel-art (${brackets})`
+    : `(${brackets})`; 
+
+  if(document.getElementById("count").value === "0") return `empty ${str}`;
+  else return `${str}`;
 }
 
 function checkDetail() {
-  document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent(`image/CommissionPlaceholders/Placeholder for commission page${assemblePath()}.png`);
+  document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent(`image/CommissionPlaceholders/Placeholder for commission page ${assemblePath()}.png`);
   outputPrice()
+}
+
+function checkControls() {
+  let disPart = (document.getElementById("count").value === "0");
+  document.getElementById("head").disabled = disPart;
+  document.getElementById("half").disabled = disPart;
+  document.getElementById("full").disabled = disPart;
+  document.getElementById("blank").disabled = disPart;
+  document.getElementById("paint_line").disabled = disPart;
+  document.getElementById("shadow_line").disabled = disPart;
+  document.getElementById("lineless_paint").disabled = disPart;
+  document.getElementById("shadow_lineless_paint").disabled = disPart;
+
+  let disPixel = (document.getElementById("pixel-art").checked);
+  document.getElementById("lineless_paint").disabled = disPixel;
+  document.getElementById("shadow_lineless_paint").disabled = disPixel;
+  
+  let disBg = (document.getElementById("detailed").checked);
+  document.getElementById("line").disabled = disPart || disBg;
+  document.getElementById("shadow_line").disabled = disPixel || disBg;
 }
 
 function checkStyle() {
@@ -77,6 +107,7 @@ function checkStyle() {
   else {
     document.getElementById("placeholder").style.imageRendering = "auto";
   }
+  checkControls();
   checkDetail()
 }
 
@@ -163,6 +194,7 @@ function copyStatsToClipboard() {
       : 2
     )
   })R:(${document.getElementById("ref").checked})P:(${calcPrice()})`);
+  alert("copied to clipboard");
 }
 
 loadJson();
