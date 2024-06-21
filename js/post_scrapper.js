@@ -28,7 +28,7 @@ import * as videoException from "./../js/video_exception.js";
       else throw "undefined url \"post\" argument";
     }
     catch (error) {
-      document.getElementById("post").innerHTML = (await videoException.getExceptionNode(error));
+      document.getElementById("post").appendChild(await videoException.getExceptionNode(error));
     }
   }
   else {
