@@ -1,0 +1,33 @@
+{
+  "crop": {
+    "head": 2,
+    "half": 4,
+    "full": 7
+  },
+  "detail": {
+    "line": 0.5,
+    "line+color": 1,
+    "line+color+effect": 2,
+    "line+effect": 1,
+    "lineless-color": 1,
+    "lineless-color+effect": 2
+  },
+  "count": {
+    "0": 0.75,
+    "1": 1,
+    "2+": 0.5
+  },
+  "style": {
+    "original": 1,
+    "pixel-art": 0.5,
+    "others": 5
+  },
+  "background": {
+    "blank": 0.75,
+    "abstract": 1,
+    "actual": 1.5,
+    "detailed": 2
+  },
+  "global": 0.5,
+  "base": 5
+}

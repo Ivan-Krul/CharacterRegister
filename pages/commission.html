@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
+    <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
+    <title>Commissions in Character Register</title>
+</head>
+
+<style>
+    img {
+        max-width: 400%;
+        text-align: left;
+    }
+
+    .head_crop {
+        width: 256px !important;
+        height: 80px !important;
+        object-fit: cover;
+        object-position: 50% 20%;
+    }
+
+    .half_crop {
+        width: 256px !important;
+        height: 170px !important;
+        object-fit: cover;
+        object-position: 50% 25%;
+    }
+
+    .full_crop {
+        width: 256px;
+        height: 256px;
+    }
+</style>
+
+<body>
+    <div id="sideMenu"></div>
+
+    <div id="content">
+        <h2>Commission page</h2>
+        <div>Here you can see how you can get my drawing up to 1 week.</div>
+        <div>
+            <div>Conditions to call out me:</div>
+            <ul>
+                <li>Using direct messages to my discord account</li>
+                <li>Using google forms for shy people(soon)</li>
+            </ul>
+        </div>
+        <div>
+            <div>In these sheets, you're choosing commission plan:</div>
+            <div>
+                <div>Crop (C): </div>
+                <div>
+                    <input type="radio" name="crop" id="head">
+                    <label for="head">head (<span id="head_cost"></span>)</label>
+                    <input type="radio" name="crop" id="half">
+                    <label for="half">half-body (<span id="half_cost"></span>)</label>
+                    <input type="radio" name="crop" id="full" checked>
+                    <label for="full">full-body (<span id="full_cost"></span>)</label>
+                </div>
+                <br>
+                <div>
+                    <div>Detail (D): </div>
+                    <div>
+                        <input type="radio" name="detail" id="line" checked>
+                        <label for="line">line (<span id="line_cost"></span>)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="detail" id="paint_line">
+                        <label for="paint_line">line + paint (<span id="paint_line_cost"></span>)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="detail" id="shadow_paint_line">
+                        <label for="shadow_paint_line">line + paint + shadow/light (<span
+                                id="shadow_paint_line_cost"></span>)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="detail" id="shadow_line">
+                        <label for="shadow_line">line + shadow/light (<span id="shadow_line_cost"></span>)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="detail" id="lineless_paint">
+                        <label for="lineless_paint">lineless-paint (<span id="lineless_paint_cost"></span>)</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="detail" id="shadow_lineless_paint">
+                        <label for="shadow_lineless_paint">lineless-paint shadow/light (<span
+                                id="shadow_lineless_paint_cost"></span>)</label>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div>Count characters(N): </div>
+                    <input type="number" min="0" value="1" step="1" id="count" style="width: 5ch;">
+                    <label for="count">Count of character to be drawn <div>(for 0: <span id="0_count_cost"></span>, for
+                            1: <span id="1_count_cost"></span>, for additional: *(<span id="1_count_cost"></span>+<span
+                                id="2+_count_cost"></span>)</div>
+                    </label>
+                </div>
+                <br>
+                <div>
+                    <div>Background(B): </div>
+                    <input type="radio" name="background" id="blank" checked>
+                    <label for="blank">blank (<span id="blank_cost"></span>)</label>
+                    <input type="radio" name="background" id="abstract">
+                    <label for="abstract">abstract (<span id="abstract_cost"></span>)</label>
+                    <input type="radio" name="background" id="actual">
+                    <label for="actual">actual (<span id="actual_cost"></span>)</label>
+                    <input type="radio" name="background" id="detailed">
+                    <label for="detailed">detailed (<span id="detailed_cost"></span>)</label>
+                </div>
+                <br>
+                <div>
+                    <div>Style(S): </div>
+                    <input type="radio" name="style" id="original" checked>
+                    <label for="original">original (<span id="original_cost"></span>)</label>
+                    <input type="radio" name="style" id="pixel-art">
+                    <label for="pixel-art">pixel-art (<span id="pixel-art_cost"></span>)</label>
+                    <input type="radio" name="style" id="others">
+                    <label for="others">others (<span id="others_cost"></span>)</label>
+                </div>
+                <br>
+                <div>
+                    <div>Reference(R): </div>
+                    <input type="checkbox" id="ref">
+                    <label for="ref">with reference(-<span id="ref_cost"></span>)</label>
+                </div>
+            </div>
+            <div>
+                <img id="placeholder" class="full_crop">
+            </div>
+            <div>Global price multiplier (G): <span id="global_cost"></span></div>
+            <div>Base price (A): <span id="base_cost"></span></div>
+            <br>
+            <div>Price: ( C * D * N * B * S + R ) * G + A</div>
+            <div>Price: <span id="price_counter"></span></div>
+            <button id="copy_stats_to_clipboard">Copy plan into clipboard</button>
+        </div>
+        <div>After choosing one, you click "save plan into clipboard", and paste it to me.</div>
+        <div>Before starting the drawing, you have to pay, or "pre-pay" a half of your money, and I would make only a
+            half of my work, and when you're paying the rest of the price, I'm gonna finish till the end.</div>
+        <div>
+            Right now you can pay using:
+            <ul>
+                <li>PayPal(soon)</li>
+                <li>Amazon gift cards, depending on your region</li>
+                <li>Steam gift card, depending on your region</li>
+                <li>Steam games as a present</li>
+            </ul>
+            If you're lacking of money, or you can't get access to payment system, you can make a contribution to my
+            active GitHub projects using "pull requests"(I accept good code, so you can ask me is it valid), or draw as
+            best as you can drawings of my characters(don't try ai, it has to be yours and high quality), or befriend
+            with me(hours chatting with me isn't meaning we're friends).
+        </div>
+        <div>
+            What I draw:
+            <ul>
+                <li>Furries/Animals</li>
+                <li>Landscape(in my style)</li>
+                <li>Machines(simple)</li>
+                <li>Abstraction(randomly)</li>
+                <li>(anything not included here are in following list, but not written)</li>
+            </ul>
+            What I CAN'T draw:
+            <ul>
+                <li>Suggestive(feeling awkward to draw this)</li>
+                <li>Blood(ehh… not too much, like 20% without any injuries and stuff)</li>
+            </ul>
+        </div>
+        <div>After that, for a day, or for a week(more than a week after payment you can ask about another drawing as free), you're getting a drawing from me. Lastly, don't forget to mention me in case of publishing my work.</div>
+    </div>
+
+    <script type="module" src="../js/commission.js"></script>
+</body>
+
+</html>
