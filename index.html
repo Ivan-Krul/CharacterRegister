@@ -19,9 +19,12 @@
         margin: 5px;
     }
 
-    iframe {
-        width:35vw;
-        height: 30vh;
+
+    @media screen and ((max-aspect-ratio: 1/1) or (max-width: 600px)) {
+        iframe {
+            width: 90vw;
+            height: 40vh;
+        }
     }
 
     body {
@@ -32,14 +35,20 @@
         background-size: cover;
     }
 
-    a, a:visited{
-        color:#fff;
+    a,
+    a:visited {
+        color: #fff;
     }
 
     @media screen and not ((max-aspect-ratio: 1/1) or (max-width: 600px)) {
         #about {
             width: 50vw;
-        }    
+        }
+
+        iframe {
+            width: 40vw;
+            height: 40vh;
+        }
     }
 </style>
 
@@ -57,59 +66,64 @@
 
 
         <div id="marks">
-        <div id="about" class="block">
-            <h2>About</h2>
-            <p>This is a register, what I made for myself. Here you can watch all my characters and/or other
-                things what have relation with these characters.</p>
-            <p>
-                You can spectate my world called <span style="font-size: larger;">𝓜𝓲𝓷𝓭</span>. It's an illusion,
-                it's a vendor, it's a valve, and
-                last but not least, it's a matrix.
-                Can they exist without that? No. They dependant, but from who? I don't want to tell you...
-            </p>
-            <p>
-                Anyway, It have an older version of that called OCDataBase. It still haven't design yet, but
-                it's a better that in older version.
-                It would use future technologies called JavaScript and one-page loading resources!
-                They're better that in older version because I can rest after designing separate pages and
-                then manage them.
-                It would takes a profile, story and image files, and insert them in marked sequence.
-            </p>
-            <p>
-                It's like design hub for me. I can just precreate all thigs here and if I want, link it.
-                These stories are relatable or not yet. The application holds not only from Github-Pages, it
-                also hosts in Fur and even Ima!!
-            </p>
-            <p>
-                What is the Ima, Fur, or others definition? It's a whole countries!! In Mind, no one cares
-                what is would be: "Anime", "<a href="./pages/def.html?def=ESC">ESC</a>", "SN", "Life" or even "Skills".
-            </p>
-            <p>
-                Then what is the "Mind"?
-            </p>
-            <p>
-                At last, I would write more characters and not only mine!
-                Even bad experience is also experience!
-            </p>
+            <div id="about" class="block">
+                <h2>About</h2>
+                <p>This is a register, what I made for myself. Here you can watch all my characters and/or other
+                    things what have relation with these characters.</p>
+                <p>
+                    You can spectate my world called <span style="font-size: larger;">𝓜𝓲𝓷𝓭</span>. It's an illusion,
+                    it's a vendor, it's a valve, and
+                    last but not least, it's a matrix.
+                    Can they exist without that? No. They dependant, but from who? I don't want to tell you...
+                </p>
+                <p>
+                    Anyway, It have an older version of that called OCDataBase. It still haven't design yet, but
+                    it's a better that in older version.
+                    It would use future technologies called JavaScript and one-page loading resources!
+                    They're better that in older version because I can rest after designing separate pages and
+                    then manage them.
+                    It would takes a profile, story and image files, and insert them in marked sequence.
+                </p>
+                <p>
+                    It's like design hub for me. I can just precreate all thigs here and if I want, link it.
+                    These stories are relatable or not yet. The application holds not only from Github-Pages, it
+                    also hosts in Fur and even Ima!!
+                </p>
+                <p>
+                    What is the Ima, Fur, or others definition? It's a whole countries!! In Mind, no one cares
+                    what is would be: "Anime", "<a href="./pages/def.html?def=ESC">ESC</a>", "SN", "Life" or even
+                    "Skills".
+                </p>
+                <p>
+                    Then what is the "Mind"?
+                </p>
+                <p>
+                    At last, I would write more characters and not only mine!
+                    Even bad experience is also experience!
+                </p>
+            </div>
+            <div class="block">
+                <h2>My famous OCs:</h2>
+                <ul>
+                    <li><a href="./pages/oc.html?oc=jania">Jania (my current sona, cat with soul)</a></li>
+                    <li><a href="./pages/oc.html?oc=stefan">Stefan (trans tiger shark)</a></li>
+                    <li><a href="./pages/oc.html?oc=alexa">Alexa (energetic daot ( dog + cat ))</a></li>
+                    <li>There're some more OCs in side menu</li>
+                </ul>
+            </div>
+            <div class="block">
+                <h2>Also exists some definitions about the Mind,</h2>
+                but it's not what are you looking for (all of them in side menu)
+            </div>
+            <div class="block">
+                <h2>Also I have an open commission!!</h2>
+                you can <a href="./pages/commission.html">check it out here and try to order from me</a>
+            </div>
+            <div class="block">
+                <h2>Also I do posts here</h2>
+                <iframe src="./pages/post_scrapper.html?windowed=1&post=5"></iframe>
+            </div>
         </div>
-        <div class="block">
-            <h2>My famous OCs:</h2>
-            <ul>
-                <li><a href="./pages/oc.html?oc=jania">Jania (my current sona, cat with soul)</a></li>
-                <li><a href="./pages/oc.html?oc=stefan">Stefan (trans tiger shark)</a></li>
-                <li><a href="./pages/oc.html?oc=alexa">Alexa (energetic daot ( dog + cat ))</a></li>
-                <li>There're some more OCs in side menu</li>
-            </ul>
-        </div>
-        <div class="block">
-            <h2>Also exists some definitions about the Mind,</h2>
-            but it's not what are you looking for (all of them in side menu)
-        </div>
-        <div class="block">
-            <h2>Also I do posts here</h2>
-            <iframe src="./pages/post_scrapper.html?windowed=1&post=5"></iframe>
-        </div>
-    </div>
     </div>
 
     <script type="module" src="./js/index.js"></script>
