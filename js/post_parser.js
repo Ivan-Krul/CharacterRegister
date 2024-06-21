@@ -56,14 +56,20 @@ export const dictionary =
     ["i- ", "<img src=\""],
     [" -i", "\">"],
 
+    ["\\\"", "\\\""],
+
     ["\" ", "<div>"],
     [" \"", "</div>"],
+
+    ["\"*>", "<div id=\""],
+    ["<* ", "\">"],
 
     ["[ ", "<i>["],
     [" ]", "]</i>"],
 
     ["\"*", "\""],
     ["*\"", "\""],
+
 
     ["<!twitter ", "<a target=\"_blank\" href=\"https://twitter.com/"],
     ["<!youtube ", "<a target=\"_blank\" href=\"https://www.youtube.com/"],
@@ -87,9 +93,6 @@ export const dictionary =
 
     [">q> ", "<blockquote style=\"color: gray;\">"],
     [" >q>", "</blockquote>"],
-
-    ["|$ ", "<script type=\"module\">"],
-    [" $|", "</script>"],
 
     ["|$- ", `<script type=\"module\" src=\"${fileFetcher.makeLinkIndependent("js/")}`],
     [" -$|", "\"></script>"],
