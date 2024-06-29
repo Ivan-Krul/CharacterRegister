@@ -26,6 +26,7 @@
     "blank": 0.75,
     "abstract": 1,
     "actual": 1.5,
+    "photo": 1.5,
     "detailed": 2
   },
   "global": 0.5,
