@@ -45,6 +45,7 @@
 
       document.getElementById("output").innerHTML = PostParser.parseRawPost(text, forced);
       document.getElementById("title").innerText = PostParser.parseRawTitle(text, forced);
+      PostParser.appendParsedPostToDOM(document.getElementById("output").innerHTML, document.getElementById("output"));
     }
     function update(event) {
       updateRaw(event.target.value);
