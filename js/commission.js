@@ -15,6 +15,7 @@ function calcPrice() {
        if(document.getElementById("line").checked)                  res *= json.detail["line"];
   else if(document.getElementById("paint_line").checked)            res *= json.detail["line+color"];
   else if(document.getElementById("shadow_paint_line").checked)     res *= json.detail["line+color+effect"];
+
   if(document.getElementById("pixel-art").checked === false) {
          if(document.getElementById("shadow_line").checked)           res *= json.detail["line+effect"];
     else if(document.getElementById("lineless_paint").checked)        res *= json.detail["lineless-color"];
@@ -23,11 +24,12 @@ function calcPrice() {
 
        if(document.getElementById("count").value === "0") res *= json.count["0"];
   else if(document.getElementById("count").value === "1") res *= json.count["1"];
-  else                                                  res *= json.count["2+"] * document.getElementById("count").value +json.count["1"];
+  else                                                    res *= json.count["2+"] * document.getElementById("count").value +json.count["1"];
 
        if(document.getElementById("blank").checked)    res *= json.background.blank;
   else if(document.getElementById("abstract").checked) res *= json.background.abstract;
   else if(document.getElementById("actual").checked)   res *= json.background.actual;
+  else if(document.getElementById("photo").checked)    res *= json.background.photo;
   else if(document.getElementById("detailed").checked) res *= json.background.detailed;
 
        if(document.getElementById("original").checked)  res *= json.style["original"];
@@ -62,6 +64,7 @@ function assembleBracket() {
        if(document.getElementById("blank").checked)    return `${detail}`;
   else if(document.getElementById("abstract").checked) return `${detail}${detail.length !== 0 ? " + " : ""}abst`;
   else if(document.getElementById("actual").checked)   return `${detail}${detail.length !== 0 ? " + " : ""}actual`;
+  else if(document.getElementById("photo").checked)    return `${detail}${detail.length !== 0 ? " + " : ""}photo`;
   else if(document.getElementById("detailed").checked) return `${detail}${detail.length !== 0 ? " + " : ""}detailed`;
 }
 
@@ -94,8 +97,9 @@ function checkControls() {
   let disPixel = (document.getElementById("pixel-art").checked);
   document.getElementById("lineless_paint").disabled = disPixel;
   document.getElementById("shadow_lineless_paint").disabled = disPixel;
+  document.getElementById("photo").disabled = disPixel;
   
-  let disBg = (document.getElementById("detailed").checked);
+  let disBg = (document.getElementById("detailed").checked || document.getElementById("photo").checked);
   document.getElementById("line").disabled = disPart || disBg;
   document.getElementById("shadow_line").disabled = disPixel || disBg;
 }
@@ -142,6 +146,7 @@ async function loadJson() {
   document.getElementById("blank_cost").innerText =    json.background.blank;
   document.getElementById("abstract_cost").innerText = json.background.abstract;
   document.getElementById("actual_cost").innerText =   json.background.actual;
+  document.getElementById("photo_cost").innerText =   json.background.photo;
   document.getElementById("detailed_cost").innerText = json.background.detailed;
 
   document.getElementById("original_cost").innerText = json.style["original"];
@@ -182,7 +187,11 @@ function copyStatsToClipboard() {
       : (
         document.getElementById("actual").checked
         ? 2
-        : 3
+        : (
+          document.getElementById("photo").checked
+          ? 3
+          : 4
+        )
       )
     )
   })S:(${
@@ -217,6 +226,7 @@ document.getElementById("count").onchange = checkStyle;
 document.getElementById("blank").onclick = checkStyle;
 document.getElementById("abstract").onclick = checkStyle;
 document.getElementById("actual").onclick = checkStyle;
+document.getElementById("photo").onclick = checkStyle;
 document.getElementById("detailed").onclick = checkStyle;
 
 document.getElementById("original").onclick = checkStyle;

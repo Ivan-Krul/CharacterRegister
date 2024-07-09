@@ -5,9 +5,11 @@ image\CommissionPlaceholders\Placeholder for commission page (line + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + detailed).png
+image\CommissionPlaceholders\Placeholder for commission page (line + paint + photo).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + shadow + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + shadow + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + shadow + detailed).png
+image\CommissionPlaceholders\Placeholder for commission page (line + paint + shadow + photo).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + shadow).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint).png
 image\CommissionPlaceholders\Placeholder for commission page (line + shadow + abst).png
@@ -17,9 +19,11 @@ image\CommissionPlaceholders\Placeholder for commission page (line).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + detailed).png
+image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + photo).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + shadow + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + shadow + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + shadow + detailed).png
+image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + shadow + photo).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint + shadow).png
 image\CommissionPlaceholders\Placeholder for commission page (lineless-paint).png
 image\CommissionPlaceholders\Placeholder for commission page empty (abst).png
