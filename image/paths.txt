@@ -121,6 +121,7 @@ image\OCPool\Jania\Jania pfp.png
 image\OCPool\Jania\Jania with gun.png
 image\OCPool\Jania\Jania with strawberry.png
 image\OCPool\Jania\Jania's style clones.png
+image\OCPool\Jania\Monday.png
 image\OCPool\Jania\Oct 07.png
 image\OCPool\Jania\On way to Fronstan.png
 image\OCPool\Jania\photo_2023-04-25_22-35-40.jpg
@@ -141,6 +142,7 @@ image\OCPool\Kiwuar\Kiwuar pfp.png
 image\OCPool\Kiwuar\Kiwuar with cover.png
 image\OCPool\Kiwuar\Kiwuar's researches.png
 image\OCPool\Kiwuar\Pumpkin field.png
+image\OCPool\Nuzle\Nuzle in Gersthof post-proc.png
 image\OCPool\Nuzle\Nuzle isn't giant.png
 image\OCPool\Nuzle\Nuzle.png
 image\OCPool\Ostafan\Chess is fun.png
