@@ -26,6 +26,8 @@
   <div id="output"></div>
 
   <hr>
+  <div id="source"></div>
+  <hr>
 
   <div style="font-family: consolas;">
     <div>You can save your work in local storage like a cookie using CTRL + S or clicking that button "Save"</div>
@@ -42,9 +44,11 @@
 
     function updateRaw(text) {
       let forced = document.getElementById("langArg").value.length ? document.getElementById("langArg").value : undefined;
+      let content = PostParser.parseRawPost(text, forced);
 
-      document.getElementById("output").innerHTML = PostParser.parseRawPost(text, forced);
+      document.getElementById("output").innerHTML = content;
       document.getElementById("title").innerText = PostParser.parseRawTitle(text, forced);
+      document.getElementById("source").innerText = content;
       PostParser.appendParsedPostToDOM(document.getElementById("output").innerHTML, document.getElementById("output"));
     }
     function update(event) {

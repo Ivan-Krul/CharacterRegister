@@ -9,8 +9,8 @@ function capitalizeFirstLetter(string) {
 async function outputDefinition() {
     let def = fileFetcher.getURLParams().get("def");
 
-
-    document.getElementById("page").innerHTML = postParser.parseRawPost(await fileFetcher.fetchFile(`list/definitions/${def}.crd`));
+    let page = postParser.parseRawPost(await fileFetcher.fetchFile(`list/definitions/${def}.crd`));
+    document.getElementById("page").innerHTML = page;
     document.getElementById("header").innerText = capitalizeFirstLetter(def);
 }
 
