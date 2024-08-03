@@ -28,7 +28,7 @@
         "magaziner",
         "redfunner (maybe)"
     ],
-    "work": "Hairdresser",
+    "work": "Not employed",
     "currency": {
         "now_place": null,
         "now_value": null,
@@ -110,9 +110,7 @@
             " Yogan - *\"Yeah, but even with obsticles, we can reach to our love*\"!| He cuddled Alexa, while she was working on haircut. Did she deserved this?"
         ],
         "With Yogan again.crs",
-        [
-            
-        ]
+        "Love's fracture.crs"
     ],
     "not_mine_gallery": [
         {
