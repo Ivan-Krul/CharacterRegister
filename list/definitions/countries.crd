@@ -8,30 +8,21 @@ il- DefinitionPool/sit.png -il
 		 -- ESC |-- 
 		 -- Erraser |-- 
 		 -- Games |-- 
-		 -- History |-- 
 		 -- Lp |-- 
 		 -- Lang g |-- 
-		 -- Vec |-- 
 		 -- W |-- 
 		 >->
 	" Countries in 3rd generation continent: "
 	>-> 
 		 -- Continent #3 |-- 
+		 
 		 >->
 	" Countries in 4th generation continent: "
 	>-> 
-		 -- Agrar |-- 
-		 -- Mot |-- 
-		 -- Nat |-- 
-     -- Life |-- 
-		 -- Locat |-- 
-		 -- Proc |-- 
-		 -- Series |-- 
-		 -- T |-- 
+		 -- Continent #4 |-- 
 		 >->
 	" Countries in force islands: "
 	>-> 
-		 -- Marathon |-- 
 		 -- Phy |-- 
 		 -- Sp. gm |-- 
 		 -- Strength |-- 
@@ -39,15 +30,10 @@ il- DefinitionPool/sit.png -il
 	" Countries in 5th generation continent: "
 	>-> 
 		 -- Outer border |-- 
-         -- Edu |-- 
-         -- Life |-- 
-         -- Proph |-- 
-    		 -- Skill |-- 
-         -- YT |-- 
 		 >->
 	" Countries in central islands: "
 	>-> 
 		 -- Border |-- 
-		 -- P.L |-- 
+		 -- Life |-- 
 		 >->
  "
