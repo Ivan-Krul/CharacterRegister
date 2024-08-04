@@ -47,6 +47,7 @@ image\CommissionPlaceholders\Placeholder for commission page pixel-art (line).pn
 image\DefinitionPool\-9sc1tw.jpg
 image\DefinitionPool\-exd374.jpg
 image\DefinitionPool\cit.png
+image\DefinitionPool\Continent #3 poster.png
 image\DefinitionPool\ESC secret shot.png
 image\DefinitionPool\Form of Mem UN (after).png
 image\DefinitionPool\Form of Mem UN (before).png
@@ -55,6 +56,7 @@ image\DefinitionPool\MW7.gif
 image\DefinitionPool\numberstan.png
 image\DefinitionPool\sit.png
 image\DefinitionPool\symbol of currency S.png
+image\DefinitionPool\What is X div X.png
 image\Events\MindWarNum5\0.png
 image\Events\MindWarNum5\1.png
 image\Events\MindWarNum5\10.png
@@ -86,6 +88,7 @@ image\Favicons\Favicon 32x32.png
 image\Favicons\Favicon 64x64.png
 image\OCPool\Alexa\Aftermath.png
 image\OCPool\Alexa\Alexa in the beach.png
+image\OCPool\Alexa\Alexa is connecting.png
 image\OCPool\Alexa\Alexa is meeting Yogan.png
 image\OCPool\Alexa\Alexa pfp.png
 image\OCPool\Alexa\Alexa thought about that for a time.png
@@ -98,6 +101,7 @@ image\OCPool\Alexa\IMG_20230521_224410.jpg
 image\OCPool\Alexa\IMG_20230522_230112.jpg
 image\OCPool\Grace\Grace.png
 image\OCPool\Grace\Stefan's first kiss.png
+image\OCPool\Grace\Work in library.png
 image\OCPool\Jania\-rw9530.jpg
 image\OCPool\Jania\Anniversary.png
 image\OCPool\Jania\Bday 18th.png
@@ -114,6 +118,7 @@ image\OCPool\Jania\IMG_20230518_202725.jpg
 image\OCPool\Jania\IMG_20230522_230112.jpg
 image\OCPool\Jania\Jania Christmas.png
 image\OCPool\Jania\Jania had sad vibes.png
+image\OCPool\Jania\Jania hai.png
 image\OCPool\Jania\Jania in Vienna.png
 image\OCPool\Jania\Jania is yawing.png
 image\OCPool\Jania\Jania pfp speedrun.png
@@ -121,6 +126,7 @@ image\OCPool\Jania\Jania pfp.png
 image\OCPool\Jania\Jania with gun.png
 image\OCPool\Jania\Jania with strawberry.png
 image\OCPool\Jania\Jania's style clones.png
+image\OCPool\Jania\Jania.xcf.png
 image\OCPool\Jania\Monday.png
 image\OCPool\Jania\Oct 07.png
 image\OCPool\Jania\On way to Fronstan.png
@@ -168,6 +174,7 @@ image\OCPool\Stefan\Stefan's first kiss.png
 image\OCPool\Stefan\Stefan's trans.png
 image\OCPool\Stefan\Stefan.png
 image\OCPool\Stefan\Unexpected meeting.png
+image\OCPool\Stefan\Work in library.png
 image\OCPool\Thomas\Chess is fun.png
 image\OCPool\Thomas\Consequences.png
 image\OCPool\Thomas\IMG_20230430_215037.jpg
