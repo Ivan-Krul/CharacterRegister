@@ -27,10 +27,7 @@ function getLangTag(str = "", forcedLang = undefined) {
   let indxBeg = str.indexOf(begLangTag.replace("[]", lang));
   let indxEnd = str.indexOf(endLangTag.replace("[]", lang));
 
-  if (indxBeg === -1) {
-    console.warn("It's unsupported for translated text, assumption it's deprecated post");
-    return str;
-  }
+  if (indxBeg === -1) return str;
   if (indxEnd === -1) throw `Bracket for language ${lang} wasn't closed`;
 
   return str.substring(indxBeg + begLangTag.length, indxEnd);

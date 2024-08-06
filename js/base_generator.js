@@ -3,7 +3,7 @@ import * as sideLinker from "./side_linker.js";
 import "./side_handler.js";
 import "./dark_theme.js";
 
-async function assemble() {
+export async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
 
     side = side.replace("./pages/post_scrapper.html",fileFetcher.makeLinkIndependent("./pages/post_scrapper.html"));
@@ -19,6 +19,4 @@ async function assemble() {
   await sideLinker.gatherEvents();
   await sideLinker.gatherMarathons();
 }
-
-assemble();
 

@@ -1,5 +1,6 @@
 image\Mind.png
 image\paths.txt
+image\Buttons\mintychaosDOTcom_88x31.png
 image\CommissionPlaceholders\Placeholder for commission page (line + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (line + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + abst).png
@@ -166,6 +167,7 @@ image\OCPool\Stefan\IMG_20230521_224410.jpg
 image\OCPool\Stefan\IMG_20230522_230112.jpg
 image\OCPool\Stefan\jar of apricot jam.png
 image\OCPool\Stefan\Stefan in library.png
+image\OCPool\Stefan\Stefan is laying.png
 image\OCPool\Stefan\Stefan is waiting.png
 image\OCPool\Stefan\Stefan pfp.png
 image\OCPool\Stefan\Stefan with different outfit.png
@@ -201,6 +203,7 @@ image\OCPool\Ukinas\Ukinas.png
 image\PostPool\Annas Bday.png
 image\PostPool\Annas celebrating.png
 image\PostPool\Annas Christmas.png
+image\PostPool\Astrid-Nick bday anim merg.gif
 image\PostPool\CharacterRegister favicon high.png
 image\PostPool\First Art Raffle.png
 image\PostPool\Gang in Altes Landgut.png

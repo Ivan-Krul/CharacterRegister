@@ -1,4 +1,4 @@
-import "./base_generator.js";
+import {assemble} from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 
 var json = JSON.parse(await fileFetcher.fetchFile("resource/commission_params.json"));
@@ -206,35 +206,41 @@ function copyStatsToClipboard() {
   alert("copied to clipboard");
 }
 
-loadJson();
+async function main() {
+  await assemble();
 
-document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent("image/CommissionPlaceholders/Placeholder for commission page(line).png");
+  await loadJson();
 
-document.getElementById("head").onclick = checkCrop;
-document.getElementById("half").onclick = checkCrop;
-document.getElementById("full").onclick = checkCrop;
+  document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent("image/CommissionPlaceholders/Placeholder for commission page(line).png");
 
-document.getElementById("line").onclick = checkStyle;
-document.getElementById("paint_line").onclick = checkStyle;
-document.getElementById("shadow_paint_line").onclick = checkStyle;
-document.getElementById("shadow_line").onclick = checkStyle;
-document.getElementById("lineless_paint").onclick = checkStyle;
-document.getElementById("shadow_lineless_paint").onclick = checkStyle;
+  document.getElementById("head").onclick = checkCrop;
+  document.getElementById("half").onclick = checkCrop;
+  document.getElementById("full").onclick = checkCrop;
 
-document.getElementById("count").onchange = checkStyle;
+  document.getElementById("line").onclick = checkStyle;
+  document.getElementById("paint_line").onclick = checkStyle;
+  document.getElementById("shadow_paint_line").onclick = checkStyle;
+  document.getElementById("shadow_line").onclick = checkStyle;
+  document.getElementById("lineless_paint").onclick = checkStyle;
+  document.getElementById("shadow_lineless_paint").onclick = checkStyle;
 
-document.getElementById("blank").onclick = checkStyle;
-document.getElementById("abstract").onclick = checkStyle;
-document.getElementById("actual").onclick = checkStyle;
-document.getElementById("photo").onclick = checkStyle;
-document.getElementById("detailed").onclick = checkStyle;
+  document.getElementById("count").onchange = checkStyle;
 
-document.getElementById("original").onclick = checkStyle;
-document.getElementById("pixel-art").onclick = checkStyle;
-document.getElementById("others").onclick = checkStyle;
+  document.getElementById("blank").onclick = checkStyle;
+  document.getElementById("abstract").onclick = checkStyle;
+  document.getElementById("actual").onclick = checkStyle;
+  document.getElementById("photo").onclick = checkStyle;
+  document.getElementById("detailed").onclick = checkStyle;
 
-document.getElementById("ref").onclick = checkStyle;
+  document.getElementById("original").onclick = checkStyle;
+  document.getElementById("pixel-art").onclick = checkStyle;
+  document.getElementById("others").onclick = checkStyle;
 
-document.getElementById("copy_stats_to_clipboard").onclick = copyStatsToClipboard;
+  document.getElementById("ref").onclick = checkStyle;
 
-checkCrop();
+  document.getElementById("copy_stats_to_clipboard").onclick = copyStatsToClipboard;
+
+  checkCrop();
+}
+
+main();
