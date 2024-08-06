@@ -1,4 +1,4 @@
-import "./base_generator.js";
+import {assemble} from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 import * as videoException from "./video_exception.js"
 import * as oc from "./oc.js";
@@ -131,4 +131,6 @@ document.getElementById("button_showGallery").onclick = (target) => {
   target.target.innerText = `${toggle_gallery ? "Hide" : "Show "} Gallery`;
   renderGallery();
 };
-render();
+
+await assemble();
+await render();

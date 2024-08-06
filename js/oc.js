@@ -1,4 +1,4 @@
-import "./base_generator.js";
+import {assemble} from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 import * as postParser from "./post_parser.js"
 import * as mind from "./mind.js";

@@ -12,8 +12,6 @@ export async function getExceptionNode(errorMessage) {
   let noded = fileFetcher.makeLinkIndependent("resource/"+list[choosedElement]);
   if(noded.indexOf(".gif") !== -1)
     node.innerHTML = `${errorMessage}<br/><img src="${noded}" style="max-width: 50vw; max-height: 50vh">`;
-  else
-    node.innerHTML = `${errorMessage}<br/><video src="${noded}" autoplay controls style="max-width: 50vw; max-height: 50vh"></video>`;
-  
+
   return node;
 }

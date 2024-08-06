@@ -7,10 +7,12 @@
     background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
     color: #fff;
     border-right: 5px solid black;
-    padding: 2vw;
+    padding-top: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-bottom: 16vw;
     overflow-y: auto;
 }
-
 
 @media screen and (min-aspect-ratio: 1/1) {
     #sideMenu {
@@ -67,6 +69,12 @@ button {
     position: fixed;
     top: 20px;
     right: 20px;
+}
+.buttons {
+    margin: 5px;
+    padding: 5px;
+    image-rendering: pixelated;
+    border: none !important;
 }
 img {
     border: 5px solid white;

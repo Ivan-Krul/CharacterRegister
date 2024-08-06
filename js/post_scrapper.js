@@ -1,7 +1,9 @@
-import "./base_generator.js";
+import {assemble} from "./base_generator.js";
 import * as fileFetcher from "../js/file_fetcher.js";
 import * as postGenerator from "./../js/post_generator.js";
 import * as videoException from "./../js/video_exception.js";
+
+await assemble();
 
 (async () => {
   const urlParams = new URLSearchParams(window.location.search);

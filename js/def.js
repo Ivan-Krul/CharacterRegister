@@ -1,4 +1,4 @@
-import "./base_generator.js";
+import {assemble} from "./base_generator.js";
 import * as postParser from "./post_parser.js";
 import * as fileFetcher from "./file_fetcher.js";
 
@@ -14,4 +14,5 @@ async function outputDefinition() {
     document.getElementById("header").innerText = capitalizeFirstLetter(def);
 }
 
-outputDefinition();
+await assemble();
+await outputDefinition();
