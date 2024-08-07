@@ -46,6 +46,10 @@ button {
     padding-right: 6px;
 }
 
+button:hover {
+    background-color: #a885c9;
+}
+
 #sideMenu a{
     color:#fff;
 }
