@@ -1,6 +1,7 @@
 image\Mind.png
 image\paths.txt
 image\Buttons\mintychaosDOTcom_88x31.png
+image\Buttons\raihormoDOTgithubDOTio_88x31.png
 image\CommissionPlaceholders\Placeholder for commission page (line + abst).png
 image\CommissionPlaceholders\Placeholder for commission page (line + actual).png
 image\CommissionPlaceholders\Placeholder for commission page (line + paint + abst).png
