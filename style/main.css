@@ -7,10 +7,8 @@
     background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
     color: #fff;
     border-right: 5px solid black;
-    padding-top: 2vw;
     padding-left: 2vw;
     padding-right: 2vw;
-    padding-bottom: 16vw;
     overflow-y: auto;
 }
 
