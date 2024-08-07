@@ -123,8 +123,26 @@
                 <h2>Also I do posts here</h2>
                 <iframe src="./pages/post_scrapper.html?windowed=1&post=5"></iframe>
             </div>
+            <div class="block">
+                <h2>If you want to embed the website's button</h2>
+                <a href="https://ivan-krul.github.io/CharacterRegister" target="_blank">
+                <img src="https://ivan-krul.github.io/CharacterRegister/image/Kiwii's%20CharacterRegister%20button.png"></a> 
+                <code id="button_code_copy" style="background-color: white;border: 1px solid gray; border-radius: 4px;color: black;">
+                    &lt;a href="https://ivan-krul.github.io/CharacterRegister" target="_blank"&gt;<br/>
+                    &lt;img src="https://ivan-krul.github.io/CharacterRegister/image/Kiwii's%20CharacterRegister%20button.png"&gt;&lt;/a&gt;
+                </code>
+                    <button onclick="copyCode()">copy</button>
+            </div>
         </div>
     </div>
+
+    <script>
+        function copyCode() {
+            let text = document.getElementById(`button_code_copy`).innerText;
+            navigator.clipboard.writeText(text);
+            alert("The code has copied");
+        }
+    </script>
 
     <script type="module" src="./js/index.js"></script>
 </body>
