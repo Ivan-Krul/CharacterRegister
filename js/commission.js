@@ -6,37 +6,12 @@ var json = JSON.parse(await fileFetcher.fetchFile("resource/commission_params.js
 function calcPrice() {
   let res = 1;
 
-  if(document.getElementById("count").value !== "0") {
-         if(document.getElementById("head").checked) res *= json.crop.head;
-    else if(document.getElementById("half").checked) res *= json.crop.half;
-    else                                             res *= json.crop.full;
-  }
-
-       if(document.getElementById("line").checked)                  res *= json.detail["line"];
-  else if(document.getElementById("paint_line").checked)            res *= json.detail["line+color"];
-  else if(document.getElementById("shadow_paint_line").checked)     res *= json.detail["line+color+effect"];
-
-  if(document.getElementById("pixel-art").checked === false) {
-         if(document.getElementById("shadow_line").checked)           res *= json.detail["line+effect"];
-    else if(document.getElementById("lineless_paint").checked)        res *= json.detail["lineless-color"];
-    else if(document.getElementById("shadow_lineless_paint").checked) res *= json.detail["lineless-color+effect"];
-  }
-
-       if(document.getElementById("count").value === "0") res *= json.count["0"];
-  else if(document.getElementById("count").value === "1") res *= json.count["1"];
-  else                                                    res *= json.count["2+"] * document.getElementById("count").value +json.count["1"];
-
-       if(document.getElementById("blank").checked)    res *= json.background.blank;
-  else if(document.getElementById("abstract").checked) res *= json.background.abstract;
-  else if(document.getElementById("actual").checked)   res *= json.background.actual;
-  else if(document.getElementById("photo").checked)    res *= json.background.photo;
-  else if(document.getElementById("detailed").checked) res *= json.background.detailed;
-
-       if(document.getElementById("original").checked)  res *= json.style["original"];
-  else if(document.getElementById("pixel-art").checked) res *= json.style["pixel-art"];
-  else                                                  res *= json.style["others"];
-
-if(document.getElementById("ref").checked) res -= json.base;
+  res *= parseFloat(document.getElementById("C_eq").innerText);
+  res *= parseFloat(document.getElementById("D_eq").innerText);
+  res *= parseFloat(document.getElementById("N_eq").innerText);
+  res *= parseFloat(document.getElementById("B_eq").innerText);
+  res *= parseFloat(document.getElementById("S_eq").innerText);
+  res -= parseFloat(document.getElementById("R_eq").innerText);
 
   return res * json.global + json.base;
 }
@@ -44,7 +19,6 @@ if(document.getElementById("ref").checked) res -= json.base;
 function outputPrice() {
   document.getElementById("price_counter").innerText = `${Math.floor(calcPrice())}€ (${calcPrice()})`;
 }
-
 
 function assembleToDetail() {
   if(document.getElementById("count").value === "0") return "";
@@ -80,6 +54,7 @@ function assemblePath() {
 
 function checkDetail() {
   document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent(`image/CommissionPlaceholders/Placeholder for commission page ${assemblePath()}.png`);
+  updateEquation();
   outputPrice()
 }
 
@@ -115,6 +90,50 @@ function checkStyle() {
   checkDetail()
 }
 
+function updateEquation() {
+  //C_eq
+  if(document.getElementById("count").value !== "0") {
+         if(document.getElementById("head").checked) document.getElementById("C_eq").innerText = json.crop.head;
+    else if(document.getElementById("half").checked) document.getElementById("C_eq").innerText = json.crop.half;
+    else                                             document.getElementById("C_eq").innerText = json.crop.full;
+  } else document.getElementById("C_eq").innerText = 1;
+
+  //D_eq
+       if(document.getElementById("line").checked)                  document.getElementById("D_eq").innerText = json.detail["line"];
+  else if(document.getElementById("paint_line").checked)            document.getElementById("D_eq").innerText = json.detail["line+color"];
+  else if(document.getElementById("shadow_paint_line").checked)     document.getElementById("D_eq").innerText = json.detail["line+color+effect"];
+  
+  if(document.getElementById("pixel-art").checked === false) {
+         if(document.getElementById("shadow_line").checked)           document.getElementById("D_eq").innerText = json.detail["line+effect"];
+    else if(document.getElementById("lineless_paint").checked)        document.getElementById("D_eq").innerText = json.detail["lineless-color"];
+    else if(document.getElementById("shadow_lineless_paint").checked) document.getElementById("D_eq").innerText = json.detail["lineless-color+effect"];
+  }
+
+  //N_eq
+       if(document.getElementById("count").value === "0") document.getElementById("N_eq").innerText = json.count["0"];
+  else if(document.getElementById("count").value === "1") document.getElementById("N_eq").innerText = json.count["1"];
+  else                                                    document.getElementById("N_eq").innerText = json.count["2+"] * document.getElementById("count").value +json.count["1"];
+
+  //B_eq
+       if(document.getElementById("blank").checked)    document.getElementById("B_eq").innerText = json.background.blank;
+  else if(document.getElementById("abstract").checked) document.getElementById("B_eq").innerText = json.background.abstract;
+  else if(document.getElementById("actual").checked)   document.getElementById("B_eq").innerText = json.background.actual;
+  else if(document.getElementById("photo").checked)    document.getElementById("B_eq").innerText = json.background.photo;
+  else if(document.getElementById("detailed").checked) document.getElementById("B_eq").innerText = json.background.detailed;
+
+  //S_eq
+       if(document.getElementById("original").checked)  document.getElementById("S_eq").innerText = json.style["original"];
+  else if(document.getElementById("pixel-art").checked) document.getElementById("S_eq").innerText = json.style["pixel-art"];
+  else                                                  document.getElementById("S_eq").innerText = json.style["others"];
+
+  //R_eq
+  document.getElementById("R_eq").innerText = (document.getElementById("ref").checked) ? json.base : 0;
+
+  //G_eq & A_eq
+  document.getElementById("G_eq").innerText = json.global;
+  document.getElementById("A_eq").innerText = json.base;
+}
+
 function checkCrop() {
   document.getElementById("placeholder").classList.remove("full_crop", "half_crop", "head_crop");
   if(document.getElementById("head").checked) {
@@ -124,7 +143,7 @@ function checkCrop() {
     document.getElementById("placeholder").classList.add("half_crop");
   }
   else document.getElementById("placeholder").classList.add("full_crop");
-  checkStyle();
+  checkStyle();  
 }
 
 async function loadJson() {
