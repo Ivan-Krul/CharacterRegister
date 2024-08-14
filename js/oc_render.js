@@ -62,9 +62,6 @@ async function prepareTom(filename = "") {
 }
 
 async function renderStories() {
-  document.getElementById("stories").innerHTML = "";
-  if(!toggle_story) return;
-
   let merged = "";
 
   for(let i = 0; i < json.stories.length; i++) {
@@ -99,9 +96,6 @@ function prepareMineDrawings() {
 }
 
 function renderGallery() {
-  document.getElementById("gallery").innerHTML = "";
-  if(!toggle_gallery) return;
-
   document.getElementById("gallery").innerHTML = `<div>${prepareNotMineDrawings()}</div><div>${prepareMineDrawings()}</div>`;
 }
 
@@ -114,23 +108,14 @@ async function render() {
     json.mine_gallery = await oc.getGalleryLinks(OC_PARAM);
 
     renderDetails();
+    renderStories();
+    renderGallery();
   }
   catch (error) {
     let div_section = document.getElementById("content");
     div_section.appendChild(await videoException.getExceptionNode(error));
   }
 }
-
-document.getElementById("button_showStories").onclick = (target) => {
-  toggle_story = !toggle_story;
-  target.target.innerText = `${toggle_story ? "Hide" : "Show "} Stories`;
-  renderStories();
-};
-document.getElementById("button_showGallery").onclick = (target) => {
-  toggle_gallery = !toggle_gallery;
-  target.target.innerText = `${toggle_gallery ? "Hide" : "Show "} Gallery`;
-  renderGallery();
-};
 
 await assemble();
 await render();
