@@ -1,16 +1,21 @@
 function Write-ImagePaths
 {
-	$paths = Get-ChildItem -Path "image" -Name -Recurse -File
-	
+	$paths = Get-ChildItem -Path "image" -Recurse -File |
+	    Sort-Object -Property {$_.LastWriteTime}
+
+	[array]::Reverse($paths)
+
 	$str = ""
-	
+	$const = "CharacterRegister";
+
 	foreach ($path in $paths) {
 		<# $path is the current item #>
-		if ( $path -notmatch "Not mine" -and $path -notmatch "marathon" ) 
+		$filepath = $path.FullName
+		$filepath = $filepath.Substring($filepath.IndexOf($const) + $const.Length + 1);
+		Write-Host $filepath
+		if ( $filepath -notmatch "Not mine" -and $filepath -notmatch "marathon" ) 
 		{
-			$str += "image\"
-			$str += $path
-			$str += "`n"
+			$str += "$filepath`n"
 		}
 	}
 	
