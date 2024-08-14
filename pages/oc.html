@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport    " content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/main.css">
     <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
     <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
@@ -42,10 +42,14 @@
             </tr>
         </table>
         <hr>
-        <button id="button_showStories">Show Stories</button>
-        <div id="stories"></div>
-        <button id="button_showGallery">Show Gallery</button>
-        <div id="gallery"></div>
+        <details>
+            <summary>Stories</summary>
+            <div id="stories"></div>
+        </details>
+        <details>
+            <summary>Gallery</summary>
+            <div id="gallery"></div>
+        </details>
     </div>
 
     <script type="module" src="./../js/oc_render.js"></script>

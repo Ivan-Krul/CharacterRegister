@@ -1,4 +1,5 @@
 import "./base_generator.js";
+import { assemble } from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 import * as videoException from "./video_exception.js";
 
@@ -37,4 +38,5 @@ async function outputMarathonPost() {
     }
 }
 
-outputMarathonPost();
+await assemble();
+await outputMarathonPost();

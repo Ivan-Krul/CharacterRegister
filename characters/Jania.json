@@ -268,8 +268,20 @@
     ],
     "not_mine_gallery": [
         {
+            "path": "image/Not mine/Jania for pfp by @cryfurstudios.png",
+            "link": "https://twitter.com/cryfurstudios"
+        },
+        {
+            "path": "image/Not mine/Jania by @cryfurstudios.jpg",
+            "link": "https://twitter.com/cryfurstudios"
+        },
+        {
             "path": "image/Not mine/Jania waiter by @Teddycatstuff.jpg",
             "link": "https://twitter.com/teddycatstuff"
+        },
+        {
+            "path": "image/Not mine/Jania by @Annas.png",
+            "link": "https://twitter.com/AnnasVirtual"
         },
         {
             "path": "image/Not mine/Jania on Bday by @RaiDev_.png",
