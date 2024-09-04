@@ -225,9 +225,36 @@ function copyStatsToClipboard() {
   alert("copied to clipboard");
 }
 
-async function main() {
-  await assemble();
+async function mainSimple() {
+  {
+    let mult = json.detail["line"] * json.count["1"] * json.style["original"] * json.background["blank"];
+    document.getElementById("head_cost_s").innerText = (json.crop.head * mult - json.base) * json.global + json.base;
+    document.getElementById("half_cost_s").innerText = (json.crop.half * mult - json.base) * json.global + json.base;
+    document.getElementById("full_cost_s").innerText = (json.crop.full * mult - json.base) * json.global + json.base;
+  }
 
+  {
+    let mult = json.count["1"] * json.style["original"] * json.background["blank"];
+    document.getElementById("paint_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.detail["line+color"] - json.base) * json.global + json.base;
+    document.getElementById("shadow_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.detail["line+color+effect"] - json.base) * json.global + json.base;
+    document.getElementById("llp_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.detail["lineless-color"] - json.base) * json.global + json.base;
+    document.getElementById("llpshadow_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.detail["lineless-color+effect"] - json.base) * json.global + json.base;
+  }
+
+  {
+    let mult = json.count["1"] * json.style["original"] * json.detail["line+color+effect"];
+    document.getElementById("abst_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.background["abstract"]) * json.global + json.base - parseInt(document.getElementById("shadow_cost_s").innerText);
+    document.getElementById("actual_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.background["actual"]) * json.global + json.base- parseInt(document.getElementById("shadow_cost_s").innerText);
+    document.getElementById("photo_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.background["photo"]) * json.global + json.base - parseInt(document.getElementById("shadow_cost_s").innerText);
+    document.getElementById("deltailed_cost_s").innerText = (((json.crop.full + json.crop.half)/2) * mult * json.background["detailed"]) * json.global + json.base - parseInt(document.getElementById("shadow_cost_s").innerText);
+  }
+   
+  {
+    document.getElementById("pixlart_cost_s").innerText = Math.floor(((((json.crop.full + json.crop.half)/2) * json.count["1"] * json.style["pixel-art"] * json.detail["line+color+effect"] * json.background["actual"]) * json.global + json.base) / ((((json.crop.full + json.crop.half)/2) * json.count["1"] * json.style["original"] * json.detail["line+color+effect"] * json.background["actual"]) * json.global + json.base) * 1000) / 1000;
+  }
+}
+
+async function mainDetail() {
   await loadJson();
 
   document.getElementById("placeholder").src = fileFetcher.makeLinkIndependent("image/CommissionPlaceholders/Placeholder for commission page(line).png");
@@ -262,4 +289,23 @@ async function main() {
   checkCrop();
 }
 
-main();
+function handleSwitch(event) {
+  if(event.target.value === "simple") {
+    console.info("simple");
+    document.getElementById("simple_pricing_container").style.display = "inherit";
+    document.getElementById("detail_pricing_container").style.display = "none";
+  }
+  else if (event.target.value === "detail") {
+    console.info("detail");
+    document.getElementById("simple_pricing_container").style.display = "none";
+    document.getElementById("detail_pricing_container").style.display = "inherit";
+  }
+}
+
+
+await assemble();
+document.getElementById("select_pricing_choice").onchange = handleSwitch;
+
+await mainSimple();
+await mainDetail();
+
