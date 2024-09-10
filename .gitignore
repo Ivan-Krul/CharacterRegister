@@ -2,3 +2,4 @@ list/ignore/*
 resource/reserved/*
 posts/*
 PostStorage/*
+*.git
