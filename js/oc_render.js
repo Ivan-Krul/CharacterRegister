@@ -4,12 +4,10 @@ import * as videoException from "./video_exception.js"
 import * as oc from "./oc.js";
 import * as postParser from "./post_parser.js";
 
-const OC_PARAM = fileFetcher.getURLParams().get("oc");
+const OC_PARAM = capitalizeFirstLetter(fileFetcher.getURLParams().get("oc").toLowerCase());
 const GALLERY_STYLE = "max-width: 25vw";
 
 var json = {};
-var toggle_story = false;
-var toggle_gallery = false;
 
 function renderOrientation() {
   let fill = "";
@@ -99,6 +97,10 @@ function renderGallery() {
   document.getElementById("gallery").innerHTML = `<div>${prepareNotMineDrawings()}</div><div>${prepareMineDrawings()}</div>`;
 }
 
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 async function render() {
   document.title = `${OC_PARAM} in CharacterRegister`;
