@@ -11,7 +11,7 @@ catch (e) {
 export function fetchPartitionList() {
   if(response) {
     console.log("internally");
-    return fileFetcher.fetchFile("posts/partitions.txt")
+    return fileFetcher.fetchFile("PostStorage/posts/partitions.txt")
   }
   else {
     console.log("externally");
@@ -22,7 +22,7 @@ export function fetchPartitionList() {
 export function fetchPost(filename) {
   if(response) {
     console.log("internally");
-    return fileFetcher.fetchFile(`posts/${filename}`);
+    return fileFetcher.fetchFile(`PostStorage/posts/${filename}`);
   }
   else {
     console.log("externally");
