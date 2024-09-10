@@ -1,7 +1,8 @@
 import {assemble} from "./base_generator.js";
-import * as fileFetcher from "../js/file_fetcher.js";
-import * as postGenerator from "./../js/post_generator.js";
-import * as videoException from "./../js/video_exception.js";
+import * as fileFetcher from "./file_fetcher.js";
+import * as postGenerator from "./post_generator.js";
+import * as videoException from "./video_exception.js";
+import * as postFetcher from "./post_fetcher.js";
 
 await assemble();
 
@@ -20,7 +21,7 @@ await assemble();
     let page = "";
     try {
       if (post.indexOf(".") !== -1) {
-        let file = await fileFetcher.fetchFile("posts/" + post);
+        let file = await postFetcher.fetchPost(post);
         page = postGenerator.printPostPage(file, post);
         let resPage = page;//.replaceAll("./", "./../");
         document.getElementById("post").innerHTML = resPage;
@@ -39,9 +40,7 @@ await assemble();
 
     let res = `<dir><a href="${fileFetcher.makeLinkIndependent("resource/post_parser_constructor.html")}">Post Parser constructor</a></dir>`;
 
-    let partitions = await fileFetcher.fetchFile("posts/partitions.txt");
-
-    console.log(partitions);
+    let partitions = await postFetcher.fetchPartitionList();
     
     let partArr = partitions.split("\n");
 

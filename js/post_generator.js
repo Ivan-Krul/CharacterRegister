@@ -1,5 +1,5 @@
-import * as fileFetcher from "./file_fetcher.js";
 import * as postParser from "./post_parser.js";
+import * as postFetcher from "./../js/post_fetcher.js";
 
 export function generateHTMLPost(content = "") {
   return `<div>${content}</div><hr/>`;
@@ -23,7 +23,7 @@ export function generatePost(content = "", filename = "") {
 }
 
 export async function generatePostPage(index_page = 0, index_page_size = 10) {
-  let links = await fileFetcher.fetchFile("posts/partitions.txt");
+  let links = await postFetcher.fetchPartitionList();
   let linksArr = links.split("\n");
   linksArr.splice(linksArr.length - 1, 1);
   
@@ -31,7 +31,7 @@ export async function generatePostPage(index_page = 0, index_page_size = 10) {
 
   for(let i = 0; i < index_page_size && (linksArr.length - i - index_page * index_page_size - 1) >= 0; i++) {
     const link = linksArr[linksArr.length - i - index_page * index_page_size - 1];
-    const content = await fileFetcher.fetchFile("posts/" + link);
+    const content = await postFetcher.fetchPost(link);
     console.log(link);
     res += generatePost(content,link);
   }

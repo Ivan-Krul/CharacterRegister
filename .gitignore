@@ -1,2 +1,4 @@
 list/ignore/*
 resource/reserved/*
+posts/*
+PostStorage/*
