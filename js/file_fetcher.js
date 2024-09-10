@@ -2,8 +2,8 @@ export async function fetchFile(filePath) {
   return fetch(makeLinkIndependent(filePath))
     .then(response => response.text())
     .catch(error => {
-      console.error('Error fetching ' + filePath + ':', error);
-      throw 'Error fetching ' + filePath + ':', error;
+      console.error('*Error fetching ' + filePath + ':', error);
+      throw '*Error fetching ' + filePath + ':', error;
     });
 }
 
