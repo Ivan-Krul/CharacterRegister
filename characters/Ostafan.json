@@ -123,5 +123,9 @@
         ]
     ],
     "not_mine_gallery": [
+      {
+        "path": "image/Not mine/Ostafan by @ScriptPostum.png",
+        "link": "https://bsky.app/profile/scriptpostum.bsky.social"
+      }
     ]
 }
