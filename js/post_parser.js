@@ -1,4 +1,5 @@
 import * as fileFetcher from "./file_fetcher.js";
+import * as postFetcher from "./post_fetcher.js";
 import * as mind from "./mind.js";
 
 function replaceAllOccurrences(inputString, substringToReplace, replacementValue) {
@@ -47,7 +48,10 @@ export const dictionary =
     ["!!!! ", "<h1>"],
     [" !!!!", "</h1>"],
 
-    ["il- ", `<img src="${fileFetcher.makeLinkIndependent("image/")}`],
+    ["ilcr- ", `<img src="${fileFetcher.makeLinkIndependent("/")}image/`],
+    [" -ilcr", "\">"],
+
+    ["il- ", `<img src="${postFetcher.getContentLink()}image/`],
     [" -il", "\">"],
 
     ["i- ", "<img src=\""],
@@ -77,7 +81,7 @@ export const dictionary =
     ["<!youtube ", "<a target=\"_blank\" href=\"https://www.youtube.com/"],
     [" !>", "</a>"],
 
-    ["<<l ", `<a target=\"_blank\" href="${fileFetcher.makeLinkIndependent("/")}`],
+    ["<<l ", `<a target=\"_blank\" href="${fileFetcher.makeLinkIndependent("../")}`],
     [" l>>", "</a>"],
 
     ["<< ", "<a target=\"_blank\" href=\""],
