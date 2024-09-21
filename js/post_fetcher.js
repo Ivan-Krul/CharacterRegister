@@ -8,10 +8,14 @@ catch (e) {
   response = false;
 }
 
+export function getContentLink() {
+  return response ? fileFetcher.makeLinkIndependent("../PostStorage/") : "https://raw.githubusercontent.com/Ivan-Krul/PostStorage/main/";
+}
+
 export function fetchPartitionList() {
   if(response) {
     console.log("internally");
-    return fileFetcher.fetchFile("PostStorage/partitions.txt")
+    return fileFetcher.fetchFile("../PostStorage/partitions.txt")
   }
   else {
     console.log("externally");
@@ -22,7 +26,7 @@ export function fetchPartitionList() {
 export function fetchPost(filename) {
   if(response) {
     console.log("internally");
-    return fileFetcher.fetchFile(`PostStorage/posts/${filename}`);
+    return fileFetcher.fetchFile(`../PostStorage/posts/${filename}`);
   }
   else {
     console.log("externally");
