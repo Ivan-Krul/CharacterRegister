@@ -1,10 +1,10 @@
 import * as fileFetcher from "./file_fetcher.js";
 
-var response = false;
+let response = false;
 try {
-  response = await fetch("../resource/reserved/debug_key", { method: "HEAD" }).then(true).catch(false);
-}
-catch (e) {
+  const result = await fetch("../resource/reserved/debug_key", { method: "HEAD" });
+  response = result.ok ? true : false;
+} catch (e) {
   response = false;
 }
 
