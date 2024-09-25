@@ -48,7 +48,7 @@ export const dictionary =
     ["!!!! ", "<h1>"],
     [" !!!!", "</h1>"],
 
-    ["ilcr- ", `<img src="${fileFetcher.makeLinkIndependent("/")}image/`],
+    ["ilcr- ", `<img src="${fileFetcher.makeLinkIndependent("")}image/`],
     [" -ilcr", "\">"],
 
     ["il- ", `<img src="${postFetcher.getContentLink()}image/`],
