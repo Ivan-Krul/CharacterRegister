@@ -1,5 +1,5 @@
 " Map of cities "
-il- DefinitionPool/cit.png -il
+ilcr- DefinitionPool/cit.png -ilcr
 
 " City is a contrentration point, where most of services and handlers are clusterised. Some of them support airline, small or huge.
 Their radius could reach up to 5km. They all have names, what reflect history and culture of the city. "
@@ -27,7 +27,10 @@ Their radius could reach up to 5km. They all have names, what reflect history an
 		 -- Lenkelp |--  
 		 -- Deubunderstag |--  
 		 -- Dokar |--  
- -- Wanisky |-- 
+     -- Wanisky |-- 
+     -- Sophron |-- 
+     -- Rosherber |-- 
+     -- Yequarr |-- 
 	 >->
 	" Cities in 3rd generation continent: "
 	>-> 
@@ -95,7 +98,7 @@ Their radius could reach up to 5km. They all have names, what reflect history an
  -- Soketion |-- 
  -- Kofto |-- 
  -- Deto-basio |-- 
- -- Cont-ins |--
+ -- Cont-ins |-- 
  -- Uneins |-- 
 	 >->
 	" Cities in 4th generation continent: "
