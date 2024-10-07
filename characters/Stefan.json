@@ -1,193 +1,193 @@
 {
-    "pfp_path": "../image/OCPool/Stefan/Stefan chilling.png",
-    "biological_class": "Tiger Shark",
-    "initial_age": 17,
-    "sex": "Male",
-    "orientation": [
-        "cyan",
-        "pink",
-        "white",
-        "pink",
-        "cyan"
+  "pfp_path": "../image/OCPool/Stefan/Stefan chilling.png",
+  "biological_class": "Tiger Shark",
+  "initial_age": 17,
+  "sex": "Male",
+  "orientation": [
+    "cyan",
+    "pink",
+    "white",
+    "pink",
+    "cyan"
+  ],
+  "traits": [
+    "Melanholic (in lonely)",
+    "Playful (when met a joyful person(s))",
+    "Behevolent (with a person who broke down)"
+  ],
+  "date_creation": "22 Jan 2023",
+  "disappeared": false,
+  "country": "Fur",
+  "parents": {
+    "mother": "Nora",
+    "father": "Andrew"
+  },
+  "interests": [
+    "trade manager",
+    "reader",
+    "writer of fan fiction"
+  ],
+  "work": "Student of Trade School in country Edu",
+  "currency": {
+    "now_place": null,
+    "now_value": null,
+    "then_place": null,
+    "then_value": null
+  },
+  "mbti": "INFP",
+  "stories": [
+    [
+      "Stefan was born into a rich family as an only child. His mother, Nora, was happy with him, but she was more intrested in money. His parents were busy,",
+      " so he decided to read some books. He got invested in adventure book series. Stefan was so impressed, that decided to write fan fictions and share them",
+      " with a group of fans. His stories were so good that Stefan was able to kickstart a writer career.!| Gray - *\"When Stefan came to us, he was so",
+      " inpatient, and he said - *\"Hey guys! Guess what? I wrote my own fan fiction, it's called *\"Tension Games\"*, who wants to read it?\"*.",
+      " but when I read it, I was suprised by his work*\"."
     ],
-    "traits": [
-        "Melanholic (in lonely)",
-        "Playful (when met a joyful person(s))",
-        "Behevolent (with a person who broke down)"
+    [
+      "He also read some fan fictions of adventure books by fan of books with non-traditional relationship.!| Stefan - *\"They were",
+      " so passionate, that I was inspired to not be so traditional but more modern.*\"!| One time, he read a fan fiction named *\"Jimmy's life as trans\"*.!|",
+      " Stefan - *\"The fan fictions confused me a little, like, *\"Why is Jimmy looking for men to date with?*\".",
+      " When I understood this, then I wanted to be different, to be more cute and attractive.*\"."
     ],
-    "date_creation": "22 Jan 2023",
-    "disappeared": false,
-    "country": "Fur",
-    "parents": {
-        "mother": "Nora",
-        "father": "Andrew"
-    },
-    "interests": [
-        "trade manager",
-        "reader",
-        "writer of fan fiction"
+    [
+      "One time, Stefan with his family made a trip around the country Fur. During the trip, he saw <<l oc.html?oc=Jania>|<Jania l>>, and the two hang out.",
+      " He once decided to go to hang out with her. When Stefan first met her, he asked the group about books. Nobody",
+      " answered. But he rightly saw that everyone in her group was happy. Stefan thought he wasn't very happy in her group.",
+      " <<l oc.html?oc=Jania>|<Jania l>> tried to appologise and promised to fix it,",
+      " if he pays her 100S. Stefan accepted the offer and <<l oc.html?oc=Jania>|<Jania l>> tried to",
+      " introduce him to her group and said *\"Here's a new piece of our hang zone! Meet him! Stefan!\"*. After these words, Stefan started to",
+      " suspect her of robbering him. When everyone started cheering up, he was wondering if all of then will demanding money from him.",
+      " After that he left the group, believing they only cared about",
+      " wealth. But with how much he spent, he was moved to 2nd plan during the next normalization."
     ],
-    "work": "Student of Trade School in country Edu",
-    "currency": {
-        "now_place": null,
-        "now_value": null,
-        "then_place": null,
-        "then_value": null
-    },
-    "mbti": "INFP",
-    "stories": [
-        [
-            "Stefan was born into a rich family as an only child. His mother, Nora, was happy with him, but she was more intrested in money. His parents were busy,",
-            " so he decided to read some books. He got invested in adventure book series. Stefan was so impressed, that decided to write fan fictions and share them",
-            " with a group of fans. His stories were so good that Stefan was able to kickstart a writer career.!| Gray - *\"When Stefan came to us, he was so",
-            " inpatient, and he said - *\"Hey guys! Guess what? I wrote my own fan fiction, it's called *\"Tension Games\"*, who wants to read it?\"*.",
-            " but when I read it, I was suprised by his work*\"."
-        ],
-        [
-            "He also read some fan fictions of adventure books by fan of books with non-traditional relationship.!| Stefan - *\"They were",
-            " so passionate, that I was inspired to not be so traditional but more modern.*\"!| One time, he read a fan fiction named *\"Jimmy's life as trans\"*.!|",
-            " Stefan - *\"The fan fictions confused me a little, like, *\"Why is Jimmy looking for men to date with?*\".",
-            " When I understood this, then I wanted to be different, to be more cute and attractive.*\"."
-        ],
-        [
-            "One time, Stefan with his family made a trip around the country Fur. During the trip, he saw <<l oc.html?oc=Jania>|<Jania l>>, and the two hang out.",
-            " He once decided to go to hang out with her. When Stefan first met her, he asked the group about books. Nobody",
-            " answered. But he rightly saw that everyone in her group was happy. Stefan thought he wasn't very happy in her group.",
-            " <<l oc.html?oc=Jania>|<Jania l>> tried to appologise and promised to fix it,",
-            " if he pays her 100S. Stefan accepted the offer and <<l oc.html?oc=Jania>|<Jania l>> tried to",
-            " introduce him to her group and said *\"Here's a new piece of our hang zone! Meet him! Stefan!\"*. After these words, Stefan started to",
-            " suspect her of robbering him. When everyone started cheering up, he was wondering if all of then will demanding money from him.",
-            " After that he left the group, believing they only cared about",
-            " wealth. But with how much he spent, he was moved to 2nd plan during the next normalization."
-        ],
-        [
-            "Stefan once recived a letter to visit the literature group. When he arrived there, Stefan was suprised to see a present for himself in Valentine cycle.",
-            " Stefan opened the present and found a Jimmy plush with heard and mark *\"<<l oc.html?oc=Grace>|<Grace l>>, for the best fan fiction  writer\"*. He knew about <<l oc.html?oc=Grace>|<Grace l>>,",
-            " she was a member of the group, but at this time, she wasn't there. Stefan started connecting with her. He thanked <<l oc.html?oc=Grace>|<Grace l>> for",
-            " the present and asked her where she is. <<l oc.html?oc=Grace>|<Grace l>> was ill and she was waiting until full recovery from her disease to hug him."
-        ],
-        [
-            "Stefan had wrote a fan fiction about joyness of main character of *\"John Smiller is leaving a broom\"*. He had writed, what John was",
-            " tried to impress his loving character and making with her pretty off things. When Stefan writed the fan fiction, he became hunger.",
-            " He opened jar of apricot jam and it was so taste, what Stefan added this to his fan fiction literaly. In the next cycle he showed this",
-            " with the group. They wasn't excited with it, and just went to <<l oc.html?oc=Grace>|<Grace l>>. She was confused with jam, but when Stefan explained this, <<l oc.html?oc=Grace>|<Grace l>>",
-            " understood and hugged him."
-        ],
-        [
-            "Stefan's parents once invited his friends to a trip to Anime.",
-            " All his friends came, except <<l oc.html?oc=Grace>|<Grace l>>. She wanted to go with Stefan, but her parents didn't let her.!|",
-            " Parents - *\"We think <<l oc.html?oc=Grace>|<Grace l>> should be with us!\"*!| They started arguing with <<l oc.html?oc=Grace>|<Grace l>>. At night, Stefan sneakly walked to <<l oc.html?oc=Grace>|<Grace's l>> room.!|",
-            " Stefan - *\"Hey <<l oc.html?oc=Grace>|<Grace l>>! I heard you arguing with you parents, but don't argree with them. So, I decided to take you myself.\"*!|",
-            " <<l oc.html?oc=Grace>|<Grace l>> - *\"Really? Of course I will go with you!\"*.!| Stefan - *\"Are you in love with me?\"*!|",
-            " <<l oc.html?oc=Grace>|<Grace l>> (Embarassed) - *\"No...\"*.!| Stefan - *\"So, are we going?\"*!|",
-            " They sneakly left <<l oc.html?oc=Grace>|<Grace's l>> home after Stefan told his parents, time to go.",
-            " All friends, including <<l oc.html?oc=Grace>|<Grace l>>, Stefan and his parents left Fur on a floating vehicle.",
-            " They arrived to the Anime. Stefan's friends was impressed, and so was he!|",
-            " Stefan - *\"It's such a different place for me, I think we should stay here for a while.\"*!|!|",
-            
-            "After every country declared a 4th Mind war, Stefan and his friends understood why are they went on this *\"trip\"*.",
-            " They were worried about their parents, especially <<l oc.html?oc=Grace>|<Grace l>> and Gray.!| Stefan's parents - *\"Don't worry, they will be okay.\"*!|",
-            " Gray - *\"Don't worry? How? Why did you not take our parents? They were very important to us. You think ",
-            "    that you, as Stefan's parents, are also great parents to us???\"*!|",
-            " Stefan's parents - *\"Listen everyone, we didn't expected any of this. You think we predicted the Mind war?\"*!|",
-            " <<l oc.html?oc=Grace>|<Grace l>> - *\"My parents couldn't realised that the Mind war was ahead when I sneakly left my home. I was only able to come to Anime because Stefan.\"*!|",
-            " Stefan hugs <<l oc.html?oc=Grace>|<Grace l>> and says - *\"Dear, I didn't expected that...\"*!|",
-            " Stefan's parents - *\"Stefan, leave her alone. We said it's all right.\"*!|",
-            " Stefan - *\"I won't do this, let me do that\"*!|",
-            " Stafan(loudly) - *\"Hey you all! Have you realized we're all stuck there? Not just you. Me and my parents also stuck there, and we can't go anywhere either.",
-            "    So why are you mad about that? Your parents are also stuck, but in their psyhology bubble. They tried to keep you young, but I think it's time",
-            "     you grow up!\"*!|",
-            "    !|!|",
-        
-            "After returning, Stefan and his friends saw there was nothing wrong. They were relived to see that.",
-            " They said to Stefan that his parents are a little odd, but they still thanked them about everything."
-        ],
-        [
-            "One time, Stefan saw an advertisment to vote for a new party to further the restoration of the country.",
-            " He decided to check out what was happening.",
-            " On the next cycle he walked to the goverment building to explaining.",
-            " He saw <<l oc.html?oc=Thomas>|<Thomas l>> and asked about it.",
-            " <<l oc.html?oc=Thomas>|<Thomas l>> told him about the whole idea to rebuild the whole enviroment around and inside Fur!|",
-            " <<l oc.html?oc=Thomas>|<Thomas l>> - *\"Without sensitiveness we can go further with peace and wealthness!\"*!|",
-            " Stefan this was a bad idea, because it isn't a good reason of agression.!|",
-            " As Stefan thought about it, he told <<l oc.html?oc=Thomas>|<Thomas l>>, and he said - *\"Not yet.",
-            " This trait is fully breakable during the agressive time of the 4th Mind war.",
-            " My task is to prevent these feelings.\"*!|",
-            " Stefan - *\"The trait is helpful, so don't be so agressive. You can fix other issues, like geopolitics and stuff like that.*\"!|",
-            " Then <<l oc.html?oc=Thomas>|<Thomas l>> threatened him to leave or else he will arrest him.",
-            " Stefan ended up voting *\"Against\"*."
-        ],
-        [
-            "One time, Stefan heard a news, what the 5th Mind war was occured. He was so terrified, and envy - *\"Did he provoked that?? I'm promising I'm gonna beat him!\"*.",
-            " Meanwhile, he left Fur and safely transfered throught the active front and got to the other side. Later, he got to the Life and started to waiting for the peace deal.",
-            " While he's waiting, he writed his poems, fanfictions, he walked around and continued to wait.!|",
-            " One time, when he's waiting, he crossed path with <<l oc.html?oc=Jania>|<Jania l>>. When he saw her, Stefan remembered what she did.!|",
+    [
+      "Stefan once recived a letter to visit the literature group. When he arrived there, Stefan was suprised to see a present for himself in Valentine cycle.",
+      " Stefan opened the present and found a Jimmy plush with heard and mark *\"<<l oc.html?oc=Grace>|<Grace l>>, for the best fan fiction  writer\"*. He knew about <<l oc.html?oc=Grace>|<Grace l>>,",
+      " she was a member of the group, but at this time, she wasn't there. Stefan started connecting with her. He thanked <<l oc.html?oc=Grace>|<Grace l>> for",
+      " the present and asked her where she is. <<l oc.html?oc=Grace>|<Grace l>> was ill and she was waiting until full recovery from her disease to hug him."
+    ],
+    [
+      "Stefan had wrote a fan fiction about joyness of main character of *\"John Smiller is leaving a broom\"*. He had writed, what John was",
+      " tried to impress his loving character and making with her pretty off things. When Stefan writed the fan fiction, he became hunger.",
+      " He opened jar of apricot jam and it was so taste, what Stefan added this to his fan fiction literaly. In the next cycle he showed this",
+      " with the group. They wasn't excited with it, and just went to <<l oc.html?oc=Grace>|<Grace l>>. She was confused with jam, but when Stefan explained this, <<l oc.html?oc=Grace>|<Grace l>>",
+      " understood and hugged him."
+    ],
+    [
+      "Stefan's parents once invited his friends to a trip to Anime.",
+      " All his friends came, except <<l oc.html?oc=Grace>|<Grace l>>. She wanted to go with Stefan, but her parents didn't let her.!|",
+      " Parents - *\"We think <<l oc.html?oc=Grace>|<Grace l>> should be with us!\"*!| They started arguing with <<l oc.html?oc=Grace>|<Grace l>>. At night, Stefan sneakly walked to <<l oc.html?oc=Grace>|<Grace's l>> room.!|",
+      " Stefan - *\"Hey <<l oc.html?oc=Grace>|<Grace l>>! I heard you arguing with you parents, but don't argree with them. So, I decided to take you myself.\"*!|",
+      " <<l oc.html?oc=Grace>|<Grace l>> - *\"Really? Of course I will go with you!\"*.!| Stefan - *\"Are you in love with me?\"*!|",
+      " <<l oc.html?oc=Grace>|<Grace l>> (Embarassed) - *\"No...\"*.!| Stefan - *\"So, are we going?\"*!|",
+      " They sneakly left <<l oc.html?oc=Grace>|<Grace's l>> home after Stefan told his parents, time to go.",
+      " All friends, including <<l oc.html?oc=Grace>|<Grace l>>, Stefan and his parents left Fur on a floating vehicle.",
+      " They arrived to the Anime. Stefan's friends was impressed, and so was he!|",
+      " Stefan - *\"It's such a different place for me, I think we should stay here for a while.\"*!|!|",
+      
+      "After every country declared a 4th Mind war, Stefan and his friends understood why are they went on this *\"trip\"*.",
+      " They were worried about their parents, especially <<l oc.html?oc=Grace>|<Grace l>> and Gray.!| Stefan's parents - *\"Don't worry, they will be okay.\"*!|",
+      " Gray - *\"Don't worry? How? Why did you not take our parents? They were very important to us. You think ",
+      "  that you, as Stefan's parents, are also great parents to us???\"*!|",
+      " Stefan's parents - *\"Listen everyone, we didn't expected any of this. You think we predicted the Mind war?\"*!|",
+      " <<l oc.html?oc=Grace>|<Grace l>> - *\"My parents couldn't realised that the Mind war was ahead when I sneakly left my home. I was only able to come to Anime because Stefan.\"*!|",
+      " Stefan hugs <<l oc.html?oc=Grace>|<Grace l>> and says - *\"Dear, I didn't expected that...\"*!|",
+      " Stefan's parents - *\"Stefan, leave her alone. We said it's all right.\"*!|",
+      " Stefan - *\"I won't do this, let me do that\"*!|",
+      " Stafan(loudly) - *\"Hey you all! Have you realized we're all stuck there? Not just you. Me and my parents also stuck there, and we can't go anywhere either.",
+      "  So why are you mad about that? Your parents are also stuck, but in their psyhology bubble. They tried to keep you young, but I think it's time",
+      "   you grow up!\"*!|",
+      "  !|!|",
+    
+      "After returning, Stefan and his friends saw there was nothing wrong. They were relived to see that.",
+      " They said to Stefan that his parents are a little odd, but they still thanked them about everything."
+    ],
+    [
+      "One time, Stefan saw an advertisment to vote for a new party to further the restoration of the country.",
+      " He decided to check out what was happening.",
+      " On the next cycle he walked to the goverment building to explaining.",
+      " He saw <<l oc.html?oc=Thomas>|<Thomas l>> and asked about it.",
+      " <<l oc.html?oc=Thomas>|<Thomas l>> told him about the whole idea to rebuild the whole enviroment around and inside Fur!|",
+      " <<l oc.html?oc=Thomas>|<Thomas l>> - *\"Without sensitiveness we can go further with peace and wealthness!\"*!|",
+      " Stefan this was a bad idea, because it isn't a good reason of agression.!|",
+      " As Stefan thought about it, he told <<l oc.html?oc=Thomas>|<Thomas l>>, and he said - *\"Not yet.",
+      " This trait is fully breakable during the agressive time of the 4th Mind war.",
+      " My task is to prevent these feelings.\"*!|",
+      " Stefan - *\"The trait is helpful, so don't be so agressive. You can fix other issues, like geopolitics and stuff like that.*\"!|",
+      " Then <<l oc.html?oc=Thomas>|<Thomas l>> threatened him to leave or else he will arrest him.",
+      " Stefan ended up voting *\"Against\"*."
+    ],
+    [
+      "One time, Stefan heard a news, what the 5th Mind war was occured. He was so terrified, and envy - *\"Did he provoked that?? I'm promising I'm gonna beat him!\"*.",
+      " Meanwhile, he left Fur and safely transfered throught the active front and got to the other side. Later, he got to the Life and started to waiting for the peace deal.",
+      " While he's waiting, he writed his poems, fanfictions, he walked around and continued to wait.!|",
+      " One time, when he's waiting, he crossed path with <<l oc.html?oc=Jania>|<Jania l>>. When he saw her, Stefan remembered what she did.!|",
 
-            "!|>q> Stefan decided what he in her happy group isn't happy. <<l oc.html?oc=Jania>|<Jania l>> has tried to appologise with it and promise, what she can fix it,",
-            " if he pays for her 100S. Stefan accept it and <<l oc.html?oc=Jania>|<Jania l>> a is tried to introduce for her group!| ... !|",
-            " Stefan started to suspect of robbering him. When all started to cheering up, he started thought, what all of then will demanding from him money. >q>!|!|",
+      "!|>q> Stefan decided what he in her happy group isn't happy. <<l oc.html?oc=Jania>|<Jania l>> has tried to appologise with it and promise, what she can fix it,",
+      " if he pays for her 100S. Stefan accept it and <<l oc.html?oc=Jania>|<Jania l>> a is tried to introduce for her group!| ... !|",
+      " Stefan started to suspect of robbering him. When all started to cheering up, he started thought, what all of then will demanding from him money. >q>!|!|",
 
-            " And so, he reminded for her, what <<l oc.html?oc=Jania>|<Jania l>> is *\"Money demander\"*.",
-            " After her apology, Stefan had a dark bit, what still go around on his soul. Does I need to call it a soul?!|",
-            " After <<l oc.html?oc=Jania>|<Jania's l>> final arguments, while they had awkward silence, Stefan also noticed, what his old friends and his group members aren't",
-            " speaking. It's like behave as a friend, but when he got away, he make a radio silence, like not knowing here.",
-            " The struggle was ridiculously high. He can't handle that, and so, he leave the place.",
-            " Stefan thought what maybe, it was really his fault... After this thoughts, he decided to come back to the same place, where he was crossed paths with Jania, but she's not here.",
-            " He thoughts that what he had done..."
-        ],
-        [
-            "After that, Stefan decided to go back to Fur. He also thought, what emprire of <<l oc.html?oc=Thomas>|<Thomas l>> is over and replaced to more democratic one. Anyway, he wants to go back",
-            " to origins, because he still keep it in his head a phrase of <<l oc.html?oc=Jania>|<Jania l>>. When he walks, he decided to go to the hospital, to find out is <<l oc.html?oc=Grace>|<Grace l>> here.",
-            " While he was finding, he saw a cabin with <<l oc.html?oc=Thomas>|<Thomas l>> in it. He rested after an injury. Stefan entered to the cabin and started dialogue:!|",
-            "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"Hey nurse, can you bring for me an anime disk?\"*!|",
-            "Stefan - *\"I'm not your nurse!*\"!|",
-            "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"Huh?? Hold on, is that the guy, what tried to bring unsurence to my past me?\"*!|",
-            "Stefan - *\"Yeah, and what? You ended here. That means, you failed whole task of protecting whole country's interests by your ideas.*\"!*|",
-            "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"That's ridiculous... Are you still thinks, what that's my fault of provoking 5th Mind War? No...\"*!|",
-            "Stefan - *\"Right, and what would you say about changing profiling layout and turned into disappointment\"*!|",
-            "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"About profiling this is better, than older, and I know, but what about you?*\"!|",
-            "Stefan got awkwardness, <<l oc.html?oc=Thomas>|<Thomas l>> understood, what he started to fear himself.!|",
-            "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"It's the same feeling as I felt: loneliness, awkwardness, depression and ...\"*!|",
-            "He started breathes, and then asked to go out of his life. Stefan in awkwardness listened him. He had never felt so obscure",
-            " Stefan also found out, what she isn't in Fur anymore. He tried to connect her, and Stefan got connection with <<l oc.html?oc=Grace>|<Grace l>>.",
-            "Stefan - *\"Hello Grace! Um... Where r u?\"*!|",
-            "<<l oc.html?oc=Grace>|<Grace l>> - *\"Oh, hi!!! We're in Lang e.\"*!|",
-            "Stefan - *\"Why?*\"!|",
-            "<<l oc.html?oc=Grace>|<Grace l>> - *\"Well, it's still a place, where we used to have a time, where are you?\"*!|",
-            "Stefan - *\"Still in Fur*\"!|",
-            "<<l oc.html?oc=Grace>|<Grace l>> - *\"Seriously? It's really abandoned place, like souther of country Marathon\"*!|",
-            "Stefan - *\"Fine, I'll came\"*!|",
-            "Later, he really came to the city, where he used to live here. He never was so happy to see <<l oc.html?oc=Grace>|<Grace l>> and the group.",
-            " Stefan even cried in front of them, <<l oc.html?oc=Grace>|<Grace l>> tried to hug him, but she hugged decently. At least <<l oc.html?oc=Grace>|<Grace l>> is happy too."
-        ],
-        [
-            "One time, Stefan had a pretty regular day, he will end up Trade School in country Edu in city Ukrefia, sometimes he visit Engoria to literature group.",
-            " When he came here, he nobody saw here. *\"Maybe I should wait for more time\"*. After for a while, he decided to read something. Stefan last time discovered",
-            " from members. It was *\"Mind in Flames\"*. The documentary tell about first 3 Mind wars, and telling how Eli Frenc had created a new ideology, what was",
-            " inspired from lack of rights for island countries, but Herasym Birchui changed that to chauvinism, island countries are in first place, because",
-            " they standing in ancient land, and how was in this times and revenge of Continentals, what turns out to be respect each other.",
-            " Stefan started to looking for the book, and after he had taken, the library was lighted up and all in this group celebrated for him a birthday.!|",
-            "*\"HAPPY BIRTHDAY!!!\"*!|",
-            "He was very surprised about that. Everyone had a very cheerful expressions: Gray jumps out of the coach, <<l oc.html?oc=Grace>|<Grace l>> got him from side of a shelf and hugged him."
-        ],
+      " And so, he reminded for her, what <<l oc.html?oc=Jania>|<Jania l>> is *\"Money demander\"*.",
+      " After her apology, Stefan had a dark bit, what still go around on his soul. Does I need to call it a soul?!|",
+      " After <<l oc.html?oc=Jania>|<Jania's l>> final arguments, while they had awkward silence, Stefan also noticed, what his old friends and his group members aren't",
+      " speaking. It's like behave as a friend, but when he got away, he make a radio silence, like not knowing here.",
+      " The struggle was ridiculously high. He can't handle that, and so, he leave the place.",
+      " Stefan thought what maybe, it was really his fault... After this thoughts, he decided to come back to the same place, where he was crossed paths with Jania, but she's not here.",
+      " He thoughts that what he had done..."
+    ],
+    [
+      "After that, Stefan decided to go back to Fur. He also thought, what emprire of <<l oc.html?oc=Thomas>|<Thomas l>> is over and replaced to more democratic one. Anyway, he wants to go back",
+      " to origins, because he still keep it in his head a phrase of <<l oc.html?oc=Jania>|<Jania l>>. When he walks, he decided to go to the hospital, to find out is <<l oc.html?oc=Grace>|<Grace l>> here.",
+      " While he was finding, he saw a cabin with <<l oc.html?oc=Thomas>|<Thomas l>> in it. He rested after an injury. Stefan entered to the cabin and started dialogue:!|",
+      "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"Hey nurse, can you bring for me an anime disk?\"*!|",
+      "Stefan - *\"I'm not your nurse!*\"!|",
+      "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"Huh?? Hold on, is that the guy, what tried to bring unsurence to my past me?\"*!|",
+      "Stefan - *\"Yeah, and what? You ended here. That means, you failed whole task of protecting whole country's interests by your ideas.*\"!*|",
+      "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"That's ridiculous... Are you still thinks, what that's my fault of provoking 5th Mind War? No...\"*!|",
+      "Stefan - *\"Right, and what would you say about changing profiling layout and turned into disappointment\"*!|",
+      "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"About profiling this is better, than older, and I know, but what about you?*\"!|",
+      "Stefan got awkwardness, <<l oc.html?oc=Thomas>|<Thomas l>> understood, what he started to fear himself.!|",
+      "<<l oc.html?oc=Thomas>|<Thomas l>> - *\"It's the same feeling as I felt: loneliness, awkwardness, depression and ...\"*!|",
+      "He started breathes, and then asked to go out of his life. Stefan in awkwardness listened him. He had never felt so obscure",
+      " Stefan also found out, what she isn't in Fur anymore. He tried to connect her, and Stefan got connection with <<l oc.html?oc=Grace>|<Grace l>>.",
+      "Stefan - *\"Hello Grace! Um... Where r u?\"*!|",
+      "<<l oc.html?oc=Grace>|<Grace l>> - *\"Oh, hi!!! We're in Lang e.\"*!|",
+      "Stefan - *\"Why?*\"!|",
+      "<<l oc.html?oc=Grace>|<Grace l>> - *\"Well, it's still a place, where we used to have a time, where are you?\"*!|",
+      "Stefan - *\"Still in Fur*\"!|",
+      "<<l oc.html?oc=Grace>|<Grace l>> - *\"Seriously? It's really abandoned place, like souther of country Marathon\"*!|",
+      "Stefan - *\"Fine, I'll came\"*!|",
+      "Later, he really came to the city, where he used to live here. He never was so happy to see <<l oc.html?oc=Grace>|<Grace l>> and the group.",
+      " Stefan even cried in front of them, <<l oc.html?oc=Grace>|<Grace l>> tried to hug him, but she hugged decently. At least <<l oc.html?oc=Grace>|<Grace l>> is happy too."
+    ],
+    [
+      "One time, Stefan had a pretty regular day, he will end up Trade School in country Edu in city Ukrefia, sometimes he visit Engoria to literature group.",
+      " When he came here, he nobody saw here. *\"Maybe I should wait for more time\"*. After for a while, he decided to read something. Stefan last time discovered",
+      " from members. It was *\"Mind in Flames\"*. The documentary tell about first 3 Mind wars, and telling how Eli Frenc had created a new ideology, what was",
+      " inspired from lack of rights for island countries, but Herasym Birchui changed that to chauvinism, island countries are in first place, because",
+      " they standing in ancient land, and how was in this times and revenge of Continentals, what turns out to be respect each other.",
+      " Stefan started to looking for the book, and after he had taken, the library was lighted up and all in this group celebrated for him a birthday.!|",
+      "*\"HAPPY BIRTHDAY!!!\"*!|",
+      "He was very surprised about that. Everyone had a very cheerful expressions: Gray jumps out of the coach, <<l oc.html?oc=Grace>|<Grace l>> got him from side of a shelf and hugged him."
+    ],
 		[
 			"One time, Stefan decided to write another fanfiction story, but he thought, based on which story he should write? Which story he wanted to pick, *\"Jimmy's life as trans\"*?",
-            " He decided to write a new story. He decided to name it as *\"Guesses\"*.!|",
-            "*\"It's a story about 2 bros, whose are being argued by wild spirit, and they grew up like this, training in magic, until a certain moment of their lives, when they met in a single arene*\". He decided to share with that idea with his group.!|",
-            "Grey - *\"It seems like it's not as original story as it could be. but it's your first story anyway...\"*!|",
-            "<<l oc.html?oc=grace>|<Grace l>> - *\"Ehhh... not so original... Are you writing it at first time?\"*!|",
-            "Stefan thought, it could be a progress, and still writing it."
+      " He decided to write a new story. He decided to name it as *\"Guesses\"*.!|",
+      "*\"It's a story about 2 bros, whose are being argued by wild spirit, and they grew up like this, training in magic, until a certain moment of their lives, when they met in a single arene*\". He decided to share with that idea with his group.!|",
+      "Grey - *\"It seems like it's not as original story as it could be. but it's your first story anyway...\"*!|",
+      "<<l oc.html?oc=grace>|<Grace l>> - *\"Ehhh... not so original... Are you writing it at first time?\"*!|",
+      "Stefan thought, it could be a progress, and still writing it."
 		],
-        "Guesses - Stefan.crs"
-    ],
-    "not_mine_gallery" : [
-	    {     
-            "path" : "image/Not mine/Stefan comm by @Meta_122.png",
-            "link": "https://twitter.com/Meta_122"
-        },
-        {     
-            "path" : "image/Not mine/Stefan by @Thir.png",
-            "link": "https://twitter.com/Uki7UqvfzqQJ36j"
-        }
-    ]
+    "Guesses - Stefan.crs"
+  ],
+  "not_mine_gallery" : [
+	  {   
+      "path" : "image/Not mine/Stefan comm by @Meta_122.png",
+      "link": "https://twitter.com/Meta_122"
+    },
+    {   
+      "path" : "image/Not mine/Stefan by @Thir.png",
+      "link": "https://twitter.com/Uki7UqvfzqQJ36j"
+    }
+  ]
 }
