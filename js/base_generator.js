@@ -1,7 +1,6 @@
 import * as fileFetcher from "./file_fetcher.js";
 import * as sideLinker from "./side_linker.js";
-import "./side_handler.js";
-import "./dark_theme.js";
+import {setUpSideButtons} from "./side_buttons.js";
 
 export async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
@@ -11,6 +10,8 @@ export async function assemble() {
   let doc = await fileFetcher.fetchFile("pages/footer_template.html");
   document.getElementById('sideMenu').innerHTML = `${side}
   <div id="externalFooter">${doc}</div>`;
+
+  await setUpSideButtons();
 
   await sideLinker.gatherOCs();
   await sideLinker.gatherDefs();

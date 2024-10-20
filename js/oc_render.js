@@ -2,7 +2,7 @@ import {assemble} from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 import * as videoException from "./video_exception.js"
 import * as oc from "./oc.js";
-import * as postParser from "./post_parser.js";
+import * as postParser from "../../PostViewer/post_parser.js";
 
 const OC_PARAM = capitalizeFirstLetter(fileFetcher.getURLParams().get("oc").toLowerCase());
 const GALLERY_STYLE = "max-width: 25vw";

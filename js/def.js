@@ -1,5 +1,5 @@
 import {assemble} from "./base_generator.js";
-import * as postParser from "./post_parser.js";
+import * as postParser from "../../PostViewer/post_parser.js";
 import * as fileFetcher from "./file_fetcher.js";
 
 function capitalizeFirstLetter(string) {

@@ -26,7 +26,7 @@ async function renderButtons() {
         imageURL = imageURL.replaceAll("DOT", '.');
         imageURL = imageURL.replaceAll("SLASH", '/');
 
-        document.getElementById("sideMenu").innerHTML += `<a target=_blank href="https:/${imageURL}"><img src="${el}" class="buttons" style="background-color: ${localStorage.getItem("isDarkTheme") === "true" ? "black":"white"};"></a>`;
+        document.getElementById("sideMenu").innerHTML += `<a target=_blank href="https:/${imageURL}"><img src="${el}" class="buttons" style="background-color: var(--text)"></a>`;
     });
     
     document.getElementById("sideMenu").innerHTML += "</div>";

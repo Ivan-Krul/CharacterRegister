@@ -1,119 +1,133 @@
 
+:root {
+  --step: 0.03;
+  
+  --text: #ffffff;
+  --mcol: #7b48ac; /*#a886bb;*/ /*#bda1ce*/
+  --back: #000000;
+}
+
+body {
+  background-color: var(--back);
+  color: var(--text);
+}
+
 #sideMenu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #7b48ac;/*#a886bb;*/ /*#bda1ce*/
-    color: #fff;
-    border-right: 5px solid black;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    overflow-y: auto;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--mcol);
+  color: #fff;
+  border-right: 5px solid black;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  overflow-y: auto;
 }
 
 @media screen and (min-aspect-ratio: 1/1) {
-    #sideMenu {
-        width: 25vw;
-    }    
+  #sideMenu {
+    width: 25vw;
+  }
 }
 
 @media screen and ((max-aspect-ratio: 1/1) or (max-width: 600px)){
-    #sideMenu {
-        width: 100%;
-    }
+  #sideMenu {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1920px) {
-    * {
-        font-size: large;
-    }
+  * {
+    font-size: large;
+  }
 
-    h1, h2, #header{
-        font-size: xx-large;
-    }
+  h1, h2, #header{
+    font-size: xx-large;
+  }
 }
 
 button {
-    background-color: #6b389c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 6px;
-    padding-right: 6px;
+  background-color: #6b389c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 button:hover {
-    background-color: #a885c9;
+  background-color: #a885c9;
 }
 
 #sideMenu a{
-    color:#fff;
+  color:#fff;
 }
 
 #sideMenu a:visited{
-    color:#fff;
+  color:#fff;
 }
 
 #content {
-    margin-left: 1vh;
-    padding: 1vw;
+  margin-left: 1vh;
+  padding: 1vw;
 }
 
 .overlayed {
-    z-index: 1;
+  z-index: 1;
 }
 
 #control-buttons-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 .buttons {
-    margin: 5px;
-    padding: 5px;
-    image-rendering: pixelated;
-    border: none !important;
-    max-width:100% !important;
+  margin: 5px;
+  padding: 5px;
+  image-rendering: pixelated;
+  border: none !important;
+  max-width:100% !important;
 }
 img {
-    border: 5px solid white;
-    margin: 5px;
-    max-width:75%;
+  border: 5px solid var(--text);
+  margin: 5px;
+  max-width:75%;
 }
 
 video {
-    max-width:75%;
+  max-width:75%;
 }
 
 code {
-    font-family:monospace !important;
+  font-family:monospace !important;
 }
 
 code * {
-    font-family:monospace !important;
+  font-family:monospace !important;
 }
 
 .warp {
-    white-space: pre-wrap; /* CSS3 */    
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */    
-    white-space: -o-pre-wrap; /* Opera 7 */    
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* CSS3 */  
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */  
+  white-space: -o-pre-wrap; /* Opera 7 */  
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 a {
-    white-space: pre-wrap; /* CSS3 */    
-    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */    
-    white-space: -o-pre-wrap; /* Opera 7 */    
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
-    color: royalblue;
+  white-space: pre-wrap; /* CSS3 */  
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */  
+  white-space: -o-pre-wrap; /* Opera 7 */  
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  color: royalblue;
 }
 
 * {
-    font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
