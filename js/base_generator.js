@@ -5,8 +5,6 @@ import "./dark_theme.js";
 
 export async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
-
-    side = side.replace("./pages/post_scrapper.html",fileFetcher.makeLinkIndependent("./pages/post_scrapper.html"));
     side = side.replace("./pages/commission.html",fileFetcher.makeLinkIndependent("./pages/commission.html"));
     side = side.replace("./index.html",fileFetcher.makeLinkIndependent("./index.html"));
 
