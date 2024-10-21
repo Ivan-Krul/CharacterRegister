@@ -1,5 +1,5 @@
 " Map of cities "
-ilcr- DefinitionPool/cit.png -ilcr
+i- ../image/DefinitionPool/cit.png -i
 
 " City is a contrentration point, where most of services and handlers are clusterised. Some of them support airline, small or huge.
 Their radius could reach up to 5km. They all have names, what reflect history and culture of the city. "
