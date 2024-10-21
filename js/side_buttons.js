@@ -136,6 +136,10 @@ async function transferTheme() {
   let rootSet = document.documentElement.style;
   let rootGet = getComputedStyle(document.body);
   
+  let isSwappedTheme = localStorage.getItem("isSwappedTheme") == "true";
+  localStorage.setItem("isSwappedTheme", !isSwappedTheme);
+  console.log(localStorage.getItem("isSwappedTheme"));
+  
   let backOg = hexToRgb(rootGet.getPropertyValue('--back'));
   let textOg = hexToRgb(rootGet.getPropertyValue('--text'));
   
@@ -154,15 +158,20 @@ async function transferTheme() {
 }
 
 function setUpThemeSwitchButton(isWindowed) {
-  let isSwappedTheme = false;
-  if (localStorage.getItem("isSwappedTheme") == undefined)
-    localStorage.setItem("isSwappedTheme", isSwappedTheme);
+  let isSwappedTheme = localStorage.getItem("isSwappedTheme") == "true";
+  if (isSwappedTheme == undefined) {
+    localStorage.setItem("isSwappedTheme", false);
+    isSwappedTheme = false;
+  }
+  
   
   if(isSwappedTheme) {
     let rootSet = document.documentElement.style;
     let rootGet = getComputedStyle(document.body);
-    root.style.setProperty('--text', rootGet.getPropertyValue('--back'));
-    root.style.setProperty('--back', rootGet.getPropertyValue('--text'));
+    let backOg = rootGet.getPropertyValue('--back');
+    let textOg = rootGet.getPropertyValue('--text');
+    rootSet.setProperty('--text', backOg);
+    rootSet.setProperty('--back', textOg);
   }
   
   if(isWindowed && document.getElementById("toggleTheme") == null)
