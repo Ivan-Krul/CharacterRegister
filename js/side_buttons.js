@@ -132,7 +132,12 @@ function fitValues(min, max, x) {
   return x * (max - min) + min;
 }
 
+var transferingLock = false;
 async function transferTheme() {
+  if(transferingLock) {
+    return;
+  }
+  transferingLock = true;
   let rootSet = document.documentElement.style;
   let rootGet = getComputedStyle(document.body);
   
@@ -155,6 +160,7 @@ async function transferTheme() {
   
   rootSet.setProperty('--back',rgbToHex(textOg.r,textOg.g,textOg.b));
   rootSet.setProperty('--text',rgbToHex(backOg.r,backOg.g,backOg.b));
+  transferingLock = false;
 }
 
 function setUpThemeSwitchButton(isWindowed) {
