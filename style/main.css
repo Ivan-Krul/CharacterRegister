@@ -131,3 +131,9 @@ a {
 * {
   font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.small_pic {
+  border: none;
+  margin: 0;
+  vertical-align: middle;
+}
