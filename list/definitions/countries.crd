@@ -1,39 +1,22 @@
-" In current stage(24.05.18M(26 Jun 2024)) we have a list of countries: "
+" In current stage(15.10.18M(17 Nov 2024)) we have a list of countries: "
 i- ../image/DefinitionPool/sit.png -i
 " 
 	" Island countries (1st and 2nd generation of continent): "
 	>-> 
-		 -- Corrupt |-- 
-		 -- Culture |-- 
-		 -- ESC |-- 
-		 -- Erraser |-- 
-		 -- Games |-- 
-		 -- Lp |-- 
-		 -- Lang g |-- 
-		 -- W |-- 
 		 >->
 	" Countries in 3rd generation continent: "
 	>-> 
-		 -- Continent #3 |-- 
-		 
 		 >->
 	" Countries in 4th generation continent: "
 	>-> 
-		 -- Continent #4 |-- 
 		 >->
 	" Countries in force islands: "
 	>-> 
-		 -- Phy |-- 
-		 -- Sp. gm |-- 
-		 -- Strength |-- 
 		 >->
 	" Countries in 5th generation continent: "
 	>-> 
-		 -- Outer border |-- 
 		 >->
 	" Countries in central islands: "
 	>-> 
-		 -- Border |-- 
-		 -- Life |-- 
 		 >->
  "

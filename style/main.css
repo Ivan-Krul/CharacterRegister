@@ -86,6 +86,11 @@ button:hover {
   top: 20px;
   right: 20px;
 }
+#control-buttons-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
 .buttons {
   margin: 5px;
   padding: 5px;
