@@ -38,16 +38,6 @@ body {
   }
 }
 
-@media screen and (min-width: 1920px) {
-  * {
-    font-size: large;
-  }
-
-  h1, h2, #header{
-    font-size: xx-large;
-  }
-}
-
 button {
   background-color: #6b389c;
   color: #fff;
@@ -134,7 +124,7 @@ a {
 }
 
 * {
-  font-family: 'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Tahoma; /*'Corbel','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
 }
 
 .small_pic {
