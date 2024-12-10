@@ -20,6 +20,7 @@
   ],
   "date_creation": "7 Oct 2022",
   "disappeared": false,
+  "date_disappearence" : "27 Dec 2024",
   "country": "Fur",
   "parents": {
     "mother": "Kate",
@@ -264,47 +265,52 @@
       " Ostafan understood, she didn't listened and went away from her.",
       "!|Now Jania is in Fronstan working as recruiter, trading integration isn't so helpful now, but later they can rise the income by several trage strategies,",
       " but she's in bottom right now."
+    ],
+    [
+      "She was working as a recruiter in TetraBank. Jania was patient as long as she could, but the crunch ran on her constantly. Could she resist?!|",
+      "The recruiter flow wasn’t that rapid, but because of that, she had to deal with paperwork for the same income. Jania had that patience to hold it, but she would burn out sooner or later.",
+      "That eventually happened, she realized how insane it gets every time she worked. Jania asked for vacation in Ostafan, but he rejected the decision: “We don't have enough employees”."
     ]
   ],
   "not_mine_gallery": [
     {
-      "path": "image/Not mine/Jania bday by @ScriptPostum.png",
+      "path": "Jania bday by @ScriptPostum.png",
       "link": "https://bsky.app/profile/scriptpostum.bsky.social"
     },
     {
-      "path": "image/Not mine/Jania pixelated by zxspectra.jpg",
+      "path": "Jania pixelated by zxspectra.jpg",
       "link": "https://bsky.app/profile/zxspectra.bsky.social"
     },
     {
-      "path": "image/Not mine/Jania g-man by @ScriptPostum.png",
+      "path": "Jania g-man by @ScriptPostum.png",
       "link": "https://bsky.app/profile/scriptpostum.bsky.social"
     },
     {
-      "path": "image/Not mine/Jania for pfp by @cryfurstudios.png",
+      "path": "Jania for pfp by @cryfurstudios.png",
       "link": "https://cryfurstudios.github.io"
     },
     {
-      "path": "image/Not mine/Jania by @cryfurstudios.jpg",
+      "path": "Jania by @cryfurstudios.jpg",
       "link": "https://cryfurstudios.github.io"
     },
     {
-      "path": "image/Not mine/Jania waiter by @Teddycatstuff.jpg",
+      "path": "Jania waiter by @Teddycatstuff.jpg",
       "link": "https://twitter.com/teddycatstuff"
     },
     {
-      "path": "image/Not mine/Jania by @Annas.png",
+      "path": "Jania by @Annas.png",
       "link": "https://linktr.ee/AnnasVirtual"
     },
     {
-      "path": "image/Not mine/Jania on Bday by @RaiDev_.png",
+      "path": "Jania on Bday by @RaiDev_.png",
       "link": "https://raihormo.github.io/"
     },
     {
-      "path": "image/Not mine/Jania Chirstmas by @UnGato377.png",
+      "path": "Jania Chirstmas by @UnGato377.png",
       "link": "https://twitter.com/UnGato377"
     },
     {
-      "path": "image/Not mine/Jania by @Thir.jpg",
+      "path": "Jania by @Thir.jpg",
       "link": "https://twitter.com/Uki7UqvfzqQJ36j"
     }
   ]

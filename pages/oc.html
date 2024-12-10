@@ -2,57 +2,63 @@
 <html>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport    " content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
-    <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
-    <title>Original Character in Register</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport  " content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
+  <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
+  <title>Original Character in Register</title>
 </head>
 
+<style>
+
+  .block {
+    float: left;
+    display: block;
+  
+  }
+
+</style>
+
 <body>
-    <div id="sideMenu"></div>
+  <div id="sideMenu"></div>
 
-    <div id="content">
-        <h2 id="header">Character</h2>
-        <table>
-            <tr>
-                <td style="max-width: 50vw; display: block; float:left;">
-                    <img id="pfp">
-                </td>
-                <td style="display: block; float:left;">
-                    <div>Species: <span id="bioClass"></span></div>
-                    <div>Age: <span id="age"></span></div>
-                    <div>Sex: <span id="sex"></span></div>
-                    <div>Orientation: <span id="orient"></span></div>
-                    <div>Traits:<dir id="traits"></dir></div>
-                    <div>MBTI: <span id="mbtiType"></span></div>
-                    <div>Date creation: <span id="dateCreation"></span></div>
-                    <div>Date disappearence: <span id="dateDisappearence"></span></div>
-                    <div>Country of registration: <span id="country"></span></div>
-                    <div>Parents:
-                    <dir>
-                        <div><img src="../image/SmallPictures/sign_f.png" class="small_pic">:<span id="parentMom"></span></div>
-                        <div><img src="../image/SmallPictures/sign_m.png" class="small_pic">:<span id="parentDad"></span></div>
-                    </dir>
-                    </div>
-                    <div>Interests: <dir id="interests"></dir></div>
-                    <div>Work: <span id="work"></span></div>
-                </td>
-            </tr>
-        </table>
-        <hr>
-        <details>
-            <summary>Stories</summary>
-            <div id="stories"></div>
-        </details>
-        <details>
-            <summary>Gallery</summary>
-            <div id="gallery"></div>
-        </details>
+  <div id="content">
+    <h2 id="header">Character</h2>
+    <div>
+      <img id="pfp" class="block" style="max-width: min(75vh, 75vw)">
+      <div class="block">
+          <div>Species: <span id="bioClass"></span></div>
+          <div>Age: <span id="age"></span></div>
+          <div>Sex: <span id="sex"></span></div>
+          <div>Orientation: <span id="orient"></span></div>
+          <div>Traits:<dir id="traits"></dir></div>
+          <div>MBTI: <span id="mbtiType"></span></div>
+          <div>Date creation: <span id="dateCreation"></span></div>
+          <div>Date disappearence: <span id="dateDisappearence"></span></div>
+          <div>Country of registration: <span id="country"></span></div>
+          <div>Parents:
+          <dir>
+            <div><img src="../image/SmallPictures/sign_f.png" class="small_pic">:<span id="parentMom"></span></div>
+            <div><img src="../image/SmallPictures/sign_m.png" class="small_pic">:<span id="parentDad"></span></div>
+          </dir>
+          </div>
+          <div>Interests: <dir id="interests"></dir></div>
+          <div>Work: <span id="work"></span></div>
+      </div>
     </div>
+    <hr style="clear: left;">
+    <details>
+      <summary>Stories</summary>
+      <div id="stories"></div>
+    </details>
+    <details>
+      <summary>Gallery</summary>
+      <div id="gallery"></div>
+    </details>
+  </div>
 
-    <script type="module" src="./../js/oc_render.js"></script>
+  <script type="module" src="./../js/oc_render.js"></script>
 </body>
 
 </html>
