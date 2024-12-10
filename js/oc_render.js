@@ -5,7 +5,7 @@ import * as oc from "./oc.js";
 import * as postParser from "../../PostViewer/post_parser.js";
 
 const OC_PARAM = capitalizeFirstLetter(fileFetcher.getURLParams().get("oc").toLowerCase());
-const GALLERY_STYLE = "max-width: 25vw";
+const GALLERY_STYLE = "max-width: min(25vw, 25vh)";
 
 var json = {};
 
@@ -77,7 +77,7 @@ function prepareNotMineDrawings() {
   let merged = ""
 
   for(let i = 0; i < json.not_mine_gallery.length; i++) {
-    merged += `<a target="_blank" href="${json.not_mine_gallery[i].link}"><img style="${GALLERY_STYLE}" src="${fileFetcher.makeLinkIndependent(json.not_mine_gallery[i].path)}"/></a>`
+    merged += `<a target="_blank" href="${json.not_mine_gallery[i].link}"><img style="${GALLERY_STYLE}" src="${fileFetcher.makeLinkIndependent(`image/Not mine/${json.not_mine_gallery[i].path}`)}"/></a>`
   }
 
   return merged;

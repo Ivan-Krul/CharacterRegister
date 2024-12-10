@@ -181,16 +181,20 @@
     "Guesses - Stefan.crs"
   ],
   "not_mine_gallery" : [
+    {   
+      "path" : "Stefan by @RaiDev_.png",
+      "link": "https://raihormo.github.io"
+    },
     {
-      "path" : "image/Not mine/silly Stefan in news report by @Cptain Fuzzler.jpg",
+      "path" : "silly Stefan in news report by @Cptain Fuzzler.jpg",
       "link" : "https://ko-fi.com/dafazzelnow"
     },
 	  {   
-      "path" : "image/Not mine/Stefan comm by @Meta_122.png",
+      "path" : "Stefan comm by @Meta_122.png",
       "link": "https://twitter.com/Meta_122"
     },
     {   
-      "path" : "image/Not mine/Stefan by @Thir.png",
+      "path" : "Stefan by @Thir.png",
       "link": "https://twitter.com/Uki7UqvfzqQJ36j"
     }
   ]
