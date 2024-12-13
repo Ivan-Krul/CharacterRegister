@@ -5,11 +5,16 @@
   --text: #ffffff;
   --mcol: #7b48ac; /*#a886bb;*/ /*#bda1ce*/
   --back: #000000;
+  
+  --font: max(1.75vh,1vw);
+  
+  --brdr: 0.75vh; // 5px
 }
 
 body {
   background-color: var(--back);
   color: var(--text);
+  font-size: var(--font);
 }
 
 #sideMenu {
@@ -20,7 +25,7 @@ body {
   height: 100%;
   background-color: var(--mcol);
   color: #fff;
-  border-right: 5px solid black;
+  border-right: var(--brdr) solid black;
   padding-left: 2vw;
   padding-right: 2vw;
   overflow-y: auto;
@@ -38,16 +43,25 @@ body {
   }
 }
 
+/*1280x650*/
+/*(0.3vw/0.15vh)*/
+/**/
+/*C34x34*/
+/*P46x38*/
+/*B51x43 (4vw/*/
+/*M56x48 (4vw/7vh)*/
+
 button {
   background-color: #6b389c;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  margin: 5px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 6px;
-  padding-right: 6px;
+  border-radius: var(--brdr);
+  margin: 0.75vh;
+  padding-top: 0.3vh;
+  padding-bottom: 0.3vh;
+  padding-left: 0.9vh;
+  padding-right: 0.9vh;
+  font-size: var(--font);
 }
 
 button:hover {
@@ -76,11 +90,6 @@ button:hover {
   top: 20px;
   right: 20px;
 }
-#control-buttons-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-}
 .buttons {
   margin: 5px;
   padding: 5px;
@@ -89,7 +98,7 @@ button:hover {
   max-width:100% !important;
 }
 img {
-  border: 5px solid var(--text);
+  border: var(--brdr) solid var(--text);
   margin: 5px;
   max-width:75%;
 }
@@ -131,4 +140,6 @@ a {
   border: none;
   margin: 0;
   vertical-align: middle;
+  width: max(3.5vh,1.5vw);
+  height: max(3.5vh,1.5vw);
 }
