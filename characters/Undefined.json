@@ -1,32 +1,32 @@
 {
-    "pfp_path": null,
-    "biological_class": null,
-    "initial_age": 0,
-    "sex": null,
-    "orientation": [
-    ],
-    "traits": [
-    ],
-    "date_creation": null,
-    "disappeared": false,
+  "pfp_path": null,
+  "biological_class": null,
+  "initial_age": 0,
+  "sex": null,
+  "orientation": [
+  ],
+  "traits": [
+  ],
+  "date_creation": null,
+  "disappeared": false,
 	"date_disappearence" : null,
-    "country": null,
-    "parents": {
-        "mother": null,
-        "father": null
-    },
-    "interests": [
-    ],
-    "work": null,
-    "currency": {
-        "now_place": null,
-        "now_value": null,
-        "then_place": null,
-        "then_value": null
-    },
-    "mbti": null,
-    "stories": [
-    ],
-    "not_mine_gallery": [
-    ]
+  "country": null,
+  "parents": {
+    "mother": null,
+    "father": null
+  },
+  "interests": [
+  ],
+  "work": null,
+  "currency": {
+    "now_place": null,
+    "now_value": null,
+    "then_place": null,
+    "then_value": null
+  },
+  "mbti": null,
+  "stories": [
+  ],
+  "not_mine_gallery": [
+  ]
 }
