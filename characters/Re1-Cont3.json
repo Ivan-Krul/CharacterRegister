@@ -1,0 +1,32 @@
+{
+  "pfp_path": "../image/OCPool/Re1-Cont3/Re1-Cont3.png",
+  "biological_class": "Fully modified machine",
+  "initial_age": 0,
+  "sex": null,
+  "orientation": [
+  ],
+  "traits": [
+  ],
+  "date_creation": "16 Dec 2024",
+  "disappeared": false,
+	"date_disappearence" : null,
+  "country": "Continent #3",
+  "parents": {
+    "mother": null,
+    "father": null
+  },
+  "interests": [
+  ],
+  "work": "Maintainer of float fighters in Continent #3",
+  "currency": {
+    "now_place": null,
+    "now_value": null,
+    "then_place": null,
+    "then_value": null
+  },
+  "mbti": null,
+  "stories": [
+  ],
+  "not_mine_gallery": [
+  ]
+}
