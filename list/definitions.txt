@@ -5,4 +5,5 @@ countries
 cities
 ESC
 mind wars
+continents
 stick nation
