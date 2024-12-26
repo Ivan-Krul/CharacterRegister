@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "pfp_path": "../image/OCPool/Ostafan/Ostafan.png",
   "biological_class": "Sheep & Humanoid",
   "initial_age": 19,
@@ -35,7 +36,6 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": "ENFJ",
   "stories": [
     [
       "At childhood, Ostafan got leader traits.",
