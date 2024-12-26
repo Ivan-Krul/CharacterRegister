@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "pfp_path": "../image/OCPool/Grace/Grace.png",
   "biological_class": "Dog/Hund",
   "initial_age": 19,
@@ -35,7 +36,6 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": null,
   "stories": [
     [
       "Grace was born in intellectual family, where all in her family was writers and readers. Sunrise decided to take her to writing school when she had 4 years old.",

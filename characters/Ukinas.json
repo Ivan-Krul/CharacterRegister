@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "pfp_path": "../image/OCPool/Ukinas/Ukinas at charge.png",
   "biological_class": "Tiger Shark",
   "initial_age": 21,
@@ -33,7 +34,6 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": null,
   "stories": [
     [
       "Ukinas was born in average family. Her mother, Mary, worked in SN. Her dad, Isaac, was with her. Ukinas was happy, all time, when her mom came.",
@@ -117,5 +117,9 @@
     ]
   ],
   "not_mine_gallery": [
+    {
+      "path": "IMG_20241208_172309.webp",
+      "link": "https://raihormo.github.io"
+    }
   ]
 }
