@@ -5,6 +5,7 @@
   --text: #ffffff;
   --mcol: #7b48ac; /*#a886bb;*/ /*#bda1ce*/
   --back: #000000;
+  --main: var(--back);
   
   --font: max(1.75vh,1vw);
   

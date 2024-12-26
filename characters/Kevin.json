@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "pfp_path": "../image/OCPool/Kevin/Kevin.png",
   "biological_class": "Dragon",
   "initial_age": 14,
@@ -33,7 +34,6 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": null,
   "stories": [
     [
       "Kevin was created in Fur. Father was an artist and Mother was",

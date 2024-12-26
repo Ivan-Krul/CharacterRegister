@@ -35,6 +35,6 @@ export function convertDateToStringFull(date = new Date()) {
   return `${convertDateToString(date,false)}(${convertDateToString(mind.getMindDate(date),true)})`;
 }
 
-export function prepareStory(story_lines = []) {
+export function prepareStoryV1(story_lines = []) {
   return postParser.parseRawPost(story_lines.join(""));
 }

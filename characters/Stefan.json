@@ -1,4 +1,5 @@
 {
+  "version": 1,
   "pfp_path": "../image/OCPool/Stefan/Stefan chilling.png",
   "biological_class": "Tiger Shark",
   "initial_age": 17,
@@ -34,7 +35,6 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": "INFP",
   "stories": [
     [
       "Stefan was born into a rich family as an only child. His mother, Nora, was happy with him, but she was more intrested in money. His parents were busy,",

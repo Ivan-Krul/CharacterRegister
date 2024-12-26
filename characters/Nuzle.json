@@ -4,6 +4,7 @@
   "“I’m just a scientist…” with that quote meeting our lore hunter, who digs water. A SINGLE THREAD and thinking about catching a fish, but actually catched just a piece of thread. It was told - “it was made up on the fly”, like JIT compilation - compile whatever it changes. Not gonna use my dictionary to enhance the whole picture. Making lore on the fly is bad as hell. It gets so confusing, even you can't handle this. Look at Scott Cawthon - the creator of game series Five Nights at Freddy's. You got me. Scott made the FNaF lore on fly, keeping in his mind, and he listened to people from the internet to fetch some theories like from MatPat. The lore hunter is trying to do the same trick. It's good when it comes to quantity, but not in quality. You can make dozens of crappy universes, I can make it too, like Numberstan. I’ve done less in Numberstan, but gave them harmony in the community, at least hierarchy of power. “Ehmmm… it’s actually more…” No. Being eaten by an egg is ridiculous, but without pieces of natural behavior in this world it is more."
   ],
 
+  "version": 1,
   "pfp_path": "../image/OCPool/Nuzle/Nuzle.png",
   "biological_class": "Bunny",
   "initial_age": 17,
@@ -35,7 +36,11 @@
     "then_place": null,
     "then_value": null
   },
-  "mbti": null,
   "stories": [],
-  "not_mine_gallery": []
+  "not_mine_gallery": [
+    {
+      "path": "remix-5e16bbbe-6fd0-4978-965c-26a1a916d726.png",
+      "link": "https://raihormo.github.io"
+    }
+  ]
 }
