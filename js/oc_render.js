@@ -31,7 +31,6 @@ function renderDetails() {
   document.getElementById("bioClass").innerText =            json.biological_class;
   document.getElementById("age").innerText =                 oc.extractAge(json.initial_age, json.date_creation,json.disappeared,json.date_disappearence);
   document.getElementById("sex").innerText =                 json.sex;
-  document.getElementById("mbtiType").innerText =            json.mbti;
 
   renderOrientation();
   document.getElementById("traits").innerHTML =              prepareDetailList(json.traits)
@@ -59,7 +58,7 @@ async function prepareTom(filename = "") {
   return `<h1>${postParser.parseRawTitle(rawTom)}</h1><div>${postParser.parseRawPost(rawTom)}</div>`;
 }
 
-async function renderStories() {
+async function renderStoriesV1() {
   let merged = "";
 
   for(let i = 0; i < json.stories.length; i++) {
@@ -67,7 +66,7 @@ async function renderStories() {
       merged += `<div>${await prepareTom(json.stories[i])}</div><hr/>`;
     }
     else
-      merged += `<div>${oc.prepareStory(json.stories[i])}</div><hr/>`;
+      merged += `<div>${oc.prepareStoryV1(json.stories[i])}</div><hr/>`;
   }
   document.getElementById("stories").innerHTML = merged;
 }
@@ -102,6 +101,76 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+async function renderStoriesV2() {
+  const SEP_VALUE = '=';
+  const ROOT_SYM = '#';
+  let lines = ((await fileFetcher.fetchFile(`characters/Stories/${OC_PARAM}.stry`)).replaceAll('\r', '')).split('\n');
+  let l = 0;
+  let count = 0;
+  let spacing = 1;
+  
+  while(lines[l][0] === ROOT_SYM) {
+    if(lines[l].includes(ROOT_SYM+"COUNT")) count = parseInt(lines[l].substr(lines[l].indexOf(SEP_VALUE) + 1));
+    if(lines[l].includes(ROOT_SYM+"SPACE")) spacing = parseInt(lines[l].substr(lines[l].indexOf(SEP_VALUE) + 1));
+    l++;
+  }
+  
+  var bowl = "";
+  
+  for(let s = 0; s < count; s++) {
+    var allocated = 0;
+    var merge = "";
+    var mode = '0';
+    l += spacing;
+    
+    while(lines[l][0] === ROOT_SYM) {
+      if(lines[l][2] === SEP_VALUE || lines[l].length < 4) mode = lines[l][1];
+      if(lines[l].includes(ROOT_SYM+"S")) allocated = parseInt(lines[l].substr(lines[l].indexOf(SEP_VALUE) + 1));
+      l++;
+    }
+    
+    switch(mode) {
+      case 'S':
+        for(let n = 0; n < allocated; n++) {
+          merge += lines[l];
+          l++;
+        }
+        merge = postParser.parseRawPost(merge);
+        break;
+      case 'T':
+        console.log(lines[l]);
+        merge = await prepareTom(lines[l]);
+        l++;
+        break;
+      default:
+        console.warn(`bleh :p\nmode: ${mode}`);
+    }
+    
+    bowl += `<div>${merge}</div><hr/>`;
+  }
+  
+  document.getElementById("stories").innerHTML = bowl;
+}
+
+function renderV1() {
+  renderDetails();
+  renderStoriesV1();
+  renderGallery();
+}
+
+function renderV2() {
+  renderDetails();
+  renderStoriesV2();
+  renderGallery();
+}
+
+function chooseJsonInputVersion() {
+  switch(json.version) {
+    case 1: renderV1(); break;
+    case 2: renderV2(); break;
+  }
+}
+
 async function render() {
   document.title = `${OC_PARAM} in CharacterRegister`;
 
@@ -109,9 +178,7 @@ async function render() {
     json = JSON.parse(await fileFetcher.fetchFile("characters/" + OC_PARAM + ".json"));
     json.mine_gallery = await oc.getGalleryLinks(OC_PARAM);
 
-    renderDetails();
-    renderStories();
-    renderGallery();
+    chooseJsonInputVersion();
   }
   catch (error) {
     let div_section = document.getElementById("content");
