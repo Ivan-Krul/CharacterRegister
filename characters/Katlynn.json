@@ -1,0 +1,47 @@
+{
+  "version": 2,
+  "pfp_path": "../image/Not mine/IMG_0702.png",
+  "biological_class": "Ferret",
+  "initial_age": 55,
+  "sex": "Female",
+  "orientation": [
+    "black",
+    "white",
+    "black",
+    "white",
+    "black",
+    "white"
+  ],
+  "traits": [
+    "Empathetic",
+    "Independant",
+    "Perfectionist",
+    "Resentful"
+  ],
+  "date_creation": "2 Jan 2025",
+  "disappeared": false,
+  "date_disappearence" : null,
+  "country": "ESC",
+  "parents": {
+    "mother": null,
+    "father": null
+  },
+  "interests": [
+    "fishing", 
+    "gardening",
+    "dna analytic"
+  ],
+  "work": "retired",
+  "currency": {
+    "now_place": null,
+    "now_value": null,
+    "then_place": null,
+    "then_value": null
+  },
+  "not_mine_gallery": [
+    {
+      "path": "IMG_0702.png",
+      "link": "https://ivan-krul.github.io/scriptpostum.github.io"
+    }
+  ]
+}
