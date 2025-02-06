@@ -51,12 +51,16 @@ function pushZeros(number, threshold = 2) {
     return str;
 }
 
+function decorateDate(date) {
+  return `${date.getHours()}:${pushZeros(date.getMinutes())} | ${pushZeros(date.getDate())}.${pushZeros(date.getMonth() + 1)}.${date.getFullYear()}`;
+}
+
 function output() {
     let date = new Date(JSON.updated_at);
 
     document.getElementById("sideMenu").innerHTML += `
     <div>Repository updated: <span id="updateDate">
-    ${date.getHours()}:${pushZeros(date.getMinutes())} | ${pushZeros(date.getDate())}.${pushZeros(date.getMonth() + 1)}.${date.getFullYear()}
+    ${decorateDate(date)}
     </span></div>
     <div>Repository open issues: <span id="repoIssues">${JSON.open_issues_count}</span></div>
     <div>Repository forks: <span id="repoForks">${JSON.forks_count}</span></div>
@@ -71,6 +75,25 @@ async function outputGithubDetails() {
 
 ///////////////////////////////////////////////
 
+
+async function outputUpdateLogs() {
+  var commits = await fetch("https://api.github.com/repos/Ivan-Krul/CharacterRegister/commits").then(response => response.json()).catch(error => console.error(error));;
+  var elem = document.getElementById("update_log");
+  
+  for(let i = 0; i < commits.length; i++) {
+    const message = commits[i].commit.message;
+    if(message.substring(0,18) === "Merge pull request") {
+      const num = message.substring(19, message.indexOf(' f'));
+      console.log(num);
+      console.log(message);
+      elem.innerHTML += `<div><h3>Update ${num} at ${decorateDate(new Date(commits[i].commit.author.date))}</h3> ${message.substring(message.indexOf("\n\n"))}</div><hr/>`;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+
 await assemble();
 await renderButtons();
 await outputGithubDetails();
+await outputUpdateLogs();
