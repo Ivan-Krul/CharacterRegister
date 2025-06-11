@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="../style/post.css">
+  <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
+  <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">​
+  <title>Comixes in Character Register</title>
+</head>
+
+<body>
+  <div id="sideMenu"></div>
+  <div id="content">
+    <h2 id="header">Comixes</h2>
+    <div id="listContainer" style="display: none">
+      <div>There you can see all my comixes I've done so far:</div>
+      <table><tbody id="listComix"></tbody></table>
+    </div>
+    <div id="aboutContainer" style="display: none">
+      <p>Pages in total <span id="comixPageCount"></span></p>
+      <p>First page was written in <span id="comixFirstPageDate"></span></p>
+      <p>Latest page was written in <span id="comixLatestPageDate"></span></p>
+      <p>Description: <span id="comixDescription"></span></p>
+      
+      <p><a id="linkFirstPage">Read the comix</a></p>
+    </div>
+    <div id="readContainer" style="display: none; text-align: center;">
+      <img id="comixPage" style="max-height:70vh">
+      <div>
+        <button id="buttonFirst">|&lt;&lt;</button>
+        <button id="buttonPrev">&lt;</button>
+        <input type="number" id="inputNumber" placeholder="1" step="1"></input>
+        <button id="buttonNext">&gt;</button>
+        <button id="buttonLatest">&gt;&gt;|</button>
+      </div>
+    </div>
+  </div>
+  
+  <script type="module" src="./../js/comix.js"></script>
+</body>

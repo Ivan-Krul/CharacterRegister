@@ -13,7 +13,7 @@ function Write-ImagePaths
 		$filepath = $path.FullName
 		$filepath = $filepath.Substring($filepath.IndexOf($const) + $const.Length + 1);
 		Write-Host $filepath
-		if ( $filepath -notmatch "Not mine" -and $filepath -notmatch "marathon" ) 
+		if ( $filepath -match "OCPool" -or $filepath -match "Buttons") 
 		{
 			$str += "$filepath`n"
 		}

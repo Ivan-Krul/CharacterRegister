@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "pfp_path": "../image/OCPool/Stefan/Stefan chilling.png",
+  "pfp_path": "../image/OCPool/Stefan/Stefan head.png",
   "biological_class": "Tiger Shark",
   "initial_age": 17,
   "sex": "Male",
@@ -36,6 +36,10 @@
     "then_value": null
   },
   "not_mine_gallery" : [
+    {
+      "path": "Stefan by Crystalfur.png",
+      "link": "https://cryfurstudios.com"
+    },
     {   
       "path" : "bafkreiffbx4z2g7cdryhadoma7rxru75tgertnwb3ym3esq3nl5xplxdfe.jpg",
       "link": "https://bsky.app/profile/indoismailgd.bsky.social"
