@@ -69,6 +69,10 @@ button:hover {
   background-color: #a885c9;
 }
 
+button:disabled {
+  background-color: #6e6e6e;
+}
+
 #sideMenu a{
   color:#fff;
 }

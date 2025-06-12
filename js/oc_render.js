@@ -131,8 +131,12 @@ async function renderStoriesV2() {
     
     switch(mode) {
       case 'S':
-        for(let n = 0; n < allocated; n++) {
-          merge += lines[l];
+        var isNotLegacy = (postParser.getVersion(lines[l]) !== postParser.LegacyVersion);
+        
+        for(let n = 0; n < allocated; n++) {          
+          merge += `${lines[l]}`;
+          if(isNotLegacy) merge += '\n';
+          
           l++;
         }
         merge = postParser.parseRawPost(merge);
