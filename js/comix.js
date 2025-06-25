@@ -4,7 +4,7 @@ import * as fileFetcher from "./file_fetcher.js";
 async function loadComixList() {
   document.getElementById("listContainer").style.display = "inherit";
   const colomns = 3;
-  let list = (await fileFetcher.fetchFile("list/comixes.txt")).replaceAll('\r', '').split('\n');
+  let list = await fileFetcher.fetchTextFileLined("list/comixes.txt");
   let res = "";
   
   for(let i = 0; i < list.length; i++) {

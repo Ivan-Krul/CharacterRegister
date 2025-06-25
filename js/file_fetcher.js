@@ -7,6 +7,11 @@ export async function fetchFile(filePath) {
     });
 }
 
+export async function fetchTextFileLined(filePath) {
+  let f = await fetchFile(filePath);
+  return f ? f.replaceAll('\r', '').split('\n') : null;
+}
+
 export function getCountToRoot() {
   let path = window.location.pathname;
 
