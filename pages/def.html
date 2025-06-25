@@ -11,14 +11,23 @@
 </head>
 
 <body>
-    <div id="sideMenu"></div>
+  <div id="sideMenu"></div>
 
-    <div id="content">
-        <h2>Definition: <span id="header"></span></h2>
-        <div id="page"></div>
+  <div id="content">
+    <div id="actual_container" style="display: none">
+      <h2>Definition: <span id="header"></span></h2>
+      <div id="page"></div>
     </div>
+    <div id="overview_container" style="display: none;">
+      <h2><span id="header"></span></h2>
+      <table>
+      <tbody id="overview_table">
+      </tbody>
+      </table>
+    </div>
+  </div>
 
-    <script type="module" src="../js/def.js"></script>
+  <script type="module" src="../js/def.js"></script>
 </body>
 
 </html>

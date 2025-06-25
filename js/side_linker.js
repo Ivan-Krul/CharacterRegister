@@ -23,12 +23,6 @@ export async function gatherOCs() {
   generateLinks(formatedContent, "oc");
 }
 
-export async function gatherDefs() {
-  let content = await fileFetcher.fetchFile("list/definitions.txt");
-  let formatedContent = content.split('\n');
-  generateLinks(formatedContent, "def");
-}
-
 export async function gatherMarathons() {
   let content = await fileFetcher.fetchFile("image/Marathon/marathons.txt");
   let formatedContent = content.split('\n');

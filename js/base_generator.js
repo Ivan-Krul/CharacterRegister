@@ -5,6 +5,7 @@ import {setUpSideButtons} from "./side_buttons.js";
 export async function assemble() {
   let side = await fileFetcher.fetchFile("pages/side_template.html");
     side = side.replace("./pages/commission.html",fileFetcher.makeLinkIndependent("./pages/commission.html"));
+    side = side.replace("./pages/def.html",fileFetcher.makeLinkIndependent("./pages/def.html"));
     side = side.replace("./pages/comix.html",fileFetcher.makeLinkIndependent("./pages/comix.html"));
     side = side.replace("./index.html",fileFetcher.makeLinkIndependent("./index.html"));
 
@@ -15,7 +16,6 @@ export async function assemble() {
   await setUpSideButtons();
 
   await sideLinker.gatherOCs();
-  await sideLinker.gatherDefs();
   await sideLinker.gatherEvents();
   await sideLinker.gatherMarathons();
 }
