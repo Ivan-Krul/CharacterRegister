@@ -9,8 +9,8 @@
     "line+color": 1,
     "line+color+effect": 2,
     "line+effect": 1,
-    "lineless-color": 1,
-    "lineless-color+effect": 2
+    "lineless-color": 1.5,
+    "lineless-color+effect": 2.5
   },
   "count": {
     "0": 4,
@@ -29,6 +29,6 @@
     "photo": 1.5,
     "detailed": 2
   },
-  "global": 0.38,
+  "global": 0.4,
   "base": 4
 }
