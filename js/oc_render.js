@@ -38,15 +38,19 @@ function renderDetails() {
   document.getElementById("dateCreation").innerText =        oc.convertDateToStringFull(new Date(json.date_creation));
 
   if(json.disappeared) {
+    document.getElementById("disappearenceContainer").style.display = "inherit";
     document.getElementById("dateDisappearence").innerText = oc.convertDateToStringFull(new Date(json.date_disappearence));
     document.getElementById("header").innerText =            `${OC_PARAM} (Disappeared)`;
   }
-  else
+  else 
     document.getElementById("header").innerText =            OC_PARAM;
 
   document.getElementById("country").innerText =             json.country;
-  document.getElementById("parentMom").innerText =           json.parents.mother;
-  document.getElementById("parentDad").innerText =           json.parents.father;
+  if(json.parents.mother && json.parents.father) {
+    document.getElementById("parentsContainer").style.display = "inherit";
+    document.getElementById("parentMom").innerText =           json.parents.mother;
+    document.getElementById("parentDad").innerText =           json.parents.father;
+  }
   document.getElementById("interests").innerHTML =           prepareDetailList(json.interests)
   document.getElementById("work").innerText =                json.work;
   
