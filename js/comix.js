@@ -1,6 +1,30 @@
 import {assemble} from "./base_generator.js";
 import * as fileFetcher from "./file_fetcher.js";
 
+function onKey(event) {
+  switch(event.key) {
+    case 'L':
+    case 'l':
+    case 'PageDown':
+    case 'ArrowRight':
+      toNext();
+      break;
+    case 'H':
+    case 'h':
+    case 'PageUp':
+    case 'PageUp':
+    case 'ArrowLeft':
+      toPrev();
+      break;
+    case 'End':
+      toLatest();
+      break;
+    case 'Home':
+      toFirst();
+      break;
+  }
+}
+
 async function loadComixList() {
   document.getElementById("listContainer").style.display = "inherit";
   const colomns = 3;
@@ -69,6 +93,8 @@ async function loadComixPage() {
   document.getElementById("buttonPrev").disabled = parseInt(pageArg) <= 0;
   document.getElementById("buttonNext").disabled = parseInt(pageArg) >= aboutJson.pages;
   document.getElementById("buttonLatest").disabled = parseInt(pageArg) >= aboutJson.pages;
+  
+  document.body.onkeydown = onKey;
 }
 
 async function doSteering() {
