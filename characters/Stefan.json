@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "pfp_path": "../image/OCPool/Stefan/Stefan head.png",
+  "pfp_path": "../image/OCPool/Stefan/Stefan punk (cropped).png",
   "biological_class": "Tiger Shark",
   "initial_age": 17,
   "sex": "Male",
@@ -36,6 +36,10 @@
     "then_value": null
   },
   "not_mine_gallery" : [
+    {
+      "path": "hugs by @cryfurstudio.jpg",
+      "link": "https://cryfurstudios.com"
+    },
     {
       "path": "Stefan by Crystalfur.png",
       "link": "https://cryfurstudios.com"
