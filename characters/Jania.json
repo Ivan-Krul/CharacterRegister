@@ -42,6 +42,10 @@
   },
   "not_mine_gallery": [
     {
+      "path": "Jania by TeddyCat.webp",
+      "link": "https://bsky.app/profile/teddycatstuff.bsky.social"
+    },
+    {
       "path": "Jania bday by @ScriptPostum.png",
       "link": "https://bsky.app/profile/scriptpostum.bsky.social"
     },
@@ -63,7 +67,7 @@
     },
     {
       "path": "Jania waiter by @Teddycatstuff.jpg",
-      "link": "https://twitter.com/teddycatstuff"
+      "link": "https://bsky.app/profile/teddycatstuff.bsky.social"
     },
     {
       "path": "Jania by @Annas.png",
