@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/main.css">
   <link rel="stylesheet" href="style/post.css">
-  <link rel="shortcut icon" href="./image/Favicons/Favicon 16x16.png" type="image/x-icon">
-  <link rel="icon" href="./image/Favicons/Favicon 32x32.png" sizes="32x32">​
+  <link rel="shortcut icon" href="./image/Favicons/favicon_fieldtree.ico" type="image/x-icon">
+  <link rel="icon" href="./image/Favicons/favicon_fieldtree_32.ico" sizes="32x32">​
   <title>Character Register</title>
 </head>
 
@@ -17,19 +17,13 @@
     display: block;
     float: left;
     margin: 2px;
-    padding: 2px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     border: var(--brdr) solid black;
     border-radius: 5px;
     background-color: rgba(0,0,0,0.5);
 
-  }
-
-
-  @media screen and ((max-aspect-ratio: 1/1) or (max-width: 600px)) {
-    iframe {
-      width: 90vw;
-      height: 40vh;
-    }
   }
 
   body {
@@ -49,11 +43,6 @@
     #about {
       width: 40vw;
     }
-
-    iframe {
-      width: 40vw;
-      height: 40vh;
-    }
   }
   
   #update_container {
@@ -66,7 +55,22 @@
   <table>
   <tbody>
   <tr>
-  <td id="sideMenu"></td>
+  <td class="side">
+    <h2>Side Menu</h2>
+    <ul id="linkList">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pages/comix.html">Comixes</a></li>
+        <li><a href="./pages/def.html">Definitions</a></li>
+    </ul>
+    <div>Author: Kiwii Devulopir</div>
+    <div>All files are open-source in this <a target="_blank" href="https://github.com/Ivan-Krul/CharacterRegister">repository</a></div>
+    <div>Spotted mistakes or suggestions: ask <a target="_blank" href="https://github.com/Ivan-Krul/CharacterRegister/issues/new/choose">here</a></div>
+    <div>Fork the website: <a target="_blank" href="https://github.com/Ivan-Krul/CharacterRegister/fork">fork fork fork</a></div>
+    <div>Follow me on:</div>
+    <dir>
+        <div><a target="_blank" href="https://kiwii-devulopir.neocities.org/">My personal webpage</a></div>
+    </dir>
+</td>
   <td id="content">
   <center>
       <h3>Welcome to</h3>
@@ -74,11 +78,8 @@
       <h3>by Kiwii Devulopir</h3>
     </center>
 
-    <div>What's new? Idk</div>
-
-
-    <div id="marks">
-      <div id="about" class="block">
+    <main>
+        <div id="about" class="block">
         <h2>About</h2>
         <p>This is a register, what I made for myself. Here you can watch all my characters and/or other
           things what have relation with these characters.</p>
@@ -128,30 +129,7 @@
         but it's not what are you looking for (all of them in side menu)
       </div>
       <div class="block">
-        <h2>Also I have an open commission!!</h2>
-        you can <a href="./pages/commission.html">check it out here and try to order from me</a>
-      </div>
-      <div class="block">
-        <h2>About me</h2>
-        <p>
-          Ye, I'm Kiwii Devulopir. A dude, who makes things. I'm currently 19 y/o and my bday would be at 4. Feb!
-        </p>
-        <p>
-          <div>
-            I do programming, drawing and going outside taking photos.
-          </div>
-          <div>
-            I also like to go into various rabbit holes.
-          </div>
-        </p>
-      </div>
-      <div class="block">
-        <h2>Also I do posts here</h2>
-        <iframe src="../PostViewer/index.html?post=5"></iframe>
-      </div>
-      <div class="block" id="update_container">
-        <h2>Update Logs</h2>
-        <div id="update_log"></div>
+        <h2>Also I do posts <a href="../PostViewer/index.html?post=5">here</a></h2>
       </div>
       <div class="block">
         <h2>If you want to embed the website's button</h2>
@@ -159,7 +137,7 @@
         <code id="button_code_copy" style="display: none;" class="warp">&lt;a href="https://ivan-krul.github.io/CharacterRegister" target="_blank"&gt;&lt;img src="https://ivan-krul.github.io/CharacterRegister/image/Kiwii's%20CharacterRegister%20button.png" alt="Kiwii Devulopir's Character Register"&gt;&lt;/a&gt;</code>
           <button onclick="copyCode()">copy</button>
       </div>
-    </div>
+    </main>
   </td>
   </tr>
   </tbody>

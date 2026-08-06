@@ -18,8 +18,7 @@ body {
   font-size: var(--font);
 }
 
-#sideMenu {
-  display: none;
+.side {
   position: fixed;
   top: 0;
   left: 0;
